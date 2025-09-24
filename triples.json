@@ -1,0 +1,17 @@
+[
+  {
+    "start": "Alice",
+    "relation": "WORKS_AT",
+    "end": "Samsung"
+  },
+  {
+    "start": "Bob",
+    "relation": "BORN_IN",
+    "end": "London"
+  },
+  {
+    "start": "Charlie",
+    "relation": "STUDIES_AT",
+    "end": "MIT"
+  }
+]

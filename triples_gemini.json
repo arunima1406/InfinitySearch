@@ -1,0 +1,52 @@
+[
+  {
+    "start": "Satya Nadella",
+    "relation": "CEO_OF",
+    "end": "Microsoft"
+  },
+  {
+    "start": "Satya Nadella",
+    "relation": "BORN_IN",
+    "end": "Hyderabad"
+  },
+  {
+    "start": "Microsoft",
+    "relation": "HEADQUARTERS_ARE_IN",
+    "end": "Redmond"
+  },
+  {
+    "start": "VIT Vellore campus",
+    "relation": "FOUNDED_IN",
+    "end": "1984"
+  },
+  {
+    "start": "VIT Vellore campus",
+    "relation": "FOUNDED_BY",
+    "end": "G. Viswanathan"
+  },
+  {
+    "start": "VIT Vellore campus",
+    "relation": "LOCATED_IN",
+    "end": "India"
+  },
+  {
+    "start": "VIT Vellore campus",
+    "relation": "IS_A",
+    "end": "leading private university"
+  },
+  {
+    "start": "Alice",
+    "relation": "WORKS_AT",
+    "end": "Google"
+  },
+  {
+    "start": "Google",
+    "relation": "BASED_IN",
+    "end": "Mountain View"
+  },
+  {
+    "start": "Alice",
+    "relation": "STUDIED_AT",
+    "end": "Stanford University"
+  }
+]
