@@ -49,7 +49,7 @@ Example for "Alan Turing proposed the universal machine in 1936.":
 
 # --- Execution ---
 try:
-    with open("chunks.json", "r", encoding="utf-8") as f:
+    with open("chunks_updated.json", "r", encoding="utf-8") as f:
         source_files_data = json.load(f)
 
     final_knowledge_graph = []
@@ -103,7 +103,7 @@ try:
 
 
 except FileNotFoundError:
-    print("Error: `chunks.json` not found.")
+    print("Error: `chunks_updated.json` not found.")
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
 

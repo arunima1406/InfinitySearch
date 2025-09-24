@@ -1,0 +1,144 @@
+[
+    {
+        "source_file": "1_Embedded-product-design-life-cycle.pdf",
+        "text_chunks": [
+            "The embedded systems product development life cycle can utilize the waterfall model, a linear and sequential approach characterized by distinct phases like requirements, design, implementation, testing, and maintenance, which is suitable for projects with clear, stable requirements but lacks flexibility for dynamic environments, or the spiral model, a risk-driven, iterative process that combines waterfall and iterative elements, emphasizing risk assessment, prototyping, and adaptability, making it more appropriate for complex embedded systems with evolving requirements."
+        ],
+        "extracted_images": [
+            {
+                "image_path": "extracted_images\\1_Embedded-product-design-life-cycle.pdf_p1_i1.jpeg",
+                "description": "The waterfall model outlines a sequential software development process that includes requirement analysis, system design, implementation, testing, deployment, and maintenance."
+            },
+            {
+                "image_path": "extracted_images\\1_Embedded-product-design-life-cycle.pdf_p3_i1.jpeg",
+                "description": "The spiral model of software design is illustrated as a cone with concentric circles representing stages of system feasibility, specification, prototype, initial system, and enhanced system, with a system life cycle encompassing design, test, and requirements."
+            }
+        ]
+    },
+    {
+        "source_file": "1_Sample-architectures.pdf",
+        "text_chunks": [
+            "Embedded system design architectures address the structure of systems controlling everyday appliances like microwave ovens, elevators, and washing machines. These architectures utilize abstraction layers to simplify complex hardware interactions, presenting a cleaner interface for software development. Behavior models, exemplified by those for microwave ovens, elevators, and washing machines, describe the intended functionalities and operational sequences of these embedded devices."
+        ],
+        "extracted_images": [
+            {
+                "image_path": "extracted_images\\1_Sample-architectures.pdf_p1_i1.png",
+                "description": "The OvenController class has relationships with DoorSensor, Light, Beeper, PowerTube, and Button classes."
+            },
+            {
+                "image_path": "extracted_images\\1_Sample-architectures.pdf_p1_i2.png",
+                "description": "A controller receives input from doors, buttons, a keypad, sensors, and a timer, and sends output to a traction motor control, a display, a buzzer, and a floor calculator."
+            },
+            {
+                "image_path": "extracted_images\\1_Sample-architectures.pdf_p2_i1.png",
+                "description": "The controller receives input from buttons, sensors, and a door, and controls a display, LED, motor, outlet, and inlet."
+            },
+            {
+                "image_path": "extracted_images\\1_Sample-architectures.pdf_p3_i1.jpeg",
+                "description": "This flowchart outlines a process that starts with checking if heating is done, then proceeds to check door status and time intervals to either complete heating, indicate the door is open, or re-heat before finishing."
+            },
+            {
+                "image_path": "extracted_images\\1_Sample-architectures.pdf_p4_i1.jpeg",
+                "description": "A passenger pressing a hall button initiates a sequence of events involving hall call control, dispatcher, drive control, drive, door control, and the door to move the elevator and open/close its doors."
+            },
+            {
+                "image_path": "extracted_images\\1_Sample-architectures.pdf_p4_i2.jpeg",
+                "description": "The diagram illustrates a state machine for a washing machine's operational cycle."
+            },
+            {
+                "image_path": "extracted_images\\1_Sample-architectures.pdf_p5_i1.jpeg",
+                "description": "A state diagram visualizes the control software for a washing machine."
+            }
+        ]
+    },
+    {
+        "source_file": "22BEC0807_report.pdf",
+        "text_chunks": [
+            "VLSI design internship program provided comprehensive training in digital electronics, covering number systems, logic circuits, and finite state machines, alongside proficiency in Verilog HDL for modeling and designing digital systems. The program included practical experience through hands-on labs implementing designs like UART, alarm clocks, SPI, and VGA, culminating in the design and implementation of a RISC-V processor module using a five-stage pipeline. Assessments involved internal knowledge checks and an external final test on RISC-V design, with extensive use of Quartus Prime and ModelSim for simulation and verification."
+        ],
+        "extracted_images": [
+            {
+                "image_path": "extracted_images\\22BEC0807_report.pdf_p1_i1.jpeg",
+                "description": "The image displays the logo and name of Vellore Institute of Technology, which is a deemed university under section 3 of the UGC Act, 1956."
+            },
+            {
+                "image_path": "extracted_images\\22BEC0807_report.pdf_p4_i1.jpeg",
+                "description": "Chandrima Manik has successfully completed a VLSI Design Internship Program from June 05, 2024, to July 13, 2024, working on a RISC-V ISA & RV32I RTL Design project."
+            },
+            {
+                "image_path": "extracted_images\\22BEC0807_report.pdf_p11_i1.jpeg",
+                "description": "The waveform display shows the signals and data values of a RISC processor simulation over time."
+            }
+        ]
+    },
+    {
+        "source_file": "sample.pdf",
+        "text_chunks": [
+            "Chandrima Manik, a B.Tech student in Electronics and Communication Engineering at Vellore Institute of Technology, possesses a strong academic background with a CGPA of 8.79 and has demonstrated practical application of technical skills through projects like GreenIntel, an autonomous weed detection and control robot utilizing TensorFlow, Python, C, Verilog, and FPGA programming for real-time robotic control and precise weed eradication. Manik has also gained valuable experience in web development, product design, and event organization through leadership roles in Google Developers Student Club, Gravitas24, and Riviera24 at VIT Vellore, achieving significant increases in website visitors and contributing to sales efforts. Further showcasing technical proficiency, Manik has excelled in VLSI design, specifically RISC-V ISA RV32i RTL design, and has a diverse skill set encompassing Cadence Virtuoso, Quartus Prime, FPGA, various programming languages, and design software like Figma and Adobe Illustrator."
+        ],
+        "extracted_images": []
+    },
+    {
+        "source_file": "A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx",
+        "text_chunks": [
+            "An approximate adder design leverages error-reduced carry prediction and constant truncation to significantly improve computational accuracy while minimizing hardware. This design reduces the prediction error rate by up to 75% compared to existing approximate adders, decreasing the error distance and enhancing the normalized mean error distance (NMED) by 91.4% and the mean relative error distance (MRED) by 98.9%. It also achieves reductions of up to 99.4% in power-NMED, energy-NMED, and area-delay product (ADP)-NMED, resulting in a figure of merit that is 93.05% smaller. The core concept involves employing approximate full adder cells in the least significant bits (LSBs) and utilizing a novel error-reduced carry prediction (ERCP) technique coupled with constant truncation. The ERCP method incorporates an and-or logic for more accurate carry generation than traditional and-based schemes, and constant truncation sets LSBs to a constant value to reduce power and area while minimizing errors, particularly by forcing other bits to zero when the correct output is larger than the approximated output. This approach demonstrates substantial improvements in real-world applications like digital image processing and machine learning."
+        ],
+        "extracted_images": [
+            {
+                "image_path": "extracted_images\\A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx_i1.png",
+                "description": "The image displays binary numbers labeled A and B, with an \"Accurate Part\" and an \"Inaccurate Part\" indicated, along with a \"Cin\" value and a sum row labeled Sn-1:0, comparing a result \"Without Error Reduction\" to a potentially corrected result."
+            },
+            {
+                "image_path": "extracted_images\\A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx_i4.png",
+                "description": "The image displays a binary addition operation split into an \"Accurate Part\" and an \"Inaccurate Part\", with inputs A and B and output S."
+            },
+            {
+                "image_path": "extracted_images\\A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx_i8.png",
+                "description": "$C_{in} = C_{n-k-1} + P_{n-k-1}C_{n-k-2}$."
+            },
+            {
+                "image_path": "extracted_images\\A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx_i9.png",
+                "description": "A bar chart displays the carry prediction error rate for various methods, with the ERCPAA method exhibiting the lowest error rate."
+            },
+            {
+                "image_path": "extracted_images\\A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx_i10.png",
+                "description": "The equation Pi equals Ai exclusive OR Bi is displayed."
+            },
+            {
+                "image_path": "extracted_images\\A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx_i11.png",
+                "description": "The equation defines ERERCPAA(n, k, l) as 1 - P(Eco) which simplifies to 1 - (3/4)^(n-k-l-1) * (1/2)^l."
+            },
+            {
+                "image_path": "extracted_images\\A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx_i13.png",
+                "description": "ERCp(n, k) is defined by a series of equalities, culminating in an expression involving the probabilities of independent events Pn-k-1, Pn-k-2, and Eca."
+            }
+        ]
+    },
+    {
+        "source_file": "material_requirements.xlsx",
+        "text_chunks": [
+            "Raw material inventory, current quantity, and consumption data for various bakery items, including maida, atta, sugar, salt, yeast, and flavorings, alongside packaging materials like pouches and gloves, are presented, detailing unit, initial stock, purchased quantities, total consumption, closing stock, and percentage remaining for each item."
+        ],
+        "extracted_images": []
+    },
+    {
+        "source_file": "25SPF21VIT_2nd_Monthly_Connect.pptx",
+        "text_chunks": [
+            "Hybrid batch and streaming solutions, an initiative at VIT Vellore, have settled on a lambda architecture using Apache Spark 3x and Apache Kafka as the primary stack to support both historical batch and real-time streaming data processing, leveraging open-source datasets and aiming for August 2025 completion. Key achievements include a comparison of lambda and kappa architectures, understanding lambda's structure, and confirming Spark-Kafka integration feasibility, while challenges involve balancing latency and throughput, fault tolerance, and scalability. The project utilizes Scala with Spark SQL and Structured Streaming on local or cloud infrastructure, with resource requirements including Apache Spark and an Apache Kafka cluster."
+        ],
+        "extracted_images": [
+            {
+                "image_path": "extracted_images\\25SPF21VIT_2nd_Monthly_Connect.pptx_s1.png",
+                "description": "The Samsung PRISM logo features the word \"PRISM\" in large, blue, polygonal letters with the Samsung logo above it and a tagline below."
+            },
+            {
+                "image_path": "extracted_images\\25SPF21VIT_2nd_Monthly_Connect.pptx_s2.png",
+                "description": "The Samsung PRISM logo features large, blue, polygonal letters spelling out \"PRISM\" with \"SAMSUNG\" above it and a tagline, \"PREPARING AND INSPIRING STUDENTS MINDS,\" below."
+            },
+            {
+                "image_path": "extracted_images\\25SPF21VIT_2nd_Monthly_Connect.pptx_s3.png",
+                "description": "The Samsung PRISM logo displays the word \"PRISM\" in large, blue, geometric lettering with the Samsung logo above it and a tagline below."
+            }
+        ]
+    }
+]

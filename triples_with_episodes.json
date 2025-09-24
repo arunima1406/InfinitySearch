@@ -2,3843 +2,1408 @@
     "knowledge_graph": [
         {
             "source_file": "1_Embedded-product-design-life-cycle.pdf",
-            "episode_id": "ep_ebb11aca-d113-49df-8be6-8c2f8ad7fed6",
+            "episode_id": "ep_1eb7c803-49f1-47e8-ae5d-ee0e94d6904c",
             "triples": {
                 "1": {
                     "start": "waterfall model",
                     "relation": "IS_A",
-                    "end": "linear and sequential software development approach"
+                    "end": "embedded systems product development life cycle"
                 },
                 "2": {
                     "start": "waterfall model",
-                    "relation": "CAN_BE_APPLIED_TO",
-                    "end": "embedded systems"
+                    "relation": "IS_A",
+                    "end": "linear and sequential approach"
                 },
                 "3": {
                     "start": "waterfall model",
-                    "relation": "CHARACTERIZED_BY",
-                    "end": "distinct phases"
+                    "relation": "HAS_PHASE",
+                    "end": "requirements"
                 },
                 "4": {
-                    "start": "distinct phases",
-                    "relation": "INCLUDE",
-                    "end": "requirements gathering"
-                },
-                "5": {
-                    "start": "distinct phases",
-                    "relation": "INCLUDE",
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
                     "end": "design"
                 },
-                "6": {
-                    "start": "distinct phases",
-                    "relation": "INCLUDE",
+                "5": {
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
                     "end": "implementation"
                 },
-                "7": {
-                    "start": "distinct phases",
-                    "relation": "INCLUDE",
+                "6": {
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
                     "end": "testing"
                 },
-                "8": {
-                    "start": "distinct phases",
-                    "relation": "INCLUDE",
+                "7": {
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
                     "end": "maintenance"
+                },
+                "8": {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "projects with clear, stable requirements"
                 },
                 "9": {
                     "start": "waterfall model",
-                    "relation": "IS_SUITABLE_FOR_PROJECTS_WITH",
-                    "end": "welldefined stable requirements"
+                    "relation": "LACKS",
+                    "end": "flexibility for dynamic environments"
                 },
                 "10": {
-                    "start": "waterfall model",
-                    "relation": "HAS_DRAWBACK",
-                    "end": "inflexibility"
+                    "start": "spiral model",
+                    "relation": "IS_A",
+                    "end": "embedded systems product development life cycle"
                 },
                 "11": {
-                    "start": "inflexibility",
-                    "relation": "IS_DRAWBACK_IN",
-                    "end": "dynamic embedded systems landscape"
+                    "start": "spiral model",
+                    "relation": "IS_A",
+                    "end": "risk-driven, iterative process"
                 },
                 "12": {
-                    "start": "waterfall model",
-                    "relation": "WORKS_BEST_WHEN",
-                    "end": "requirements for the embedded system are well understood"
+                    "start": "spiral model",
+                    "relation": "COMBINES",
+                    "end": "waterfall model"
                 },
                 "13": {
-                    "start": "waterfall model",
-                    "relation": "WORKS_BEST_WHEN",
-                    "end": "requirements are unlikely to change significantly during development"
+                    "start": "spiral model",
+                    "relation": "COMBINES",
+                    "end": "iterative elements"
                 },
                 "14": {
-                    "start": "waterfall model",
-                    "relation": "PROCESS_FLOWS",
-                    "end": "in a linear fashion"
+                    "start": "spiral model",
+                    "relation": "EMPHASIZES",
+                    "end": "risk assessment"
                 },
                 "15": {
-                    "start": "waterfall model",
+                    "start": "spiral model",
                     "relation": "EMPHASIZES",
-                    "end": "thorough documentation"
+                    "end": "prototyping"
                 },
                 "16": {
-                    "start": "thorough documentation",
-                    "relation": "IS_HELPFUL_FOR",
-                    "end": "understanding and maintaining the system later"
+                    "start": "spiral model",
+                    "relation": "EMPHASIZES",
+                    "end": "adaptability"
                 },
                 "17": {
-                    "start": "waterfall model",
-                    "relation": "IS_SUITABLE_FOR",
-                    "end": "embedded systems with clear specifications"
+                    "start": "spiral model",
+                    "relation": "APPROPRIATE_FOR",
+                    "end": "complex embedded systems with evolving requirements"
                 },
                 "18": {
                     "start": "waterfall model",
-                    "relation": "IS_SUITABLE_FOR",
-                    "end": "embedded systems with high reliability requirements"
+                    "relation": "OUTLINES",
+                    "end": "sequential software development process"
                 },
                 "19": {
-                    "start": "waterfall model",
-                    "relation": "IS_SUITABLE_FOR",
-                    "end": "embedded systems where changes are difficult or costly to implement"
-                },
-                "20": {
-                    "start": "safety-critical systems",
-                    "relation": "EXAMPLE_OF_EMBEDDED_SYSTEM_WHERE_WATERFALL_MODEL_MAY_BE_SUITABLE",
-                    "end": "waterfall model"
-                },
-                "21": {
-                    "start": "industrial control systems",
-                    "relation": "EXAMPLE_OF_EMBEDDED_SYSTEM_WHERE_WATERFALL_MODEL_MAY_BE_SUITABLE",
-                    "end": "waterfall model"
-                },
-                "22": {
-                    "start": "some automotive applications",
-                    "relation": "EXAMPLE_OF_EMBEDDED_SYSTEM_WHERE_WATERFALL_MODEL_MAY_BE_SUITABLE",
-                    "end": "waterfall model"
-                },
-                "23": {
-                    "start": "waterfall model",
-                    "relation": "HAS_ADVANTAGE",
-                    "end": "welldefined phases"
-                },
-                "24": {
-                    "start": "welldefined phases",
-                    "relation": "PROVIDES",
-                    "end": "structured"
-                },
-                "25": {
-                    "start": "waterfall model",
-                    "relation": "SUITABLE_FOR",
-                    "end": "safetycritical systems"
-                },
-                "26": {
-                    "start": "waterfall model",
-                    "relation": "SUITABLE_FOR",
-                    "end": "industrial control systems"
-                },
-                "27": {
-                    "start": "waterfall model",
-                    "relation": "SUITABLE_FOR",
-                    "end": "some automotive applications"
-                },
-                "28": {
-                    "start": "waterfall model",
-                    "relation": "HAS_ADVANTAGE",
-                    "end": "welldefined phases"
-                },
-                "29": {
-                    "start": "waterfall model",
-                    "relation": "HAS_ADVANTAGE",
-                    "end": "easy to manage"
-                },
-                "30": {
-                    "start": "waterfall model",
-                    "relation": "HAS_ADVANTAGE",
-                    "end": "low risk when requirements are stable"
-                },
-                "31": {
-                    "start": "waterfall model",
-                    "relation": "HAS_ADVANTAGE",
-                    "end": "high reliability"
-                },
-                "32": {
-                    "start": "waterfall model",
-                    "relation": "HAS_DISADVANTAGE",
-                    "end": "inflexible"
-                },
-                "33": {
-                    "start": "waterfall model",
-                    "relation": "HAS_DISADVANTAGE",
-                    "end": "late testing"
-                },
-                "34": {
-                    "start": "waterfall model",
-                    "relation": "HAS_DISADVANTAGE",
-                    "end": "limited customer involvement"
-                },
-                "35": {
-                    "start": "waterfall model",
-                    "relation": "HAS_DISADVANTAGE",
-                    "end": "not ideal for complex projects"
-                },
-                "36": {
-                    "start": "agile",
-                    "relation": "IS_AN_ALTERNATIVE_TO",
-                    "end": "waterfall model"
-                },
-                "37": {
-                    "start": "agile",
-                    "relation": "EMPHASIZES",
-                    "end": "iterative development"
-                },
-                "38": {
-                    "start": "agile",
-                    "relation": "EMPHASIZES",
-                    "end": "collaboration"
-                },
-                "39": {
-                    "start": "agile",
-                    "relation": "EMPHASIZES",
-                    "end": "flexibility"
-                },
-                "40": {
-                    "start": "agile",
-                    "relation": "ARE_MORE_APPROPRIATE_FOR",
-                    "end": "embedded system projects"
-                },
-                "41": {
-                    "start": "agile methodologies",
-                    "relation": "EMPHASIZE",
-                    "end": "iterative development"
-                },
-                "42": {
-                    "start": "agile methodologies",
-                    "relation": "EMPHASIZE",
-                    "end": "collaboration"
-                },
-                "43": {
-                    "start": "agile methodologies",
-                    "relation": "EMPHASIZE",
-                    "end": "flexibility"
-                },
-                "44": {
-                    "start": "spiral model",
-                    "relation": "IS_A",
-                    "end": "riskdriven software development process"
-                },
-                "45": {
-                    "start": "spiral model",
-                    "relation": "IS_WELLSUITED_FOR",
-                    "end": "embedded systems"
-                },
-                "46": {
-                    "start": "spiral model",
-                    "relation": "COMBINES_ELEMENTS_OF",
-                    "end": "waterfall"
-                },
-                "47": {
-                    "start": "spiral model",
-                    "relation": "COMBINES_ELEMENTS_OF",
-                    "end": "iterative models"
-                },
-                "48": {
-                    "start": "spiral model",
-                    "relation": "ALLOWS_FOR",
-                    "end": "risk assessment"
-                },
-                "49": {
-                    "start": "spiral model",
-                    "relation": "ALLOWS_FOR",
-                    "end": "prototyping"
-                },
-                "50": {
-                    "start": "risk management",
-                    "relation": "IS_BENEFICIAL_FOR",
-                    "end": "embedded systems"
-                },
-                "51": {
-                    "start": "spiral model",
-                    "relation": "ALLOWS_FOR",
-                    "end": "identifying risks"
-                },
-                "52": {
-                    "start": "spiral model",
-                    "relation": "ALLOWS_FOR",
-                    "end": "mitigating risks"
-                },
-                "53": {
-                    "start": "spiral model",
-                    "relation": "ALLOWS_FOR",
-                    "end": "continuous refinement"
-                },
-                "54": {
-                    "start": "spiral model",
-                    "relation": "ALLOWS_FOR",
-                    "end": "adaptation"
-                },
-                "55": {
-                    "start": "spiral model",
-                    "relation": "SUPPORTS",
-                    "end": "building prototypes"
-                },
-                "56": {
-                    "start": "spiral model",
-                    "relation": "SUPPORTS",
-                    "end": "building prototypes"
-                },
-                "57": {
-                    "start": "building prototypes",
-                    "relation": "ENABLING",
-                    "end": "developers"
-                },
-                "58": {
-                    "start": "developers",
-                    "relation": "VALIDATE",
-                    "end": "design choices"
-                },
-                "59": {
-                    "start": "developers",
-                    "relation": "TEST",
-                    "end": "functionality"
-                },
-                "60": {
-                    "start": "developers",
-                    "relation": "GATHER",
-                    "end": "user feedback"
-                },
-                "61": {
-                    "start": "user feedback",
-                    "relation": "IMPORTANT_IN",
-                    "end": "embedded systems"
-                },
-                "62": {
-                    "start": "embedded systems",
-                    "relation": "INTERACT",
-                    "end": "hardware and software"
-                },
-                "63": {
-                    "start": "spiral model",
-                    "relation": "SUPPORTS",
-                    "end": "adaptability to changing requirements"
-                },
-                "64": {
-                    "start": "embedded systems",
-                    "relation": "HAVE",
-                    "end": "evolving requirements"
-                },
-                "65": {
-                    "start": "spiral models iterative approach",
-                    "relation": "ALLOWS_FOR",
-                    "end": "incorporating changes"
-                },
-                "66": {
-                    "start": "spiral models iterative approach",
-                    "relation": "ALLOWS_FOR",
-                    "end": "incorporating new functionalities"
-                },
-                "67": {
-                    "start": "spiral model",
-                    "relation": "ENSURING",
-                    "end": "final product meets changing needs"
-                },
-                "68": {
-                    "start": "spiral model",
-                    "relation": "SUITABLE_FOR",
-                    "end": "complex systems"
-                },
-                "69": {
-                    "start": "embedded systems",
-                    "relation": "CAN_BE",
-                    "end": "complex"
-                },
-                "70": {
-                    "start": "embedded systems",
-                    "relation": "INVOLVING",
-                    "end": "intricate hardware and software interactions"
-                },
-                "71": {
-                    "start": "spiral models structured approach",
-                    "relation": "HELPS_MANAGE",
-                    "end": "complexity"
-                },
-                "72": {
-                    "start": "spiral model",
-                    "relation": "PROVIDES",
-                    "end": "flexible framework"
-                },
-                "73": {
-                    "start": "spiral model",
-                    "relation": "PROVIDES",
-                    "end": "risk-aware framework"
-                },
-                "74": {
-                    "start": "spiral model",
-                    "relation": "FOR",
-                    "end": "developing embedded systems"
-                },
-                "75": {
-                    "start": "spiral model",
-                    "relation": "ALLOWING_FOR",
-                    "end": "continuous improvement"
-                },
-                "76": {
-                    "start": "spiral model",
-                    "relation": "ALLOWING_FOR",
-                    "end": "adaptation"
-                },
-                "77": {
-                    "start": "Waterfall Model",
-                    "relation": "HAS_PHASE",
+                    "start": "sequential software development process",
+                    "relation": "INCLUDES",
                     "end": "requirement analysis"
                 },
-                "78": {
-                    "start": "Waterfall Model",
-                    "relation": "HAS_PHASE",
+                "20": {
+                    "start": "sequential software development process",
+                    "relation": "INCLUDES",
                     "end": "system design"
                 },
-                "79": {
-                    "start": "Waterfall Model",
-                    "relation": "HAS_PHASE",
+                "21": {
+                    "start": "sequential software development process",
+                    "relation": "INCLUDES",
                     "end": "implementation"
                 },
-                "80": {
-                    "start": "Waterfall Model",
-                    "relation": "HAS_PHASE",
+                "22": {
+                    "start": "sequential software development process",
+                    "relation": "INCLUDES",
                     "end": "testing"
                 },
-                "81": {
-                    "start": "Waterfall Model",
-                    "relation": "HAS_PHASE",
+                "23": {
+                    "start": "sequential software development process",
+                    "relation": "INCLUDES",
                     "end": "deployment"
                 },
-                "82": {
-                    "start": "Waterfall Model",
-                    "relation": "HAS_PHASE",
+                "24": {
+                    "start": "sequential software development process",
+                    "relation": "INCLUDES",
                     "end": "maintenance"
                 },
-                "83": {
-                    "start": "spiral model",
-                    "relation": "ILLUSTRATES",
-                    "end": "software design"
+                "25": {
+                    "start": "spiral model of software design",
+                    "relation": "IS_ILLUSTRATED_AS",
+                    "end": "cone with concentric circles"
                 },
-                "84": {
-                    "start": "spiral model",
-                    "relation": "SHOWS",
-                    "end": "iterative development phases"
+                "26": {
+                    "start": "concentric circles",
+                    "relation": "REPRESENTING",
+                    "end": "stages of system feasibility"
                 },
-                "85": {
-                    "start": "iterative development phases",
-                    "relation": "FROM",
-                    "end": "system feasibility"
+                "27": {
+                    "start": "concentric circles",
+                    "relation": "REPRESENTING",
+                    "end": "specification"
                 },
-                "86": {
-                    "start": "iterative development phases",
-                    "relation": "TO",
+                "28": {
+                    "start": "concentric circles",
+                    "relation": "REPRESENTING",
+                    "end": "prototype"
+                },
+                "29": {
+                    "start": "concentric circles",
+                    "relation": "REPRESENTING",
+                    "end": "initial system"
+                },
+                "30": {
+                    "start": "concentric circles",
+                    "relation": "REPRESENTING",
                     "end": "enhanced system"
+                },
+                "31": {
+                    "start": "system life cycle",
+                    "relation": "ENCOMPASSING",
+                    "end": "design"
+                },
+                "32": {
+                    "start": "system life cycle",
+                    "relation": "ENCOMPASSING",
+                    "end": "test"
+                },
+                "33": {
+                    "start": "system life cycle",
+                    "relation": "ENCOMPASSING",
+                    "end": "requirements"
                 }
             }
         },
         {
             "source_file": "1_Sample-architectures.pdf",
-            "episode_id": "ep_9dc76428-75b6-4eb1-b1c9-63fcc721d452",
+            "episode_id": "ep_bfec2dd7-e9fb-482c-ab9b-f7e199433e66",
             "triples": {
                 "1": {
-                    "start": "embedded system design architectures",
-                    "relation": "ABSTRACTION_LAYER_SAMPLES",
-                    "end": "microwave oven"
+                    "start": "Embedded system design architectures",
+                    "relation": "ADDRESS",
+                    "end": "structure of systems controlling everyday appliances"
                 },
                 "2": {
-                    "start": "embedded system design architectures",
-                    "relation": "ABSTRACTION_LAYER_SAMPLES",
-                    "end": "elevator"
+                    "start": "systems controlling everyday appliances",
+                    "relation": "INCLUDE",
+                    "end": "microwave ovens"
                 },
                 "3": {
-                    "start": "embedded system design architectures",
-                    "relation": "ABSTRACTION_LAYER_SAMPLES",
-                    "end": "lift"
+                    "start": "systems controlling everyday appliances",
+                    "relation": "INCLUDE",
+                    "end": "elevators"
                 },
                 "4": {
-                    "start": "embedded system design architectures",
-                    "relation": "ABSTRACTION_LAYER_SAMPLES",
-                    "end": "washing machine"
+                    "start": "systems controlling everyday appliances",
+                    "relation": "INCLUDE",
+                    "end": "washing machines"
                 },
                 "5": {
-                    "start": "behaviour model examples",
-                    "relation": "FOR",
-                    "end": "microwave oven"
+                    "start": "Embedded system design architectures",
+                    "relation": "UTILIZE",
+                    "end": "abstraction layers"
                 },
                 "6": {
-                    "start": "behaviour model examples",
-                    "relation": "FOR",
-                    "end": "elevator"
+                    "start": "abstraction layers",
+                    "relation": "PURPOSE",
+                    "end": "simplify complex hardware interactions"
                 },
                 "7": {
-                    "start": "behaviour model examples",
-                    "relation": "FOR",
-                    "end": "washing machine"
+                    "start": "abstraction layers",
+                    "relation": "PRESENT",
+                    "end": "cleaner interface for software development"
                 },
                 "8": {
-                    "start": "class diagram",
-                    "relation": "OF",
-                    "end": "oven controller system"
+                    "start": "Behavior models",
+                    "relation": "EXAMPLE",
+                    "end": "models for microwave ovens"
                 },
                 "9": {
-                    "start": "oven controller system",
-                    "relation": "HAS_COMPONENT",
-                    "end": "components"
+                    "start": "Behavior models",
+                    "relation": "EXAMPLE",
+                    "end": "models for elevators"
                 },
                 "10": {
-                    "start": "oven controller system",
-                    "relation": "HAS_RELATIONSHIP",
-                    "end": "relationships"
+                    "start": "Behavior models",
+                    "relation": "EXAMPLE",
+                    "end": "models for washing machines"
                 },
                 "11": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "timer"
+                    "start": "Behavior models",
+                    "relation": "DESCRIBE",
+                    "end": "intended functionalities of these embedded devices"
                 },
                 "12": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "door"
+                    "start": "Behavior models",
+                    "relation": "DESCRIBE",
+                    "end": "operational sequences of these embedded devices"
                 },
                 "13": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "buttons"
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "DoorSensor"
                 },
                 "14": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "keypad"
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "Light"
                 },
                 "15": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "sensors"
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "Beeper"
                 },
                 "16": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "display"
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "PowerTube"
                 },
                 "17": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "buzzer"
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "Button"
                 },
                 "18": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "traction motor control"
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "doors"
                 },
                 "19": {
-                    "start": "system controller",
-                    "relation": "CONNECTED_TO",
-                    "end": "floor calculator"
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "buttons"
                 },
                 "20": {
                     "start": "controller",
-                    "relation": "RECEIVING_INPUT_FROM",
-                    "end": "buttons"
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "a keypad"
                 },
                 "21": {
                     "start": "controller",
-                    "relation": "RECEIVING_INPUT_FROM",
+                    "relation": "RECEIVES_INPUT_FROM",
                     "end": "sensors"
                 },
                 "22": {
                     "start": "controller",
-                    "relation": "RECEIVING_INPUT_FROM",
-                    "end": "door"
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "a timer"
                 },
                 "23": {
                     "start": "controller",
-                    "relation": "CONTROLLING",
-                    "end": "display"
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "a traction motor control"
                 },
                 "24": {
                     "start": "controller",
-                    "relation": "CONTROLLING",
-                    "end": "LED"
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "a display"
                 },
                 "25": {
                     "start": "controller",
-                    "relation": "CONTROLLING",
-                    "end": "motor"
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "a buzzer"
                 },
                 "26": {
                     "start": "controller",
-                    "relation": "CONTROLLING",
-                    "end": "outlet"
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "a floor calculator"
                 },
                 "27": {
                     "start": "controller",
-                    "relation": "CONTROLLING",
-                    "end": "inlet"
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "buttons"
                 },
                 "28": {
-                    "start": "flowchart",
-                    "relation": "DEPICTING",
-                    "end": "heating process"
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "sensors"
                 },
                 "29": {
-                    "start": "heating process",
-                    "relation": "CHECKS",
-                    "end": "door status"
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "door"
                 },
                 "30": {
-                    "start": "heating process",
-                    "relation": "CHECKS",
-                    "end": "heating duration"
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "display"
                 },
                 "31": {
-                    "start": "heating process",
-                    "relation": "REQUIRES",
-                    "end": "completion"
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "LED"
                 },
                 "32": {
-                    "start": "passenger",
-                    "relation": "USES",
-                    "end": "hall call button"
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "motor"
                 },
                 "33": {
-                    "start": "hall call button",
-                    "relation": "REQUESTS",
-                    "end": "elevator"
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "outlet"
                 },
                 "34": {
-                    "start": "image",
-                    "relation": "ILLUSTRATES",
-                    "end": "steps involved in a passenger using a hall call button to request an elevator"
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "inlet"
                 },
                 "35": {
-                    "start": "state diagram",
-                    "relation": "ILLUSTRATES",
-                    "end": "washing machine's control logic"
+                    "start": "flowchart",
+                    "relation": "OUTLINES",
+                    "end": "process"
                 },
                 "36": {
-                    "start": "washing machine's control logic",
-                    "relation": "BASED_ON",
-                    "end": "sensor readings"
+                    "start": "process",
+                    "relation": "STARTS_WITH",
+                    "end": "checking if heating is done"
                 },
                 "37": {
-                    "start": "washing machine's control logic",
-                    "relation": "BASED_ON",
-                    "end": "timers"
+                    "start": "process",
+                    "relation": "PROCEEDS_TO",
+                    "end": "check door status"
                 },
                 "38": {
-                    "start": "state diagram",
-                    "relation": "VISUALIZES",
-                    "end": "washing machine's control program"
+                    "start": "process",
+                    "relation": "PROCEEDS_TO",
+                    "end": "check time intervals"
                 },
                 "39": {
-                    "start": "washing machine's control program",
-                    "relation": "USES",
-                    "end": "finite state machine"
+                    "start": "process",
+                    "relation": "CAN_RESULT_IN",
+                    "end": "complete heating"
                 },
                 "40": {
-                    "start": "finite state machine",
-                    "relation": "IN_STYLE",
-                    "end": "CSD style"
+                    "start": "process",
+                    "relation": "CAN_RESULT_IN",
+                    "end": "indicate the door is open"
+                },
+                "41": {
+                    "start": "process",
+                    "relation": "CAN_RESULT_IN",
+                    "end": "re-heat"
+                },
+                "42": {
+                    "start": "process",
+                    "relation": "ENDS_WITH",
+                    "end": "finishing"
+                },
+                "43": {
+                    "start": "passenger",
+                    "relation": "PRESSES",
+                    "end": "hall button"
+                },
+                "44": {
+                    "start": "passenger",
+                    "relation": "INITIATES",
+                    "end": "sequence of events"
+                },
+                "45": {
+                    "start": "hall button",
+                    "relation": "INITIATES",
+                    "end": "sequence of events"
+                },
+                "46": {
+                    "start": "sequence of events",
+                    "relation": "INVOLVES",
+                    "end": "hall call control"
+                },
+                "47": {
+                    "start": "sequence of events",
+                    "relation": "INVOLVES",
+                    "end": "dispatcher"
+                },
+                "48": {
+                    "start": "sequence of events",
+                    "relation": "INVOLVES",
+                    "end": "drive control"
+                },
+                "49": {
+                    "start": "sequence of events",
+                    "relation": "INVOLVES",
+                    "end": "drive"
+                },
+                "50": {
+                    "start": "sequence of events",
+                    "relation": "INVOLVES",
+                    "end": "door control"
+                },
+                "51": {
+                    "start": "sequence of events",
+                    "relation": "INVOLVES",
+                    "end": "door"
+                },
+                "52": {
+                    "start": "sequence of events",
+                    "relation": "TO_MOVE",
+                    "end": "elevator"
+                },
+                "53": {
+                    "start": "sequence of events",
+                    "relation": "TO_OPEN/CLOSE",
+                    "end": "door"
+                },
+                "54": {
+                    "start": "diagram",
+                    "relation": "ILLUSTRATES",
+                    "end": "state machine"
+                },
+                "55": {
+                    "start": "state machine",
+                    "relation": "FOR",
+                    "end": "washing machine's operational cycle"
+                },
+                "56": {
+                    "start": "state diagram",
+                    "relation": "VISUALIZES",
+                    "end": "control software"
+                },
+                "57": {
+                    "start": "control software",
+                    "relation": "FOR",
+                    "end": "washing machine"
                 }
             }
         },
         {
             "source_file": "22BEC0807_report.pdf",
-            "episode_id": "ep_645988be-5f96-4d03-a52b-e257659e89f4",
+            "episode_id": "ep_12ab3867-0be2-4c84-90fd-30b40284a242",
             "triples": {
                 "1": {
-                    "start": "vlsi design internship program",
-                    "relation": "IS_AN",
-                    "end": "industrial internship report"
+                    "start": "VLSI design internship program",
+                    "relation": "PROVIDED",
+                    "end": "comprehensive training"
                 },
                 "2": {
-                    "start": "vlsi design internship program",
-                    "relation": "HAS_START_DATE",
-                    "end": "5th june 2024"
+                    "start": "comprehensive training",
+                    "relation": "IN_FIELD",
+                    "end": "digital electronics"
                 },
                 "3": {
-                    "start": "vlsi design internship program",
-                    "relation": "HAS_END_DATE",
-                    "end": "13th july 2024"
+                    "start": "digital electronics",
+                    "relation": "COVERED",
+                    "end": "number systems"
                 },
                 "4": {
-                    "start": "chandrima manik",
-                    "relation": "SUBMITTED",
-                    "end": "vlsi design internship program"
+                    "start": "digital electronics",
+                    "relation": "COVERED",
+                    "end": "logic circuits"
                 },
                 "5": {
-                    "start": "chandrima manik",
-                    "relation": "HAS_STUDENT_ID",
-                    "end": "22bec0807"
+                    "start": "digital electronics",
+                    "relation": "COVERED",
+                    "end": "finite state machines"
                 },
                 "6": {
-                    "start": "chandrima manik",
-                    "relation": "IS_IN_PARTIAL_FULFILLMENT_FOR",
-                    "end": "b tech in electronics and communications engineering"
-                },
-                "7": {
-                    "start": "vellore institute of technology vellore",
-                    "relation": "HAS_SCHOOL",
-                    "end": "school of electronics and communication engineering"
-                },
-                "8": {
-                    "start": "school of electronics and communication engineering",
-                    "relation": "IS_PART_OF",
-                    "end": "vellore institute of technology vellore"
-                },
-                "9": {
-                    "start": "certification course",
-                    "relation": "TOOK_PLACE_DURING_VACATION_PERIOD",
-                    "end": "2024"
-                },
-                "10": {
-                    "start": "certification course",
-                    "relation": "WAS_IMPORTANT_STAGE_OF",
-                    "end": "practical learning experience"
-                },
-                "11": {
-                    "start": "university",
-                    "relation": "HAS_COMMITMENT_TO",
-                    "end": "creating an environment that encourages handson learning exploration and realworld application of theoretical knowledge"
-                },
-                "12": {
-                    "start": "maven silicon",
-                    "relation": "PROVIDED_OPPORTUNITY_FOR",
-                    "end": "vlsi design internship certification"
-                },
-                "13": {
-                    "start": "maven silicon",
-                    "relation": "PROVIDED_HELP_AND_SUPPORT_TO",
-                    "end": "chandrima manik"
-                },
-                "14": {
-                    "start": "dr noor mohammed v",
-                    "relation": "IS_HOD_OF",
-                    "end": "department"
-                },
-                "15": {
-                    "start": "dr noor mohammed v",
-                    "relation": "PROVIDED_GUIDANCE_DURING",
-                    "end": "internship period"
-                },
-                "16": {
-                    "start": "introduction",
-                    "relation": "IS_SECTION_NUMBER",
-                    "end": "1"
-                },
-                "17": {
-                    "start": "details about assessments",
-                    "relation": "IS_SECTION_NUMBER",
-                    "end": "2"
-                },
-                "18": {
-                    "start": "detailed description of various modules",
-                    "relation": "IS_SECTION_NUMBER",
-                    "end": "3"
-                },
-                "19": {
-                    "start": "Dr. Noor Mohammed V",
-                    "relation": "HOD_OF",
-                    "end": "my departments"
-                },
-                "20": {
-                    "start": "The course",
-                    "relation": "AIMED_TO_PROVIDE",
-                    "end": "a comprehensive introduction to digital electronics"
-                },
-                "21": {
-                    "start": "digital electronics",
-                    "relation": "COVERED_TOPICS",
-                    "end": "number systems"
-                },
-                "22": {
-                    "start": "digital electronics",
-                    "relation": "COVERED_TOPICS",
-                    "end": "logic circuits"
-                },
-                "23": {
-                    "start": "digital electronics",
-                    "relation": "COVERED_TOPICS",
-                    "end": "sequential circuits"
-                },
-                "24": {
-                    "start": "The course",
-                    "relation": "DELVED_INTO",
-                    "end": "verilog HDL"
-                },
-                "25": {
-                    "start": "verilog HDL",
-                    "relation": "FOCUSED_ON",
-                    "end": "data types"
-                },
-                "26": {
-                    "start": "verilog HDL",
-                    "relation": "FOCUSED_ON",
-                    "end": "operators"
-                },
-                "27": {
-                    "start": "verilog HDL",
-                    "relation": "FOCUSED_ON",
-                    "end": "structured procedures"
-                },
-                "28": {
-                    "start": "The course",
-                    "relation": "PROVIDED",
-                    "end": "Practical experience"
-                },
-                "29": {
-                    "start": "Practical experience",
-                    "relation": "NECESSARY_FOR",
-                    "end": "a career in VLSI design"
-                },
-                "30": {
-                    "start": "Expected outcomes",
-                    "relation": "INCLUDE",
-                    "end": "a solid understanding of digital electronics fundamentals"
-                },
-                "31": {
-                    "start": "Expected outcomes",
-                    "relation": "INCLUDE",
+                    "start": "VLSI design internship program",
+                    "relation": "DEVELOPED",
                     "end": "proficiency in Verilog HDL"
                 },
-                "32": {
-                    "start": "Expected outcomes",
-                    "relation": "INCLUDE",
-                    "end": "understanding of data types"
+                "7": {
+                    "start": "Verilog HDL",
+                    "relation": "USED_FOR",
+                    "end": "modeling digital systems"
                 },
-                "33": {
-                    "start": "Expected outcomes",
-                    "relation": "INCLUDE",
-                    "end": "operators"
+                "8": {
+                    "start": "Verilog HDL",
+                    "relation": "USED_FOR",
+                    "end": "designing digital systems"
                 },
-                "34": {
-                    "start": "Expected outcomes",
-                    "relation": "INCLUDE",
-                    "end": "structured procedures for effective design"
+                "9": {
+                    "start": "VLSI design internship program",
+                    "relation": "INCLUDED",
+                    "end": "practical experience"
                 },
-                "35": {
-                    "start": "Expected outcomes",
-                    "relation": "INCLUDE",
-                    "end": "practical experience through hands-on labs"
+                "10": {
+                    "start": "practical experience",
+                    "relation": "THROUGH",
+                    "end": "hands-on labs"
                 },
-                "36": {
+                "11": {
                     "start": "hands-on labs",
-                    "relation": "TO_IMPLEMENT",
-                    "end": "real-world designs"
+                    "relation": "IMPLEMENTED",
+                    "end": "UART designs"
                 },
-                "37": {
-                    "start": "real-world designs",
-                    "relation": "INCLUDE",
-                    "end": "UART"
+                "12": {
+                    "start": "hands-on labs",
+                    "relation": "IMPLEMENTED",
+                    "end": "alarm clock designs"
                 },
-                "38": {
-                    "start": "real-world designs",
-                    "relation": "INCLUDE",
-                    "end": "alarm clock"
+                "13": {
+                    "start": "hands-on labs",
+                    "relation": "IMPLEMENTED",
+                    "end": "SPI designs"
                 },
-                "39": {
-                    "start": "real-world designs",
-                    "relation": "INCLUDE",
-                    "end": "SPI"
+                "14": {
+                    "start": "hands-on labs",
+                    "relation": "IMPLEMENTED",
+                    "end": "VGA designs"
                 },
-                "40": {
-                    "start": "real-world designs",
-                    "relation": "INCLUDE",
-                    "end": "VGA"
-                },
-                "41": {
-                    "start": "The course",
-                    "relation": "AIMS_TO_EQUIP",
-                    "end": "learners"
-                },
-                "42": {
-                    "start": "learners",
-                    "relation": "EQUIPPED_WITH",
-                    "end": "necessary skills and knowledge"
-                },
-                "43": {
-                    "start": "necessary skills and knowledge",
-                    "relation": "FOR",
-                    "end": "to excel in VLSI design"
-                },
-                "44": {
-                    "start": "The target domain",
-                    "relation": "IS",
-                    "end": "digital electronics"
-                },
-                "45": {
-                    "start": "The target domain",
-                    "relation": "IS",
-                    "end": "VLSI design"
-                },
-                "46": {
-                    "start": "The course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "introduction to VLSI"
-                },
-                "47": {
-                    "start": "The course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "SoC design"
-                },
-                "48": {
-                    "start": "The course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "ASIC design flow"
-                },
-                "49": {
-                    "start": "The course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "digital design"
-                },
-                "50": {
-                    "start": "The course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "number systems"
-                },
-                "51": {
-                    "start": "course",
-                    "relation": "TARGET_DOMAIN",
-                    "end": "digital electronics"
-                },
-                "52": {
-                    "start": "course",
-                    "relation": "TARGET_DOMAIN",
-                    "end": "VLSI design"
-                },
-                "53": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "introduction to VLSI"
-                },
-                "54": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "SoC design"
-                },
-                "55": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "ASIC design flow"
-                },
-                "56": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "digital design"
-                },
-                "57": {
-                    "start": "digital design",
-                    "relation": "INCLUDES",
-                    "end": "number systems and codes"
-                },
-                "58": {
-                    "start": "digital design",
-                    "relation": "INCLUDES",
-                    "end": "logic circuits"
-                },
-                "59": {
-                    "start": "digital design",
-                    "relation": "INCLUDES",
-                    "end": "combinational circuits"
-                },
-                "60": {
-                    "start": "digital design",
-                    "relation": "INCLUDES",
-                    "end": "sequential circuits"
-                },
-                "61": {
-                    "start": "digital design",
-                    "relation": "INCLUDES",
-                    "end": "FSM"
-                },
-                "62": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "Verilog HDL"
-                },
-                "63": {
-                    "start": "Verilog HDL",
-                    "relation": "INCLUDES",
-                    "end": "introduction"
-                },
-                "64": {
-                    "start": "Verilog HDL",
-                    "relation": "INCLUDES",
-                    "end": "data types"
-                },
-                "65": {
-                    "start": "Verilog HDL",
-                    "relation": "INCLUDES",
-                    "end": "Verilog operators"
-                },
-                "66": {
-                    "start": "Verilog HDL",
-                    "relation": "INCLUDES",
-                    "end": "structured procedures"
-                },
-                "67": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "SPI design"
-                },
-                "68": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "instruction set architecture"
-                },
-                "69": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "architecture design"
-                },
-                "70": {
-                    "start": "course syllabus",
-                    "relation": "INCLUDES",
-                    "end": "5 stage pipelined RTL design"
-                },
-                "71": {
+                "15": {
                     "start": "VLSI design internship program",
-                    "relation": "REGISTRATION_PROCESS",
-                    "end": "course enrollment"
+                    "relation": "CULMINATED_IN",
+                    "end": "design of a RISC-V processor module"
                 },
-                "72": {
+                "16": {
+                    "start": "design of a RISC-V processor module",
+                    "relation": "USED",
+                    "end": "five-stage pipeline"
+                },
+                "17": {
                     "start": "VLSI design internship program",
-                    "relation": "GUIDED_BY",
-                    "end": "prof jayakumar sadhasivam phd"
+                    "relation": "INVOLVED",
+                    "end": "internal knowledge checks"
                 },
-                "73": {
-                    "start": "prof jayakumar sadhasivam phd",
-                    "relation": "IS_A",
-                    "end": "placement coordinator"
-                },
-                "74": {
+                "18": {
                     "start": "VLSI design internship program",
-                    "relation": "DATE",
-                    "end": "june 3 2024"
+                    "relation": "INVOLVED",
+                    "end": "external final test"
                 },
-                "75": {
-                    "start": "assessments",
-                    "relation": "DETAILS_ABOUT",
-                    "end": "internal and external assessments"
-                },
-                "76": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check introduction to VLSI"
-                },
-                "77": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check number systems and codes"
-                },
-                "78": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check logic circuits"
-                },
-                "79": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check combinational circuits"
-                },
-                "80": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check sequential circuits"
-                },
-                "81": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check FSM"
-                },
-                "82": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check combinational circuits"
-                },
-                "83": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check introduction to Verilog HDL"
-                },
-                "84": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check data types"
-                },
-                "85": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check operators"
-                },
-                "86": {
-                    "start": "internal assessments",
-                    "relation": "INCLUDES",
-                    "end": "knowledge check synthesis coding style"
-                },
-                "87": {
-                    "start": "external assessments",
-                    "relation": "INCLUDES",
-                    "end": "final test"
-                },
-                "88": {
-                    "start": "final test",
-                    "relation": "TOPIC",
+                "19": {
+                    "start": "external final test",
+                    "relation": "ON",
                     "end": "RISC-V design"
                 },
-                "89": {
-                    "start": "course",
-                    "relation": "HAS_DETAILED_DESCRIPTION_OF",
-                    "end": "various modules"
-                },
-                "90": {
-                    "start": "systemonchip soc architecture",
-                    "relation": "INCLUDES",
-                    "end": "cpus"
-                },
-                "91": {
-                    "start": "systemonchip soc architecture",
-                    "relation": "INCLUDES",
-                    "end": "gpus"
-                },
-                "92": {
-                    "start": "systemonchip soc architecture",
-                    "relation": "INCLUDES",
-                    "end": "memory units"
-                },
-                "93": {
-                    "start": "systemonchip soc architecture",
-                    "relation": "INCLUDES",
-                    "end": "inputoutput controllers"
-                },
-                "94": {
-                    "start": "systemonchip soc architecture",
-                    "relation": "LOCATED_WITHIN",
-                    "end": "single chip"
-                },
-                "95": {
-                    "start": "vlsi design flow",
-                    "relation": "INVOLVES",
-                    "end": "system specification"
-                },
-                "96": {
-                    "start": "vlsi design flow",
-                    "relation": "INVOLVES",
-                    "end": "architectural design"
-                },
-                "97": {
-                    "start": "vlsi design flow",
-                    "relation": "INVOLVES",
-                    "end": "logic design"
-                },
-                "98": {
-                    "start": "vlsi design flow",
-                    "relation": "INVOLVES",
-                    "end": "circuit synthesis"
-                },
-                "99": {
-                    "start": "vlsi design flow",
-                    "relation": "INVOLVES",
-                    "end": "physical design"
-                },
-                "100": {
-                    "start": "vlsi design flow",
-                    "relation": "RELATES_TO",
-                    "end": "initial conceptualization of a circuit"
-                },
-                "101": {
-                    "start": "vlsi design flow",
-                    "relation": "RELATES_TO",
-                    "end": "final physical realization"
-                },
-                "102": {
-                    "start": "performance",
-                    "relation": "BALANCED_WITH",
-                    "end": "power consumption"
-                },
-                "103": {
-                    "start": "performance",
-                    "relation": "BALANCED_WITH",
-                    "end": "area constraints"
-                },
-                "104": {
-                    "start": "digital electronics",
-                    "relation": "REVISITED_FOR",
-                    "end": "hardware design"
-                },
-                "105": {
-                    "start": "binary number systems",
-                    "relation": "BUILDING_BLOCK_OF",
-                    "end": "digital circuits"
-                },
-                "106": {
-                    "start": "binary number systems",
-                    "relation": "STUDIED_ALONG_WITH",
-                    "end": "boolean algebra"
-                },
-                "107": {
-                    "start": "logic gates",
-                    "relation": "FUNDAMENTAL_BUILDING_BLOCK_OF",
-                    "end": "digital circuits"
-                },
-                "108": {
-                    "start": "digital electronics",
-                    "relation": "REVISITED",
-                    "end": "core concepts"
-                },
-                "109": {
-                    "start": "binary number systems",
-                    "relation": "STUDIED",
-                    "end": "building blocks of digital circuits"
-                },
-                "110": {
-                    "start": "boolean algebra",
-                    "relation": "STUDIED_ALONG_WITH",
-                    "end": "binary number systems"
-                },
-                "111": {
-                    "start": "logic gates",
-                    "relation": "UNDERSTANDING_REINFORCED",
-                    "end": "fundamental building blocks of digital circuits"
-                },
-                "112": {
-                    "start": "logic gates",
-                    "relation": "LAID_GROUNDWORK_FOR",
-                    "end": "complex circuit designs"
-                },
-                "113": {
-                    "start": "week 2",
-                    "relation": "BUILT_ON_FOUNDATION_OF",
-                    "end": "first week"
-                },
-                "114": {
-                    "start": "week 2",
-                    "relation": "DELVED_INTO",
-                    "end": "design and analysis of combinational and sequential circuits"
-                },
-                "115": {
-                    "start": "combinational circuits",
-                    "relation": "DEPEND_SOLELY_ON",
-                    "end": "current inputs"
-                },
-                "116": {
-                    "start": "combinational circuits",
-                    "relation": "STUDIED_IN_DETAIL",
-                    "end": "null"
-                },
-                "117": {
-                    "start": "combinational circuits",
-                    "relation": "INCLUDED_DESIGN_AND_IMPLEMENTATION_OF",
-                    "end": "adders"
-                },
-                "118": {
-                    "start": "combinational circuits",
-                    "relation": "INCLUDED_DESIGN_AND_IMPLEMENTATION_OF",
-                    "end": "subtractors"
-                },
-                "119": {
-                    "start": "combinational circuits",
-                    "relation": "INCLUDED_DESIGN_AND_IMPLEMENTATION_OF",
-                    "end": "multiplexers"
-                },
-                "120": {
-                    "start": "combinational circuits",
-                    "relation": "INCLUDED_DESIGN_AND_IMPLEMENTATION_OF",
-                    "end": "decoders"
-                },
-                "121": {
-                    "start": "understanding of behavior and optimization techniques for these circuits",
-                    "relation": "IS_VITAL_FOR",
-                    "end": "efficient digital system design"
-                },
-                "122": {
-                    "start": "sequential circuits",
-                    "relation": "INCORPORATE",
-                    "end": "memory elements"
-                },
-                "123": {
-                    "start": "sequential circuits",
-                    "relation": "EXHIBIT",
-                    "end": "state dependent behavior"
-                },
-                "124": {
-                    "start": "sequential circuits",
-                    "relation": "WERE_THE_FOCUS_OF",
-                    "end": "week 2"
-                },
-                "125": {
-                    "start": "flipflops",
-                    "relation": "FUNDAMENTAL_BUILDING_BLOCKS_OF",
-                    "end": "sequential circuits"
-                },
-                "126": {
-                    "start": "latches",
-                    "relation": "FUNDAMENTAL_BUILDING_BLOCKS_OF",
-                    "end": "sequential circuits"
-                },
-                "127": {
-                    "start": "flipflops",
-                    "relation": "STUDIED_IN_DEPTH",
-                    "end": "null"
-                },
-                "128": {
-                    "start": "latches",
-                    "relation": "STUDIED_IN_DEPTH",
-                    "end": "null"
-                },
-                "129": {
-                    "start": "state machines",
-                    "relation": "POWERFUL_ABSTRACTION_FOR",
-                    "end": "modeling sequential behaviour"
-                },
-                "130": {
-                    "start": "state machines",
-                    "relation": "INTRODUCED_IN",
-                    "end": "week 2"
-                },
-                "131": {
-                    "start": "state machines",
-                    "relation": "LAID_GROUNDWORK_FOR",
-                    "end": "designing complex digital systems"
-                },
-                "132": {
-                    "start": "complex digital systems",
-                    "relation": "CAN_PERFORM",
-                    "end": "various tasks"
-                },
-                "133": {
-                    "start": "week 3",
-                    "relation": "MOVED_FROM",
-                    "end": "null"
-                },
-                "134": {
-                    "start": "powerful abstraction",
-                    "relation": "INTRODUCED",
-                    "end": "modeling sequential behaviour"
-                },
-                "135": {
-                    "start": "powerful abstraction",
-                    "relation": "LAID_GROUNDWORK_FOR",
-                    "end": "designing complex digital systems"
-                },
-                "136": {
-                    "start": "complex digital systems",
-                    "relation": "CAN_PERFORM",
-                    "end": "various tasks"
-                },
-                "137": {
-                    "start": "various tasks",
-                    "relation": "BASED_ON",
-                    "end": "sequence of inputs and internal states"
-                },
-                "138": {
-                    "start": "verilog hdl",
-                    "relation": "INTRODUCED_AS",
-                    "end": "tool for modeling and designing digital systems"
-                },
-                "139": {
-                    "start": "verilog hdl",
-                    "relation": "WIDELY_USED_IN",
-                    "end": "the industry"
-                },
-                "140": {
-                    "start": "syntax data types operators and structured procedures of verilog",
-                    "relation": "WERE_EXPLORED",
-                    "end": "enabling the description of hardware"
-                },
-                "141": {
-                    "start": "description of hardware",
-                    "relation": "AT_VARIOUS_LEVELS_OF_ABSTRACTION",
-                    "end": "from gatelevel to behavioural level"
-                },
-                "142": {
-                    "start": "finite state machines fsms",
-                    "relation": "WAS_REVISITED",
-                    "end": "concept"
-                },
-                "143": {
-                    "start": "finite state machines fsms",
-                    "relation": "IMPLEMENTATION_IN",
-                    "end": "verilog was demonstrated"
-                },
-                "144": {
-                    "start": "fsms",
-                    "relation": "ARE_ESSENTIAL_FOR",
-                    "end": "designing sequential circuits"
-                },
-                "145": {
-                    "start": "sequential circuits",
-                    "relation": "EXHIBIT",
-                    "end": "specific 9 behaviours"
-                },
-                "146": {
-                    "start": "specific 9 behaviours",
-                    "relation": "SUCH_AS",
-                    "end": "controllers protocol interfaces and data processing units"
-                },
-                "147": {
-                    "start": "mastering fsm design",
-                    "relation": "MAKES_IT_POSSIBLE",
-                    "end": "to create complex digital systems"
-                },
-                "148": {
-                    "start": "complex digital systems",
-                    "relation": "CAN_RESPOND_TO",
-                    "end": "various input conditions"
-                },
-                "149": {
-                    "start": "complex digital systems",
-                    "relation": "CAN_EXECUTE",
-                    "end": "specific tasks"
-                },
-                "150": {
-                    "start": "synthesis and optimization techniques",
-                    "relation": "WAS_INTRODUCED_TO",
-                    "end": "i"
-                },
-                "151": {
-                    "start": "synthesis",
-                    "relation": "IS_THE_PROCESS_OF",
-                    "end": "translating a highlevel design description into a physical implementation"
-                },
-                "152": {
-                    "start": "optimization techniques",
-                    "relation": "ARE_EMPLOYED_TO",
-                    "end": "improve the performance power consumption and area of the synthesized circuit"
-                },
-                "153": {
-                    "start": "understanding these concepts",
-                    "relation": "CAN_ENABLE",
-                    "end": "designers to create efficient"
-                },
-                "154": {
-                    "start": "optimization techniques synthesis",
-                    "relation": "IS_A",
-                    "end": "process"
-                },
-                "155": {
-                    "start": "process",
-                    "relation": "INVOLVES",
-                    "end": "translating a highlevel design description into a physical implementation"
-                },
-                "156": {
-                    "start": "optimization techniques",
-                    "relation": "ARE_EMPLOYED_TO_IMPROVE",
-                    "end": "performance"
-                },
-                "157": {
-                    "start": "optimization techniques",
-                    "relation": "ARE_EMPLOYED_TO_IMPROVE",
-                    "end": "power consumption"
-                },
-                "158": {
-                    "start": "optimization techniques",
-                    "relation": "ARE_EMPLOYED_TO_IMPROVE",
-                    "end": "area of the synthesized circuit"
-                },
-                "159": {
-                    "start": "understanding these concepts",
-                    "relation": "ENABLES",
-                    "end": "designers to create efficient and cost effective digital systems"
-                },
-                "160": {
-                    "start": "week 4",
-                    "relation": "FOCUSED_ON",
-                    "end": "consolidating the theoretical knowledge gained thus far and applying it to practical design scenarios"
-                },
-                "161": {
-                    "start": "a comprehensive test",
-                    "relation": "WAS_CONDUCTED_TO_ASSESS",
-                    "end": "understanding of verilog hdl digital electronics finite state machines and synthesis techniques"
-                },
-                "162": {
-                    "start": "this evaluation",
-                    "relation": "SERVED_AS",
-                    "end": "a valuable tool for identifying areas of strength and weakness and for reinforcing key concepts"
-                },
-                "163": {
-                    "start": "handson laboratory sessions",
-                    "relation": "WERE_CONDUCTED_TO",
-                    "end": "further solidify the theoretical understanding"
-                },
-                "164": {
-                    "start": "these labs",
-                    "relation": "PROVIDED_AN_OPPORTUNITY_TO_IMPLEMENT",
-                    "end": "various digital circuits"
-                },
-                "165": {
-                    "start": "various digital circuits",
-                    "relation": "INCLUDES",
-                    "end": "adders"
-                },
-                "166": {
-                    "start": "various digital circuits",
-                    "relation": "INCLUDES",
-                    "end": "arithmetic logic units alus"
-                },
-                "167": {
-                    "start": "various digital circuits",
-                    "relation": "INCLUDES",
-                    "end": "multiplexers"
-                },
-                "168": {
-                    "start": "various digital circuits",
-                    "relation": "INCLUDES",
-                    "end": "flipflops"
-                },
-                "169": {
-                    "start": "various digital circuits",
-                    "relation": "INCLUDES",
-                    "end": "ram"
-                },
-                "170": {
-                    "start": "various digital circuits",
-                    "relation": "INCLUDES",
-                    "end": "finite state machines"
-                },
-                "171": {
-                    "start": "working on these practical projects",
-                    "relation": "ENHANCED",
-                    "end": "the ability to translate theoretical knowledge into functional hardware designs"
-                },
-                "172": {
-                    "start": "quartus prime software",
-                    "relation": "WAS_USED_TO",
-                    "end": "simulate and verify the functionality of the designed circuits"
-                },
-                "173": {
-                    "start": "this",
-                    "relation": "INVOLVED",
-                    "end": "writing testbenches to generate input stimuli monitor output responses and compare the results against expected behaviour"
-                },
-                "174": {
-                    "start": "week 5",
-                    "relation": "IS",
-                    "end": "the final week"
-                },
-                "175": {
-                    "start": "quartus prime software",
-                    "relation": "USED_TO",
-                    "end": "simulate and verify functionality of designed circuits"
-                },
-                "176": {
-                    "start": "quartus prime software",
+                "20": {
+                    "start": "VLSI design internship program",
+                    "relation": "USED",
+                    "end": "Quartus Prime"
+                },
+                "21": {
+                    "start": "VLSI design internship program",
+                    "relation": "USED",
+                    "end": "ModelSim"
+                },
+                "22": {
+                    "start": "Quartus Prime",
                     "relation": "USED_FOR",
-                    "end": "writing testbenches"
-                },
-                "177": {
-                    "start": "testbenches",
-                    "relation": "GENERATE",
-                    "end": "input stimuli"
-                },
-                "178": {
-                    "start": "testbenches",
-                    "relation": "MONITOR",
-                    "end": "output responses"
-                },
-                "179": {
-                    "start": "testbenches",
-                    "relation": "COMPARE",
-                    "end": "results against expected behaviour"
-                },
-                "180": {
-                    "start": "week 5",
-                    "relation": "FOCUSED_ON",
-                    "end": "design and implementation of a riscv processor module"
-                },
-                "181": {
-                    "start": "riscv",
-                    "relation": "IS_A",
-                    "end": "open standard instruction set architecture"
-                },
-                "182": {
-                    "start": "riscv",
-                    "relation": "IS_POPULAR_FOR",
-                    "end": "applications requiring a flexible lowpower and highperformance processor design"
-                },
-                "183": {
-                    "start": "key riscv concepts",
-                    "relation": "INCLUDED",
-                    "end": "instruction fetch decode execute stages"
-                },
-                "184": {
-                    "start": "key riscv concepts",
-                    "relation": "INCLUDED",
-                    "end": "handling of registers and control signals"
-                },
-                "185": {
-                    "start": "riscv processor functioning",
-                    "relation": "ENSURED_BY",
-                    "end": "study of key riscv concepts"
-                },
-                "186": {
-                    "start": "architecture of the riscv module",
-                    "relation": "DESIGNED_TO_INCORPORATE",
-                    "end": "a fivestage pipeline"
-                },
-                "187": {
-                    "start": "fivestage pipeline",
-                    "relation": "MANAGED_BY",
-                    "end": "finite state machines"
-                },
-                "188": {
-                    "start": "finite state machines",
-                    "relation": "MANAGE",
-                    "end": "instruction flow control"
-                },
-                "189": {
-                    "start": "finite state machines",
-                    "relation": "MANAGE",
-                    "end": "hazard handling"
-                },
-                "190": {
-                    "start": "verilog hdl",
-                    "relation": "USED_TO_IMPLEMENT",
-                    "end": "core functionalities of the riscv processor"
-                },
-                "191": {
-                    "start": "implementation in verilog hdl",
-                    "relation": "FOCUSED_ON",
-                    "end": "efficient resource utilization"
-                },
-                "192": {
-                    "start": "implementation in verilog hdl",
-                    "relation": "FOCUSED_ON",
-                    "end": "adherence to riscv specifications"
-                },
-                "193": {
-                    "start": "processor module",
-                    "relation": "VALIDATED_BY",
-                    "end": "testbenches"
-                },
-                "194": {
-                    "start": "testbenches",
-                    "relation": "SIMULATE",
-                    "end": "instruction execution"
-                },
-                "195": {
-                    "start": "testbenches",
-                    "relation": "CHECK",
-                    "end": "interactions between pipeline stages"
-                },
-                "196": {
-                    "start": "final project",
-                    "relation": "DEMONSTRATED",
-                    "end": "ability to design and implement a complex digital system"
-                },
-                "197": {
-                    "start": "completing the final project",
-                    "relation": "CONTRIBUTED_TO",
-                    "end": "acquiring knowledge and skills"
-                },
-                "198": {
-                    "start": "instruction execution",
-                    "relation": "SIMULATE",
-                    "end": "pipeline stages"
-                },
-                "199": {
-                    "start": "final project",
-                    "relation": "DEMONSTRATED ABILITY TO APPLY",
-                    "end": "acquired knowledge and skills"
-                },
-                "200": {
-                    "start": "final project",
-                    "relation": "REQUIRED UNDERSTANDING OF",
-                    "end": "course material"
-                },
-                "201": {
-                    "start": "final project",
-                    "relation": "REQUIRED FURTHER RESEARCH FROM",
-                    "end": "multiple sources"
-                },
-                "202": {
-                    "start": "final project",
-                    "relation": "REQUIRED PRACTICAL UNDERSTANDING OF",
-                    "end": "existing projects"
-                },
-                "203": {
-                    "start": "VLSI",
-                    "relation": "DOMAIN OF",
-                    "end": "existing projects"
-                },
-                "204": {
-                    "start": "ModelSim",
-                    "relation": "IS",
-                    "end": "best HDL language simulation software"
-                },
-                "205": {
-                    "start": "ModelSim",
-                    "relation": "SUPPORTS",
-                    "end": "VHDL and Verilog mixed simulation"
-                },
-                "206": {
-                    "start": "ModelSim",
-                    "relation": "PROVIDES",
-                    "end": "nice simulation environment"
-                },
-                "207": {
-                    "start": "ModelSim",
-                    "relation": "MAKES USE OF",
-                    "end": "singlecore simulation technology"
-                },
-                "208": {
-                    "start": "ModelSim",
-                    "relation": "MAKES USE OF",
-                    "end": "Tcl/Tk technology"
-                },
-                "209": {
-                    "start": "ModelSim",
-                    "relation": "MAKES USE OF",
-                    "end": "directly optimised compilation technology"
-                },
-                "210": {
-                    "start": "ModelSim",
-                    "relation": "COMPILATION SIMULATION IS",
-                    "end": "quick"
-                },
-                "211": {
-                    "start": "ModelSim",
-                    "relation": "PRODUCED CODE IS",
-                    "end": "platform agnostic"
-                },
-                "212": {
-                    "start": "ModelSim",
-                    "relation": "SPEEDS UP",
-                    "end": "debugging"
-                },
-                "213": {
-                    "start": "ModelSim",
-                    "relation": "IS FIRST CHOICE OF SIMULATION SOFTWARE FOR",
-                    "end": "FPGA/ASIC design"
-                },
-                "214": {
-                    "start": "ModelSim",
-                    "relation": "PROVIDES",
-                    "end": "powerful means"
-                },
-                "215": {
-                    "start": "instructions",
-                    "relation": "LOADED INTO",
-                    "end": "instruction memory"
-                },
-                "216": {
-                    "start": "instructions",
-                    "relation": "EXECUTED IN",
-                    "end": "pipeline fashion"
-                },
-                "217": {
-                    "start": "simulation software",
-                    "relation": "FIRST_CHOICE_FOR",
-                    "end": "fpgaasic design"
-                },
-                "218": {
-                    "start": "simulation software",
-                    "relation": "PROVIDES",
-                    "end": "powerful means simulation"
-                },
-                "219": {
-                    "start": "instructions",
-                    "relation": "ARE_EXECUTED_IN",
-                    "end": "pipeline fashion"
-                },
-                "220": {
-                    "start": "instruction memory",
-                    "relation": "CONTAINS",
-                    "end": "instructions"
-                },
-                "221": {
-                    "start": "instructions",
-                    "relation": "LOADED_FROM_POSITION",
-                    "end": "0"
-                },
-                "222": {
-                    "start": "modelsim",
-                    "relation": "IS_USED_FOR",
                     "end": "simulation"
                 },
-                "223": {
-                    "start": "add r1r4r6",
-                    "relation": "IS_AN_EXAMPLE_OF",
-                    "end": "arithmetic type instructions"
+                "23": {
+                    "start": "Quartus Prime",
+                    "relation": "USED_FOR",
+                    "end": "verification"
                 },
-                "224": {
-                    "start": "sub r2r6r4",
-                    "relation": "IS_AN_EXAMPLE_OF",
-                    "end": "arithmetic type instructions"
+                "24": {
+                    "start": "ModelSim",
+                    "relation": "USED_FOR",
+                    "end": "simulation"
                 },
-                "225": {
-                    "start": "r4 and r6",
-                    "relation": "ARE_FETCHED_AND_ADDED",
-                    "end": "r1"
+                "25": {
+                    "start": "ModelSim",
+                    "relation": "USED_FOR",
+                    "end": "verification"
                 },
-                "226": {
-                    "start": "hardware",
-                    "relation": "IS_USED",
-                    "end": "paralleled"
-                },
-                "227": {
-                    "start": "r6 and r4 values",
-                    "relation": "ARE_FETCHED",
-                    "end": "subtracted"
-                },
-                "228": {
-                    "start": "vlsi design course",
-                    "relation": "SIGNIFICANTLY_UPGRADED",
-                    "end": "my skills"
-                },
-                "229": {
-                    "start": "vlsi design course",
-                    "relation": "PROVIDED",
-                    "end": "strong foundation"
-                },
-                "230": {
-                    "start": "strong foundation",
-                    "relation": "IN",
-                    "end": "digital design"
-                },
-                "231": {
-                    "start": "strong foundation",
-                    "relation": "IN",
-                    "end": "hardware description languages"
-                },
-                "232": {
-                    "start": "handson labs and projects",
-                    "relation": "REINFORCED",
-                    "end": "understanding of circuit design synthesis and verification processes"
-                },
-                "233": {
-                    "start": "course",
-                    "relation": "DEEPENED",
-                    "end": "technical knowledge"
-                },
-                "234": {
-                    "start": "course",
-                    "relation": "EQUIPPED_ME_WITH",
-                    "end": "practical skills"
-                },
-                "235": {
-                    "start": "practical skills",
-                    "relation": "ESSENTIAL_FOR",
-                    "end": "realworld applications"
-                },
-                "236": {
-                    "start": "course",
-                    "relation": "PREPARED_ME_WELL_FOR",
-                    "end": "industry demands"
-                },
-                "237": {
+                "26": {
                     "start": "Vellore Institute of Technology",
-                    "relation": "IS_LOGO_OF",
-                    "end": "VIT"
+                    "relation": "IS_A",
+                    "end": "deemed university"
                 },
-                "238": {
+                "27": {
+                    "start": "Vellore Institute of Technology",
+                    "relation": "OPERATES_UNDER",
+                    "end": "UGC Act, 1956"
+                },
+                "28": {
+                    "start": "deemed university",
+                    "relation": "DEFINED_IN",
+                    "end": "section 3 of the UGC Act, 1956"
+                },
+                "29": {
                     "start": "Chandrima Manik",
-                    "relation": "INTERN_AT",
-                    "end": "Maven Silicon"
+                    "relation": "COMPLETED",
+                    "end": "VLSI Design Internship Program"
                 },
-                "239": {
-                    "start": "VLSI Design Internship",
-                    "relation": "COMPLETED_BY",
-                    "end": "Chandrima Manik"
+                "30": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "STARTED_ON",
+                    "end": "June 05, 2024"
                 },
-                "240": {
-                    "start": "VLSI Design Internship",
-                    "relation": "COMPLETED_AT",
-                    "end": "Maven Silicon"
+                "31": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "ENDED_ON",
+                    "end": "July 13, 2024"
                 },
-                "241": {
-                    "start": "VLSI Design Internship",
-                    "relation": "COMPLETED_FROM",
-                    "end": "June 5th, 2024"
+                "32": {
+                    "start": "Chandrima Manik",
+                    "relation": "WORKED_ON",
+                    "end": "RISC-V ISA & RV32I RTL Design project"
                 },
-                "242": {
-                    "start": "VLSI Design Internship",
-                    "relation": "COMPLETED_TO",
-                    "end": "July 13th, 2024"
+                "33": {
+                    "start": "waveform display",
+                    "relation": "SHOWS",
+                    "end": "signals"
                 },
-                "243": {
-                    "start": "screenshot",
-                    "relation": "SHOWING",
-                    "end": "digital logic simulator"
+                "34": {
+                    "start": "waveform display",
+                    "relation": "SHOWS",
+                    "end": "data values"
                 },
-                "244": {
-                    "start": "digital logic simulator",
-                    "relation": "DISPLAYING",
-                    "end": "multiple waveforms"
+                "35": {
+                    "start": "signals",
+                    "relation": "OF",
+                    "end": "RISC processor simulation"
                 },
-                "245": {
-                    "start": "digital logic simulator",
-                    "relation": "DISPLAYING",
-                    "end": "binary data"
+                "36": {
+                    "start": "data values",
+                    "relation": "OF",
+                    "end": "RISC processor simulation"
                 },
-                "246": {
-                    "start": "multiple waveforms",
-                    "relation": "REPRESENTING",
-                    "end": "execution of a RISC-V processor"
-                },
-                "247": {
-                    "start": "binary data",
-                    "relation": "REPRESENTING",
-                    "end": "execution of a RISC-V processor"
+                "37": {
+                    "start": "RISC processor simulation",
+                    "relation": "OCCURS_OVER",
+                    "end": "time"
                 }
             }
         },
         {
             "source_file": "sample.pdf",
-            "episode_id": "ep_3546c874-fae0-44ef-b34e-c981aea4ac1c",
+            "episode_id": "ep_6d96ef9b-acd3-468a-925c-24522553395d",
             "triples": {
                 "1": {
                     "start": "Chandrima Manik",
-                    "relation": "HAS_EMAIL",
-                    "end": "chandrimamanik@gmail.com"
+                    "relation": "IS_A",
+                    "end": "B.Tech student"
                 },
                 "2": {
                     "start": "Chandrima Manik",
-                    "relation": "HAS_PHONE",
-                    "end": "919483050465"
+                    "relation": "STUDENT_AT",
+                    "end": "Vellore Institute of Technology"
                 },
                 "3": {
                     "start": "Chandrima Manik",
-                    "relation": "HAS_LOCATION",
-                    "end": "Vellore, TN"
+                    "relation": "MAJOR_IN",
+                    "end": "Electronics and Communication Engineering"
                 },
                 "4": {
                     "start": "Chandrima Manik",
-                    "relation": "EDUCATION",
-                    "end": "Vellore Institute of Technology"
-                },
-                "5": {
-                    "start": "Vellore Institute of Technology",
-                    "relation": "DEGREE",
-                    "end": "B.Tech in Electronics and Communication Engineering"
-                },
-                "6": {
-                    "start": "B.Tech in Electronics and Communication Engineering",
-                    "relation": "EXPECTED_GRADUATION",
-                    "end": "2026"
-                },
-                "7": {
-                    "start": "B.Tech in Electronics and Communication Engineering",
-                    "relation": "CGPA",
+                    "relation": "HAS_CGPA",
                     "end": "8.79"
                 },
-                "8": {
+                "5": {
                     "start": "Chandrima Manik",
-                    "relation": "EDUCATION",
-                    "end": "Vyasa International School"
+                    "relation": "DEVELOPED",
+                    "end": "GreenIntel"
+                },
+                "6": {
+                    "start": "GreenIntel",
+                    "relation": "IS_A",
+                    "end": "autonomous weed detection and control robot"
+                },
+                "7": {
+                    "start": "GreenIntel",
+                    "relation": "UTILIZES",
+                    "end": "TensorFlow"
+                },
+                "8": {
+                    "start": "GreenIntel",
+                    "relation": "UTILIZES",
+                    "end": "Python"
                 },
                 "9": {
-                    "start": "Vyasa International School",
-                    "relation": "GRADE",
-                    "end": "Class 12"
+                    "start": "GreenIntel",
+                    "relation": "UTILIZES",
+                    "end": "C"
                 },
                 "10": {
-                    "start": "Class 12",
-                    "relation": "SUBJECTS",
-                    "end": "Math, Physics, Chemistry, Biology, English"
+                    "start": "GreenIntel",
+                    "relation": "UTILIZES",
+                    "end": "Verilog"
                 },
                 "11": {
-                    "start": "Class 12",
-                    "relation": "PERCENTAGE",
-                    "end": "80%"
+                    "start": "GreenIntel",
+                    "relation": "UTILIZES",
+                    "end": "FPGA programming"
                 },
                 "12": {
-                    "start": "Class 12",
-                    "relation": "GRADUATION_YEAR",
-                    "end": "2022"
+                    "start": "GreenIntel",
+                    "relation": "FOR",
+                    "end": "real-time robotic control"
                 },
                 "13": {
-                    "start": "Chandrima Manik",
-                    "relation": "EDUCATION",
-                    "end": "Atomic Energy Central School"
+                    "start": "GreenIntel",
+                    "relation": "FOR",
+                    "end": "precise weed eradication"
                 },
                 "14": {
-                    "start": "Atomic Energy Central School",
-                    "relation": "GRADE",
-                    "end": "Class 10"
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_EXPERIENCE_IN",
+                    "end": "web development"
                 },
                 "15": {
-                    "start": "Class 10",
-                    "relation": "PERCENTAGE",
-                    "end": "93.2%"
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_EXPERIENCE_IN",
+                    "end": "product design"
                 },
                 "16": {
-                    "start": "Class 10",
-                    "relation": "GRADUATION_YEAR",
-                    "end": "2020"
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_EXPERIENCE_IN",
+                    "end": "event organization"
                 },
                 "17": {
                     "start": "Chandrima Manik",
-                    "relation": "PROJECT",
-                    "end": "Greenintel Autonomous Weed Detection and Control Robot"
+                    "relation": "HELD_LEADERSHIP_ROLE_IN",
+                    "end": "Google Developers Student Club"
                 },
                 "18": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "DEVELOPED_BY",
-                    "end": "Feb25 Technologies"
+                    "start": "Chandrima Manik",
+                    "relation": "HELD_LEADERSHIP_ROLE_IN",
+                    "end": "Gravitas24"
                 },
                 "19": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "TECHNOLOGY_USED",
-                    "end": "Tensorflow"
+                    "start": "Chandrima Manik",
+                    "relation": "HELD_LEADERSHIP_ROLE_IN",
+                    "end": "Riviera24"
                 },
                 "20": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "TECHNOLOGY_USED",
-                    "end": "Python"
+                    "start": "Google Developers Student Club",
+                    "relation": "AFFILIATED_WITH",
+                    "end": "VIT Vellore"
                 },
                 "21": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "TECHNOLOGY_USED",
-                    "end": "C"
+                    "start": "Gravitas24",
+                    "relation": "AFFILIATED_WITH",
+                    "end": "VIT Vellore"
                 },
                 "22": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "TECHNOLOGY_USED",
-                    "end": "Verilog"
+                    "start": "Riviera24",
+                    "relation": "AFFILIATED_WITH",
+                    "end": "VIT Vellore"
                 },
                 "23": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "TECHNOLOGY_USED",
-                    "end": "FPGA Programming"
+                    "start": "Chandrima Manik",
+                    "relation": "ACHIEVED",
+                    "end": "significant increases in website visitors"
                 },
                 "24": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "TECHNOLOGY_USED",
-                    "end": "Robotics"
+                    "start": "Chandrima Manik",
+                    "relation": "CONTRIBUTED_TO",
+                    "end": "sales efforts"
                 },
                 "25": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "IMPLEMENTED",
-                    "end": "State machine-based movement algorithms on FPGA Cyclone IV E"
+                    "start": "Chandrima Manik",
+                    "relation": "EXCELLED_IN",
+                    "end": "VLSI design"
                 },
                 "26": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "INTEGRATED",
-                    "end": "MobileNetV2"
+                    "start": "Chandrima Manik",
+                    "relation": "WORKED_ON",
+                    "end": "RISC-V ISA RV32i RTL design"
                 },
                 "27": {
-                    "start": "MobileNetV2",
-                    "relation": "ACCURACY",
-                    "end": "99.23%"
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_SKILL",
+                    "end": "Cadence Virtuoso"
                 },
                 "28": {
-                    "start": "Greenintel Autonomous Weed Detection and Control Robot",
-                    "relation": "ACHIEVED",
-                    "end": "Seamless coordination of four robotic arms across diverse terrains"
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_SKILL",
+                    "end": "Quartus Prime"
                 },
                 "29": {
                     "start": "Chandrima Manik",
-                    "relation": "WORK_EXPERIENCE",
-                    "end": "Google Developers Student Club VIT Vellore"
+                    "relation": "HAS_SKILL",
+                    "end": "FPGA"
                 },
                 "30": {
-                    "start": "Google Developers Student Club VIT Vellore",
-                    "relation": "ROLE",
-                    "end": "Core Committee Member"
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_SKILL",
+                    "end": "programming languages"
                 },
                 "31": {
-                    "start": "Core Committee Member",
-                    "relation": "DURATION",
-                    "end": "April 2023 - Present"
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_SKILL",
+                    "end": "design software"
                 },
                 "32": {
-                    "start": "Core Committee Member",
-                    "relation": "CONTRIBUTED_TO",
-                    "end": "Development of websites for Devjams, Hexathon, and Women Techies events"
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_SKILL",
+                    "end": "Figma"
                 },
                 "33": {
-                    "start": "Core Committee Member",
-                    "relation": "PART_OF",
-                    "end": "Organizing committee"
-                },
-                "34": {
-                    "start": "Core Committee Member",
-                    "relation": "LED",
-                    "end": "Product design for Vitty and FfWriter"
-                },
-                "35": {
                     "start": "Chandrima Manik",
-                    "relation": "WORK_EXPERIENCE",
-                    "end": "Gravitas24 VIT Vellore"
-                },
-                "36": {
-                    "start": "Gravitas24 VIT Vellore",
-                    "relation": "TEAM",
-                    "end": "Design and Merch Team"
-                },
-                "37": {
-                    "start": "Design and Merch Team",
-                    "relation": "DURATION",
-                    "end": "September 2024"
-                },
-                "38": {
-                    "start": "Design and Merch Team",
-                    "relation": "PARTICIPATED_IN",
-                    "end": "Making of the official website for Gravitas"
-                },
-                "39": {
-                    "start": "Design and Merch Team",
-                    "relation": "CONTRIBUTED_TO",
-                    "end": "Merchandise"
-                },
-                "40": {
-                    "start": "Design and Merch Team",
-                    "relation": "IMPACTED",
-                    "end": "Increased visitors on website"
-                },
-                "41": {
-                    "start": "gravitas24 vit vellore design and merch team",
-                    "relation": "PARTICIPATED_IN_MAKING_OF",
-                    "end": "official website for gravitas"
-                },
-                "42": {
-                    "start": "gravitas24 vit vellore design and merch team",
-                    "relation": "CONTRIBUTED_TO",
-                    "end": "merchandise"
-                },
-                "43": {
-                    "start": "gravitas24 vit vellore design and merch team",
-                    "relation": "CONTRIBUTED_TO_SUCCESS_OF",
-                    "end": "tech fest"
-                },
-                "44": {
-                    "start": "official website for gravitas",
-                    "relation": "INCREASED_VISITORS_BY",
-                    "end": "over 1050 yoy"
-                },
-                "45": {
-                    "start": "official website for gravitas",
-                    "relation": "HAD",
-                    "end": "400000 visitors"
-                },
-                "46": {
-                    "start": "riviera24 vit vellore tech team",
-                    "relation": "DESIGNED",
-                    "end": "website and app"
-                },
-                "47": {
-                    "start": "riviera24 vit vellore sales team",
-                    "relation": "DESIGNED",
-                    "end": "website and app"
-                },
-                "48": {
-                    "start": "website and app",
-                    "relation": "INCREASED_VISITORS_BY",
-                    "end": "over 1200 yoy"
-                },
-                "49": {
-                    "start": "website and app",
-                    "relation": "HAD",
-                    "end": "800000 visitors"
-                },
-                "50": {
-                    "start": "riviera24 vit vellore tech team",
-                    "relation": "CREATED",
-                    "end": "marketing assets"
-                },
-                "51": {
-                    "start": "riviera24 vit vellore sales team",
-                    "relation": "DROVE",
-                    "end": "sales efforts"
-                },
-                "52": {
-                    "start": "riviera24 vit vellore sales team",
-                    "relation": "WAS_PIVOTAL_MEMBER_OF",
-                    "end": "riviera sales team"
-                },
-                "53": {
-                    "start": "electrohack",
-                    "relation": "ACHIEVEMENT",
-                    "end": "winner 2nd place"
-                },
-                "54": {
-                    "start": "yantra25",
-                    "relation": "ACHIEVEMENT",
-                    "end": "winner 2nd place"
-                },
-                "55": {
-                    "start": "vlsi design maven",
-                    "relation": "AWARDED_FOR",
-                    "end": "electrohack"
-                },
-                "56": {
-                    "start": "vlsi design maven",
-                    "relation": "AWARDED_FOR",
-                    "end": "yantra25"
-                },
-                "57": {
-                    "start": "silicon riscv isa rv32i",
-                    "relation": "DESIGNED_IN",
-                    "end": "rtl design"
-                },
-                "58": {
-                    "start": "atomic energy central school student council mysuru",
-                    "relation": "HELD_POSITION",
-                    "end": "captain"
-                },
-                "59": {
-                    "start": "captain",
-                    "relation": "LED",
-                    "end": "planning and execution of cocurricular activities"
-                },
-                "60": {
-                    "start": "planning and execution of cocurricular activities",
-                    "relation": "FOR_SCHOOL_OF",
-                    "end": "around 400 students"
-                },
-                "61": {
-                    "start": "planning and execution of cocurricular activities",
-                    "relation": "ENHANCED",
-                    "end": "student engagement by over 150"
-                },
-                "62": {
-                    "start": "cadence virtuoso",
-                    "relation": "IS_SKILL",
-                    "end": "software"
-                },
-                "63": {
-                    "start": "quartus prime",
-                    "relation": "IS_SKILL",
-                    "end": "software"
-                },
-                "64": {
-                    "start": "fpga",
-                    "relation": "IS_SKILL",
-                    "end": "hardware"
-                },
-                "65": {
-                    "start": "awr",
-                    "relation": "IS_SKILL",
-                    "end": "software"
-                },
-                "66": {
-                    "start": "matlab",
-                    "relation": "IS_SKILL",
-                    "end": "software"
-                },
-                "67": {
-                    "start": "multisim",
-                    "relation": "IS_SKILL",
-                    "end": "software"
-                },
-                "68": {
-                    "start": "modelsim",
-                    "relation": "IS_SKILL",
-                    "end": "software"
-                },
-                "69": {
-                    "start": "c",
-                    "relation": "IS_SKILL",
-                    "end": "programming language"
-                },
-                "70": {
-                    "start": "python",
-                    "relation": "IS_SKILL",
-                    "end": "programming language"
-                },
-                "71": {
-                    "start": "java",
-                    "relation": "IS_SKILL",
-                    "end": "programming language"
-                },
-                "72": {
-                    "start": "verilog",
-                    "relation": "IS_SKILL",
-                    "end": "programming language"
-                },
-                "73": {
-                    "start": "keil vision",
-                    "relation": "IS_SKILL",
-                    "end": "software"
-                },
-                "74": {
-                    "start": "figma",
-                    "relation": "IS_SKILL",
-                    "end": "design software"
-                },
-                "75": {
-                    "start": "adobe illustrator",
-                    "relation": "IS_SKILL",
-                    "end": "design software"
-                },
-                "76": {
-                    "start": "procreate",
-                    "relation": "IS_SKILL",
-                    "end": "design software"
-                },
-                "77": {
-                    "start": "english",
-                    "relation": "HAS_FLUENCY",
-                    "end": "fluent"
-                },
-                "78": {
-                    "start": "japanese",
-                    "relation": "HAS_FLUENCY",
-                    "end": "beginner"
-                },
-                "79": {
-                    "start": "hindi",
-                    "relation": "HAS_FLUENCY",
-                    "end": "fluent"
-                },
-                "80": {
-                    "start": "bengali",
-                    "relation": "HAS_FLUENCY",
-                    "end": "fluent"
-                },
-                "81": {
-                    "start": "kannada",
-                    "relation": "HAS_FLUENCY",
-                    "end": "intermediate"
-                },
-                "82": {
-                    "start": "keil vision",
-                    "relation": "IS_A",
-                    "end": "adobe illustrator"
-                },
-                "83": {
-                    "start": "keil vision",
-                    "relation": "IS_A",
-                    "end": "procreate"
-                },
-                "84": {
-                    "start": "keil vision",
-                    "relation": "IS_A",
-                    "end": "figma"
-                },
-                "85": {
-                    "start": "keil vision",
-                    "relation": "LANGUAGES",
-                    "end": "english"
-                },
-                "86": {
-                    "start": "english",
-                    "relation": "FLUENCY",
-                    "end": "fluent"
-                },
-                "87": {
-                    "start": "keil vision",
-                    "relation": "LANGUAGES",
-                    "end": "japanese"
-                },
-                "88": {
-                    "start": "japanese",
-                    "relation": "FLUENCY",
-                    "end": "beginner"
-                },
-                "89": {
-                    "start": "keil vision",
-                    "relation": "LANGUAGES",
-                    "end": "hindi"
-                },
-                "90": {
-                    "start": "hindi",
-                    "relation": "FLUENCY",
-                    "end": "fluent"
-                },
-                "91": {
-                    "start": "keil vision",
-                    "relation": "LANGUAGES",
-                    "end": "bengali"
-                },
-                "92": {
-                    "start": "bengali",
-                    "relation": "FLUENCY",
-                    "end": "fluent"
-                },
-                "93": {
-                    "start": "keil vision",
-                    "relation": "LANGUAGES",
-                    "end": "kannada"
-                },
-                "94": {
-                    "start": "kannada",
-                    "relation": "FLUENCY",
-                    "end": "intermediate"
+                    "relation": "HAS_SKILL",
+                    "end": "Adobe Illustrator"
                 }
             }
         },
         {
             "source_file": "A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx",
-            "episode_id": "ep_0b0af5fc-8826-461a-b48c-c016f20b03dd",
+            "episode_id": "ep_6f61c00f-725a-4a8f-b89d-0e2b93fdf08c",
             "triples": {
                 "1": {
-                    "start": "novel approximate adder design",
-                    "relation": "REDUCE",
-                    "end": "prediction error rate"
+                    "start": "An approximate adder design",
+                    "relation": "LEVERAGES",
+                    "end": "error-reduced carry prediction"
                 },
                 "2": {
-                    "start": "novel approximate adder design",
-                    "relation": "ENHANCES",
-                    "end": "computation accuracy"
+                    "start": "An approximate adder design",
+                    "relation": "LEVERAGES",
+                    "end": "constant truncation"
                 },
                 "3": {
-                    "start": "novel approximate adder design",
-                    "relation": "IMPROVES",
-                    "end": "nmed"
-                },
-                "4": {
-                    "start": "novel approximate adder design",
-                    "relation": "IMPROVES",
-                    "end": "mred"
-                },
-                "5": {
-                    "start": "novel approximate adder design",
-                    "relation": "REDUCE",
-                    "end": "powernmed"
-                },
-                "6": {
-                    "start": "novel approximate adder design",
-                    "relation": "REDUCE",
-                    "end": "Energynmed"
-                },
-                "7": {
-                    "start": "novel approximate adder design",
-                    "relation": "REDUCE",
-                    "end": "areadelay product adpnmed"
-                },
-                "8": {
-                    "start": "novel approximate adder design",
-                    "relation": "REDUCE",
-                    "end": "power"
-                },
-                "9": {
-                    "start": "novel approximate adder design",
-                    "relation": "REDUCE",
-                    "end": "energy"
-                },
-                "10": {
-                    "start": "novel approximate adder design",
-                    "relation": "REDUCE",
-                    "end": "adpmred products"
-                },
-                "11": {
-                    "start": "error reduced carry prediction",
-                    "relation": "IS_A",
-                    "end": "core concept approximate adder"
-                },
-                "12": {
-                    "start": "constant truncation with error reduction",
-                    "relation": "IS_A",
-                    "end": "core concept approximate adder"
-                },
-                "13": {
-                    "start": "core concept approximate adder",
+                    "start": "An approximate adder design",
                     "relation": "IMPROVES",
                     "end": "computational accuracy"
                 },
-                "14": {
-                    "start": "core concept approximate adder",
+                "4": {
+                    "start": "An approximate adder design",
                     "relation": "MINIMIZES",
-                    "end": "hardware error"
+                    "end": "hardware"
                 },
-                "15": {
-                    "start": "setting lsb to constant",
+                "5": {
+                    "start": "This design",
                     "relation": "REDUCES",
-                    "end": "power area"
-                },
-                "16": {
-                    "start": "appx fa cells",
-                    "relation": "USED_IN",
-                    "end": "lsb"
-                },
-                "17": {
-                    "start": "exact fa",
-                    "relation": "REPLACED_BY",
-                    "end": "appx fa cells"
-                },
-                "18": {
-                    "start": "xor",
-                    "relation": "REPLACED_BY",
-                    "end": "or"
-                },
-                "19": {
-                    "start": "xor",
-                    "relation": "USED_IN",
-                    "end": "msb"
-                },
-                "20": {
-                    "start": "or",
-                    "relation": "USED_IN",
-                    "end": "lsb"
-                },
-                "21": {
-                    "start": "carry propagation chain",
-                    "relation": "REMOVED",
-                    "end": "delay"
-                },
-                "22": {
-                    "start": "carry propagation chain",
-                    "relation": "REMOVED",
-                    "end": "power consumption"
-                },
-                "23": {
-                    "start": "proposed carry prediction technique",
-                    "relation": "NEEDS",
-                    "end": "carry"
-                },
-                "24": {
-                    "start": "carry",
-                    "relation": "PRODUCED_BY",
-                    "end": "simple logic gates"
-                },
-                "25": {
-                    "start": "msb of this xor",
-                    "relation": "IS_USED_FOR",
-                    "end": "carry prediction"
-                },
-                "26": {
-                    "start": "lsb or",
-                    "relation": "IS_USED_FOR",
-                    "end": "carry prediction"
-                },
-                "27": {
-                    "start": "proposed carry prediction technique",
-                    "relation": "REQUIRES",
-                    "end": "carry from the inaccurate part"
-                },
-                "28": {
-                    "start": "accurate part",
-                    "relation": "NEEDS",
-                    "end": "carry from the inaccurate part"
-                },
-                "29": {
-                    "start": "simple logic gates",
-                    "relation": "ARE_USED_TO_PRODUCE",
-                    "end": "carry"
-                },
-                "30": {
-                    "start": "traditional and based prediction scheme",
-                    "relation": "HAS_CARRY_INPUT_PRODUCTION_Cin",
-                    "end": "amsb bmsb"
-                },
-                "31": {
-                    "start": "amsb bmsb",
-                    "relation": "ARE",
-                    "end": "most significant bits of the inaccurate part"
-                },
-                "32": {
-                    "start": "both bits",
-                    "relation": "ARE",
-                    "end": "1"
-                },
-                "33": {
-                    "start": "a carry",
-                    "relation": "IS_GENERATED",
-                    "end": "otherwise no carry is predicted"
-                },
-                "34": {
-                    "start": "limitation",
-                    "relation": "IS",
-                    "end": "a carry may come from lowerorder bits"
-                },
-                "35": {
-                    "start": "error rate",
-                    "relation": "IS",
-                    "end": "25"
-                },
-                "36": {
-                    "start": "proposed andor",
-                    "relation": "IS",
-                    "end": "more accurate and efficient"
-                },
-                "37": {
-                    "start": "proposed andor",
-                    "relation": "HAS_EXPENSE_OF",
-                    "end": "only 2 extra gates"
-                },
-                "38": {
-                    "start": "cnk1",
-                    "relation": "IS",
-                    "end": "carry from 1st msb"
-                },
-                "39": {
-                    "start": "cnk2",
-                    "relation": "IS",
-                    "end": "carry from second msb"
-                },
-                "40": {
-                    "start": "pnk1",
-                    "relation": "IS",
-                    "end": "propagation bit"
-                },
-                "41": {
-                    "start": "pnk1",
-                    "relation": "IS_CALCULATED_BY",
-                    "end": "xor first two bits"
-                },
-                "42": {
-                    "start": "cnk1",
-                    "relation": "IS",
-                    "end": "0"
-                },
-                "43": {
-                    "start": "cnk2",
-                    "relation": "IS",
-                    "end": "0"
-                },
-                "44": {
-                    "start": "pnk1",
-                    "relation": "IS",
-                    "end": "0"
-                },
-                "45": {
-                    "start": "xor",
-                    "relation": "IS",
-                    "end": "1"
-                },
-                "46": {
-                    "start": "1",
-                    "relation": "IS",
-                    "end": "1"
-                },
-                "47": {
-                    "start": "cin",
-                    "relation": "IS",
-                    "end": "001"
-                },
-                "48": {
-                    "start": "cnk1",
-                    "relation": "IS",
-                    "end": "0"
-                },
-                "49": {
-                    "start": "cnk2",
-                    "relation": "IS",
-                    "end": "1"
-                },
-                "50": {
-                    "start": "pnk1",
-                    "relation": "IS",
-                    "end": "0"
-                },
-                "51": {
-                    "start": "xor",
-                    "relation": "IS",
-                    "end": "1"
-                },
-                "52": {
-                    "start": "1",
-                    "relation": "IS",
-                    "end": "1"
-                },
-                "53": {
-                    "start": "cin",
-                    "relation": "IS",
-                    "end": "011"
-                },
-                "54": {
-                    "start": "error",
-                    "relation": "IS_REDUCED_TO",
-                    "end": "123"
-                },
-                "55": {
-                    "start": "hardware",
-                    "relation": "REQUIRES",
-                    "end": "one xor three and and one or gates"
-                },
-                "56": {
-                    "start": "carry input cin",
-                    "relation": "IS_GENERATED_BY",
-                    "end": "xor p bit 2 and c bits 1 and pc"
-                },
-                "57": {
-                    "start": "formula",
-                    "relation": "FOR",
-                    "end": "2 bits error"
-                },
-                "58": {
-                    "start": "formula",
-                    "relation": "REDUCED_TO",
-                    "end": "123 hardware"
-                },
-                "59": {
-                    "start": "hardware",
-                    "relation": "REQUIRES",
-                    "end": "one xor"
-                },
-                "60": {
-                    "start": "hardware",
-                    "relation": "REQUIRES",
-                    "end": "three and"
-                },
-                "61": {
-                    "start": "hardware",
-                    "relation": "REQUIRES",
-                    "end": "one or gates"
-                },
-                "62": {
-                    "start": "carry input cin",
-                    "relation": "GENERATED_BY",
-                    "end": "xor p bit 2"
-                },
-                "63": {
-                    "start": "carry input cin",
-                    "relation": "GENERATED_BY",
-                    "end": "c bits 1"
-                },
-                "64": {
-                    "start": "carry input cin",
-                    "relation": "GENERATED_BY",
-                    "end": "pc 1"
-                },
-                "65": {
-                    "start": "carry prediction",
-                    "relation": "ACHIEVED_USING",
-                    "end": "inputs of the two msb positions"
-                },
-                "66": {
-                    "start": "carry prediction",
-                    "relation": "IS_CORRECT_WHEN",
-                    "end": "carry is generated from any of these two bit positions"
-                },
-                "67": {
-                    "start": "limitation",
-                    "relation": "OCCURS_WHEN",
-                    "end": "lower bits have carry"
-                },
-                "68": {
-                    "start": "error",
-                    "relation": "INCREASES_TO",
-                    "end": "calculate this error constant"
-                },
-                "69": {
-                    "start": "error reduction constant",
-                    "relation": "IS",
-                    "end": "1"
-                },
-                "70": {
-                    "start": "truncation",
-                    "relation": "WHEN",
-                    "end": "no carry"
-                },
-                "71": {
-                    "start": "lsb of the inaccurate part",
-                    "relation": "IS_SET_TO",
-                    "end": "1"
-                },
-                "72": {
-                    "start": "constant",
-                    "relation": "IS",
-                    "end": "0"
-                },
-                "73": {
-                    "start": "truncation",
-                    "relation": "WHEN",
-                    "end": "carry is generated from n k 2th bit"
-                },
-                "74": {
-                    "start": "truncation",
-                    "relation": "WHEN",
-                    "end": "propagated to n k 2th bit"
-                },
-                "75": {
-                    "start": "error reduction",
-                    "relation": "IS_PERFORMED_WHEN",
-                    "end": "pnk1cnk2 1"
-                },
-                "76": {
-                    "start": "error reduction",
-                    "relation": "IS_DONE",
-                    "end": "basically"
-                },
-                "77": {
-                    "start": "correct output of nk1 bit",
-                    "relation": "SHOULD_BE",
-                    "end": "0"
-                },
-                "78": {
-                    "start": "our output",
-                    "relation": "IS",
-                    "end": "larger than the actual output"
-                },
-                "79": {
-                    "start": "error",
-                    "relation": "REDUCED_FROM",
-                    "end": "211"
-                },
-                "80": {
-                    "start": "error",
-                    "relation": "REDUCED_TO",
-                    "end": "84"
-                },
-                "81": {
-                    "start": "error",
-                    "relation": "REDUCES",
+                    "end": "prediction error rate"
+                },
+                "6": {
+                    "start": "prediction error rate",
+                    "relation": "REDUCED_BY",
+                    "end": "75%"
+                },
+                "7": {
+                    "start": "This design",
+                    "relation": "DECREASES",
                     "end": "error distance"
                 },
-                "82": {
-                    "start": "error rate analysis",
-                    "relation": "IS",
-                    "end": "probability of the complement of"
+                "8": {
+                    "start": "This design",
+                    "relation": "ENHANCES",
+                    "end": "normalized mean error distance (NMED)"
                 },
-                "83": {
-                    "start": "proposed adder",
-                    "relation": "HAS_ERROR_RATE",
-                    "end": "probability of the complement of"
+                "9": {
+                    "start": "normalized mean error distance (NMED)",
+                    "relation": "ENHANCED_BY",
+                    "end": "91.4%"
                 },
-                "84": {
-                    "start": "complement of the event",
-                    "relation": "REDUCES_ERROR_FROM",
-                    "end": "211 to 84"
+                "10": {
+                    "start": "This design",
+                    "relation": "ENHANCES",
+                    "end": "mean relative error distance (MRED)"
                 },
-                "85": {
-                    "start": "proposed adder",
-                    "relation": "ERROR_RATE_IS",
-                    "end": "probability of the complement of the event"
+                "11": {
+                    "start": "mean relative error distance (MRED)",
+                    "relation": "ENHANCED_BY",
+                    "end": "98.9%"
                 },
-                "86": {
-                    "start": "error rate erercpaa",
-                    "relation": "GIVEN_BY",
-                    "end": "experimental results"
+                "12": {
+                    "start": "This design",
+                    "relation": "ACHIEVES_REDUCTIONS_IN",
+                    "end": "power-NMED"
                 },
-                "87": {
-                    "start": "experimental results",
-                    "relation": "COMPARISON",
-                    "end": "experiment setup and evaluation"
+                "13": {
+                    "start": "This design",
+                    "relation": "ACHIEVES_REDUCTIONS_IN",
+                    "end": "energy-NMED"
                 },
-                "88": {
-                    "start": "proposed approximate adder",
-                    "relation": "EXAMINED_IN_TERMS_OF",
-                    "end": "area delay power and energy used"
+                "14": {
+                    "start": "This design",
+                    "relation": "ACHIEVES_REDUCTIONS_IN",
+                    "end": "area-delay product (ADP)-NMED"
                 },
-                "89": {
-                    "start": "16bit adder",
-                    "relation": "USING",
-                    "end": "8bit rcabased precise adder"
+                "15": {
+                    "start": "power-NMED",
+                    "relation": "REDUCED_BY_UP_TO",
+                    "end": "99.4%"
                 },
-                "90": {
-                    "start": "design parameter l",
-                    "relation": "DECREASES",
-                    "end": "because smaller l more logic gates"
+                "16": {
+                    "start": "energy-NMED",
+                    "relation": "REDUCED_BY_UP_TO",
+                    "end": "99.4%"
                 },
-                "91": {
-                    "start": "smaller l",
-                    "relation": "IMPLIES",
-                    "end": "more logic gates"
+                "17": {
+                    "start": "area-delay product (ADP)-NMED",
+                    "relation": "REDUCED_BY_UP_TO",
+                    "end": "99.4%"
                 },
-                "92": {
-                    "start": "l",
-                    "relation": "DECREASES",
-                    "end": "overall computation accuracy performance"
+                "18": {
+                    "start": "This design",
+                    "relation": "RESULTS_IN",
+                    "end": "figure of merit"
                 },
-                "93": {
-                    "start": "tradeoff",
-                    "relation": "BETWEEN",
-                    "end": "hardware and cost"
+                "19": {
+                    "start": "figure of merit",
+                    "relation": "SMALLER_BY",
+                    "end": "93.05%"
                 },
-                "94": {
-                    "start": "hardware efficiency",
-                    "relation": "MEASURED_BY",
-                    "end": "area delay product adp"
-                },
-                "95": {
-                    "start": "adpnmed product",
-                    "relation": "REDUCTION_OF",
-                    "end": "932"
-                },
-                "96": {
-                    "start": "nmed",
-                    "relation": "REDUCTION_OF",
-                    "end": "914"
-                },
-                "97": {
-                    "start": "mred",
-                    "relation": "REDUCTION_OF",
-                    "end": "989"
-                },
-                "98": {
-                    "start": "carry prediction",
-                    "relation": "REDUCED_BY",
-                    "end": "no"
-                },
-                "99": {
-                    "start": "loawa etai",
-                    "relation": "COMPARED_TO",
-                    "end": "50 andbased carry prediction"
-                },
-                "100": {
-                    "start": "cpeta",
-                    "relation": "REDUCTION_OF",
-                    "end": "25"
-                },
-                "101": {
-                    "start": "proposed ercp method",
-                    "relation": "IS",
-                    "end": "123"
-                },
-                "102": {
-                    "start": "digital image processing",
-                    "relation": "EXAMPLE_OF",
-                    "end": "realworld applications and validation"
-                },
-                "103": {
-                    "start": "gaussian smoothing",
-                    "relation": "IMPROVEMENT_OF",
-                    "end": "1264db"
-                },
-                "104": {
-                    "start": "machine learning",
-                    "relation": "EXAMPLE_OF",
-                    "end": "realworld applications and validation"
-                },
-                "105": {
-                    "start": "kmeans clustering",
-                    "relation": "IMPROVEMENT_OF",
-                    "end": "378"
-                },
-                "106": {
-                    "start": "compressor based hybrid approximate multiplier architectures",
-                    "relation": "WITH",
-                    "end": "efficient error correction logic"
-                },
-                "107": {
-                    "start": "digital image processing",
-                    "relation": "APPLICATIONS",
-                    "end": "gaussian smoothing"
-                },
-                "108": {
-                    "start": "gaussian smoothing",
-                    "relation": "INCREASE",
-                    "end": "1264db"
-                },
-                "109": {
-                    "start": "machine learning",
-                    "relation": "APPLICATIONS",
-                    "end": "kmeans clustering"
-                },
-                "110": {
-                    "start": "kmeans clustering",
-                    "relation": "IMPROVEMENT",
-                    "end": "378"
-                },
-                "111": {
-                    "start": "compressor based hybrid approximate multiplier architectures",
-                    "relation": "WITH",
-                    "end": "efficient error correction logic"
-                },
-                "112": {
-                    "start": "diagram",
-                    "relation": "ILLUSTRATES",
-                    "end": "error reduction technique"
-                },
-                "113": {
-                    "start": "error reduction technique",
-                    "relation": "APPLIES_TO",
-                    "end": "binary addition"
-                },
-                "114": {
-                    "start": "error reduction technique",
+                "20": {
+                    "start": "The core concept",
                     "relation": "INVOLVES",
-                    "end": "separating accurate parts of the sum"
+                    "end": "employing approximate full adder cells"
                 },
-                "115": {
-                    "start": "error reduction technique",
+                "21": {
+                    "start": "The core concept",
                     "relation": "INVOLVES",
-                    "end": "separating inaccurate parts of the sum"
+                    "end": "utilizing a novel error-reduced carry prediction (ERCP) technique"
                 },
-                "116": {
-                    "start": "error reduction technique",
+                "22": {
+                    "start": "The core concept",
                     "relation": "INVOLVES",
-                    "end": "correcting the inaccurate part"
+                    "end": "constant truncation"
                 },
-                "117": {
-                    "start": "diagram",
-                    "relation": "ILLUSTRATES",
-                    "end": "binary addition"
-                },
-                "118": {
-                    "start": "binary addition",
-                    "relation": "HAS_PART",
-                    "end": "accurate part"
-                },
-                "119": {
-                    "start": "binary addition",
-                    "relation": "HAS_PART",
-                    "end": "inaccurate part"
-                },
-                "120": {
-                    "start": "diagram",
-                    "relation": "HIGHLIGHTS",
-                    "end": "propagation of errors"
-                },
-                "121": {
-                    "start": "propagation of errors",
-                    "relation": "OCCURS_IN",
+                "23": {
+                    "start": "approximate full adder cells",
+                    "relation": "USED_IN",
                     "end": "least significant bits (LSBs)"
                 },
-                "122": {
-                    "start": "equation",
-                    "relation": "SHOWS",
-                    "end": "recursive formula"
+                "24": {
+                    "start": "novel error-reduced carry prediction (ERCP) technique",
+                    "relation": "COUPLED_WITH",
+                    "end": "constant truncation"
                 },
-                "123": {
-                    "start": "recursive formula",
-                    "relation": "FOR_CALCULATING",
-                    "end": "Cin"
+                "25": {
+                    "start": "The ERCP method",
+                    "relation": "INCORPORATES",
+                    "end": "and-or logic"
                 },
-                "124": {
+                "26": {
+                    "start": "and-or logic",
+                    "relation": "FOR",
+                    "end": "more accurate carry generation"
+                },
+                "27": {
+                    "start": "constant truncation",
+                    "relation": "SETS",
+                    "end": "LSBs"
+                },
+                "28": {
+                    "start": "constant truncation",
+                    "relation": "REDUCES",
+                    "end": "power"
+                },
+                "29": {
+                    "start": "constant truncation",
+                    "relation": "REDUCES",
+                    "end": "area"
+                },
+                "30": {
+                    "start": "constant truncation",
+                    "relation": "MINIMIZES",
+                    "end": "errors"
+                },
+                "31": {
+                    "start": "constant truncation",
+                    "relation": "FORCES",
+                    "end": "other bits to zero"
+                },
+                "32": {
+                    "start": "This approach",
+                    "relation": "DEMONSTRATES",
+                    "end": "substantial improvements"
+                },
+                "33": {
+                    "start": "substantial improvements",
+                    "relation": "IN",
+                    "end": "real-world applications"
+                },
+                "34": {
+                    "start": "real-world applications",
+                    "relation": "INCLUDE",
+                    "end": "digital image processing"
+                },
+                "35": {
+                    "start": "real-world applications",
+                    "relation": "INCLUDE",
+                    "end": "machine learning"
+                },
+                "36": {
+                    "start": "image",
+                    "relation": "DISPLAYS",
+                    "end": "binary numbers labeled A and B"
+                },
+                "37": {
+                    "start": "image",
+                    "relation": "INDICATES",
+                    "end": "Accurate Part"
+                },
+                "38": {
+                    "start": "image",
+                    "relation": "INDICATES",
+                    "end": "Inaccurate Part"
+                },
+                "39": {
+                    "start": "image",
+                    "relation": "INDICATES",
+                    "end": "Cin value"
+                },
+                "40": {
+                    "start": "image",
+                    "relation": "INDICATES",
+                    "end": "sum row labeled Sn-1:0"
+                },
+                "41": {
+                    "start": "sum row labeled Sn-1:0",
+                    "relation": "COMPARES",
+                    "end": "result \"Without Error Reduction\""
+                },
+                "42": {
+                    "start": "sum row labeled Sn-1:0",
+                    "relation": "COMPARES",
+                    "end": "potentially corrected result"
+                },
+                "43": {
+                    "start": "image",
+                    "relation": "DISPLAYS",
+                    "end": "binary addition operation"
+                },
+                "44": {
+                    "start": "binary addition operation",
+                    "relation": "SPLIT_INTO",
+                    "end": "Accurate Part"
+                },
+                "45": {
+                    "start": "binary addition operation",
+                    "relation": "SPLIT_INTO",
+                    "end": "Inaccurate Part"
+                },
+                "46": {
+                    "start": "binary addition operation",
+                    "relation": "HAS_INPUT",
+                    "end": "A"
+                },
+                "47": {
+                    "start": "binary addition operation",
+                    "relation": "HAS_INPUT",
+                    "end": "B"
+                },
+                "48": {
+                    "start": "binary addition operation",
+                    "relation": "HAS_OUTPUT",
+                    "end": "S"
+                },
+                "49": {
+                    "start": "C_in",
+                    "relation": "IS_CALCULATED_AS",
+                    "end": "C_{n-k-1} + P_{n-k-1}C_{n-k-2}"
+                },
+                "50": {
                     "start": "bar chart",
                     "relation": "DISPLAYS",
-                    "end": "carry prediction error rates"
+                    "end": "carry prediction error rate"
                 },
-                "125": {
-                    "start": "carry prediction error rates",
-                    "relation": "OF",
-                    "end": "ten different algorithms"
+                "51": {
+                    "start": "ERCPAA method",
+                    "relation": "EXHIBITS",
+                    "end": "lowest error rate"
                 },
-                "126": {
-                    "start": "ERCPAA",
-                    "relation": "SHOWS",
-                    "end": "significantly lower rate"
+                "52": {
+                    "start": "carry prediction error rate",
+                    "relation": "FOR",
+                    "end": "various methods"
                 },
-                "127": {
-                    "start": "ERCPAA",
-                    "relation": "HAS_LOWER_RATE_THAN",
-                    "end": "the others"
+                "53": {
+                    "start": "Pi",
+                    "relation": "EQUALS",
+                    "end": "Ai exclusive OR Bi"
                 },
-                "128": {
-                    "start": "P_i",
-                    "relation": "DEFINED_AS",
-                    "end": "direct sum of A_i and B_i"
-                },
-                "129": {
+                "54": {
                     "start": "ERERCPAA(n, k, l)",
-                    "relation": "EXPRESSED_AS",
-                    "end": "1 minus the probability of an event Eco"
+                    "relation": "DEFINES",
+                    "end": "1 - P(Eco)"
                 },
-                "130": {
-                    "start": "ERERCPAA(n, k, l)",
-                    "relation": "FUNCTION_OF",
-                    "end": "n"
+                "55": {
+                    "start": "1 - P(Eco)",
+                    "relation": "SIMPLIFIES_TO",
+                    "end": "1 - (3/4)^(n-k-l-1) * (1/2)^l"
                 },
-                "131": {
-                    "start": "ERERCPAA(n, k, l)",
-                    "relation": "FUNCTION_OF",
-                    "end": "k"
+                "56": {
+                    "start": "ERCp(n, k)",
+                    "relation": "IS_DEFINED_BY",
+                    "end": "series of equalities"
                 },
-                "132": {
-                    "start": "ERERCPAA(n, k, l)",
-                    "relation": "FUNCTION_OF",
-                    "end": "l"
+                "57": {
+                    "start": "series of equalities",
+                    "relation": "CULMINATING_IN",
+                    "end": "expression involving probabilities"
                 },
-                "133": {
-                    "start": "ERCP(n,k)",
-                    "relation": "DERIVED_FROM",
-                    "end": "independence of Pn-k-1, Pn-k-2, and Eca"
+                "58": {
+                    "start": "expression involving probabilities",
+                    "relation": "INVOLVES",
+                    "end": "probabilities of independent events"
+                },
+                "59": {
+                    "start": "probabilities of independent events",
+                    "relation": "INCLUDES",
+                    "end": "Pn-k-1"
+                },
+                "60": {
+                    "start": "probabilities of independent events",
+                    "relation": "INCLUDES",
+                    "end": "Pn-k-2"
+                },
+                "61": {
+                    "start": "probabilities of independent events",
+                    "relation": "INCLUDES",
+                    "end": "Eca"
                 }
             }
         },
         {
             "source_file": "material_requirements.xlsx",
-            "episode_id": "ep_c35bb699-8bae-4054-9157-79184ef367df",
+            "episode_id": "ep_7bb54ea8-2dff-4d40-a234-39059931aef4",
             "triples": {
                 "1": {
-                    "start": "b bread",
-                    "relation": "HAS_UNIT",
-                    "end": "red cow"
+                    "start": "Raw material inventory",
+                    "relation": "INCLUDES",
+                    "end": "maida"
                 },
                 "2": {
-                    "start": "b bread",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "bbrc s"
+                    "start": "Raw material inventory",
+                    "relation": "INCLUDES",
+                    "end": "atta"
                 },
                 "3": {
-                    "start": "b bread",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "sbm"
+                    "start": "Raw material inventory",
+                    "relation": "INCLUDES",
+                    "end": "sugar"
                 },
                 "4": {
-                    "start": "laccha bun",
-                    "relation": "HAS_UNIT",
-                    "end": "lb"
+                    "start": "Raw material inventory",
+                    "relation": "INCLUDES",
+                    "end": "salt"
                 },
                 "5": {
-                    "start": "sweet bun",
-                    "relation": "HAS_UNIT",
-                    "end": "sb"
+                    "start": "Raw material inventory",
+                    "relation": "INCLUDES",
+                    "end": "yeast"
                 },
                 "6": {
-                    "start": "cream bun",
-                    "relation": "HAS_UNIT",
-                    "end": "cb"
+                    "start": "Raw material inventory",
+                    "relation": "INCLUDES",
+                    "end": "flavorings"
                 },
                 "7": {
-                    "start": "pizza",
-                    "relation": "HAS_UNIT",
-                    "end": "pz"
+                    "start": "Raw material inventory",
+                    "relation": "INCLUDES",
+                    "end": "packaging materials"
                 },
                 "8": {
-                    "start": "maida",
-                    "relation": "HAS_UNIT",
-                    "end": "kg"
+                    "start": "packaging materials",
+                    "relation": "INCLUDES",
+                    "end": "pouches"
                 },
                 "9": {
-                    "start": "maida",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "1001"
+                    "start": "packaging materials",
+                    "relation": "INCLUDES",
+                    "end": "gloves"
                 },
                 "10": {
-                    "start": "maida",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "2000"
+                    "start": "Raw material inventory",
+                    "relation": "DETAILS",
+                    "end": "unit"
                 },
                 "11": {
-                    "start": "maida",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "324"
+                    "start": "Raw material inventory",
+                    "relation": "DETAILS",
+                    "end": "initial stock"
                 },
                 "12": {
-                    "start": "atta",
-                    "relation": "HAS_UNIT",
-                    "end": "kg"
+                    "start": "Raw material inventory",
+                    "relation": "DETAILS",
+                    "end": "purchased quantities"
                 },
                 "13": {
-                    "start": "atta",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "10000"
+                    "start": "Raw material inventory",
+                    "relation": "DETAILS",
+                    "end": "total consumption"
                 },
                 "14": {
-                    "start": "atta",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "1000"
+                    "start": "Raw material inventory",
+                    "relation": "DETAILS",
+                    "end": "closing stock"
                 },
                 "15": {
-                    "start": "atta",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "1000"
+                    "start": "Raw material inventory",
+                    "relation": "DETAILS",
+                    "end": "percentage remaining"
                 },
                 "16": {
-                    "start": "sugar",
-                    "relation": "HAS_UNIT",
-                    "end": "kg"
+                    "start": "current quantity",
+                    "relation": "OF",
+                    "end": "bakery items"
                 },
                 "17": {
-                    "start": "sugar",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "10000"
-                },
-                "18": {
-                    "start": "sugar",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "240"
-                },
-                "19": {
-                    "start": "sugar",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "224"
-                },
-                "20": {
-                    "start": "salt",
-                    "relation": "HAS_UNIT",
-                    "end": "kg"
-                },
-                "21": {
-                    "start": "salt",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "10000"
-                },
-                "22": {
-                    "start": "salt",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "48"
-                },
-                "23": {
-                    "start": "salt",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "56"
-                },
-                "24": {
-                    "start": "yeast",
-                    "relation": "HAS_UNIT",
-                    "end": "kg"
-                },
-                "25": {
-                    "start": "yeast",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "10000"
-                },
-                "26": {
-                    "start": "yeast",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "100"
-                },
-                "27": {
-                    "start": "yeast",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "96"
-                },
-                "28": {
-                    "start": "soya flour",
-                    "relation": "HAS_UNIT",
-                    "end": "kg"
-                },
-                "29": {
-                    "start": "soya flour",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "10000"
-                },
-                "30": {
-                    "start": "soya flour",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "15"
-                },
-                "31": {
-                    "start": "soya flour",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "224"
-                },
-                "32": {
-                    "start": "calcium proprinate",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "33": {
-                    "start": "calcium proprinate",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "15"
-                },
-                "34": {
-                    "start": "calcium proprinate",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "224"
-                },
-                "35": {
-                    "start": "calcium proprinate",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "039"
-                },
-                "36": {
-                    "start": "vital gluten",
-                    "relation": "HAS_UNIT",
-                    "end": "10000"
-                },
-                "37": {
-                    "start": "vital gluten",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "16"
-                },
-                "38": {
-                    "start": "vital gluten",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "32"
-                },
-                "39": {
-                    "start": "vital gluten",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "22"
-                },
-                "40": {
-                    "start": "vegetable fat",
-                    "relation": "HAS_UNIT",
-                    "end": "10000"
-                },
-                "41": {
-                    "start": "vegetable fat",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "256"
-                },
-                "42": {
-                    "start": "vegetable fat",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "1128"
-                },
-                "43": {
-                    "start": "vegetable fat",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "072"
-                },
-                "44": {
-                    "start": "palm oil",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "45": {
-                    "start": "palm oil",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "40"
-                },
-                "46": {
-                    "start": "palm oil",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "4"
-                },
-                "47": {
-                    "start": "palm oil",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "44"
-                },
-                "48": {
-                    "start": "acetic acid",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "49": {
-                    "start": "acetic acid",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "28000000000000003"
-                },
-                "50": {
-                    "start": "acetic acid",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "028"
-                },
-                "51": {
-                    "start": "cardamon flavour",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "52": {
-                    "start": "cardamon flavour",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "11"
-                },
-                "53": {
-                    "start": "cardamon flavour",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "11"
-                },
-                "54": {
-                    "start": "vanilla powder",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "55": {
-                    "start": "vanilla powder",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "20999999999999996"
-                },
-                "56": {
-                    "start": "vanilla powder",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "11500000000000001"
-                },
-                "57": {
-                    "start": "bread improver",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "58": {
-                    "start": "bread improver",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "17999999999999998"
-                },
-                "59": {
-                    "start": "bread improver",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "016"
-                },
-                "60": {
-                    "start": "caramel colour",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "61": {
-                    "start": "caramel colour",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "8"
-                },
-                "62": {
-                    "start": "caramel colour",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "8"
-                },
-                "63": {
-                    "start": "coconut powder",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "64": {
-                    "start": "coconut powder",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "33"
-                },
-                "65": {
-                    "start": "coconut powder",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "33"
-                },
-                "66": {
-                    "start": "tutti frutti",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "67": {
-                    "start": "tutti frutti",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "572"
-                },
-                "68": {
-                    "start": "tutti frutti",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "572"
-                },
-                "69": {
-                    "start": "muraba",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "70": {
-                    "start": "muraba",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "3"
-                },
-                "71": {
-                    "start": "muraba",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "3"
-                },
-                "72": {
-                    "start": "finamul",
-                    "relation": "HAS_UNIT",
-                    "end": "90"
-                },
-                "73": {
-                    "start": "finamul",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "1000"
-                },
-                "74": {
-                    "start": "finamul",
-                    "relation": "HAS_CLOSING_QUANTITY",
-                    "end": "032"
-                },
-                "75": {
-                    "start": "cream",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "76": {
-                    "start": "cream",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "44"
-                },
-                "77": {
-                    "start": "cream",
-                    "relation": "HAS_TOTAL_CONSUMPTION",
-                    "end": "44"
-                },
-                "78": {
-                    "start": "sorbic acid",
-                    "relation": "HAS_UNIT",
-                    "end": "1000"
-                },
-                "79": {
-                    "start": "sorbic acid",
-                    "relation": "HAS_CURRENT_QUANTITY",
-                    "end": "392"
-                },
-                "80": {
-                    "start": "caramel colour",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "81": {
-                    "start": "coconut powder",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "82": {
-                    "start": "tutti frutti",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "83": {
-                    "start": "muraba",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "84": {
-                    "start": "finamul",
-                    "relation": "QUANTITY",
-                    "end": "90"
-                },
-                "85": {
-                    "start": "cream",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "86": {
-                    "start": "sorbic acid",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "87": {
-                    "start": "fumeric acid",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "88": {
-                    "start": "ammonium chloride",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "89": {
-                    "start": "200gm pouch",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "90": {
-                    "start": "400 gm pouch",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "91": {
-                    "start": "mask",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "92": {
-                    "start": "surgical cap",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "93": {
-                    "start": "hand gloves",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "94": {
-                    "start": "slice blade",
-                    "relation": "QUANTITY",
-                    "end": "1000"
-                },
-                "95": {
-                    "start": "seal tape",
-                    "relation": "QUANTITY",
-                    "end": "1000"
+                    "start": "consumption data",
+                    "relation": "FOR",
+                    "end": "bakery items"
                 }
             }
         },
         {
             "source_file": "25SPF21VIT_2nd_Monthly_Connect.pptx",
-            "episode_id": "ep_2e801988-fc15-4c1d-8492-46bb0a5e4277",
+            "episode_id": "ep_c7854a25-3e45-46e9-a028-75e085c41107",
             "triples": {
                 "1": {
-                    "start": "hybrid batch and streaming solutions",
-                    "relation": "HAS_NAME",
-                    "end": "hybrid batch and streaming solutions"
+                    "start": "Hybrid batch and streaming solutions",
+                    "relation": "INITIATIVE_AT",
+                    "end": "VIT Vellore"
                 },
                 "2": {
-                    "start": "hybrid batch and streaming solutions",
-                    "relation": "HAS_DETAILS",
-                    "end": "worklet details"
+                    "start": "Hybrid batch and streaming solutions",
+                    "relation": "SETTLED_ON",
+                    "end": "lambda architecture"
                 },
                 "3": {
-                    "start": "worklet id",
-                    "relation": "IS",
-                    "end": "25spf21vit"
+                    "start": "lambda architecture",
+                    "relation": "USING",
+                    "end": "Apache Spark 3x"
                 },
                 "4": {
-                    "start": "college name",
-                    "relation": "IS",
-                    "end": "vit vellore"
+                    "start": "lambda architecture",
+                    "relation": "USING",
+                    "end": "Apache Kafka"
                 },
                 "5": {
-                    "start": "next steps",
-                    "relation": "INCLUDE",
-                    "end": "integrate apache kafka for ingestion"
+                    "start": "Apache Spark 3x",
+                    "relation": "PRIMARY_STACK_FOR",
+                    "end": "supporting historical batch data processing"
                 },
                 "6": {
-                    "start": "next steps",
-                    "relation": "INCLUDE",
-                    "end": "define input sources for batch historical and streaming realtime"
+                    "start": "Apache Spark 3x",
+                    "relation": "PRIMARY_STACK_FOR",
+                    "end": "supporting real-time streaming data processing"
                 },
                 "7": {
-                    "start": "next steps",
-                    "relation": "INCLUDE",
-                    "end": "confirm use of apache spark 3x for structured streaming batch"
+                    "start": "Apache Kafka",
+                    "relation": "PRIMARY_STACK_FOR",
+                    "end": "supporting historical batch data processing"
                 },
                 "8": {
-                    "start": "batch kpis achieved till now",
-                    "relation": "INCLUDE",
-                    "end": "completed comparison of lambda vs kappa"
+                    "start": "Apache Kafka",
+                    "relation": "PRIMARY_STACK_FOR",
+                    "end": "supporting real-time streaming data processing"
                 },
                 "9": {
-                    "start": "batch kpis achieved till now",
-                    "relation": "INCLUDE",
-                    "end": "understood architecture of lambda"
+                    "start": "Hybrid batch and streaming solutions",
+                    "relation": "LEVERAGING",
+                    "end": "open-source datasets"
                 },
                 "10": {
-                    "start": "batch kpis achieved till now",
-                    "relation": "INCLUDE",
-                    "end": "reviewed spark kafka integration feasibility"
+                    "start": "Hybrid batch and streaming solutions",
+                    "relation": "AIMING_FOR",
+                    "end": "August 2025 completion"
                 },
                 "11": {
-                    "start": "key achievements outcome till now",
+                    "start": "Key achievements",
                     "relation": "INCLUDE",
-                    "end": "chosen apache spark 3x kafka as primary stack"
+                    "end": "comparison of lambda and kappa architectures"
                 },
                 "12": {
-                    "start": "key achievements outcome till now",
+                    "start": "Key achievements",
                     "relation": "INCLUDE",
-                    "end": "outlined hybrid system design"
+                    "end": "understanding lambda's structure"
                 },
                 "13": {
-                    "start": "key achievements outcome till now",
+                    "start": "Key achievements",
                     "relation": "INCLUDE",
-                    "end": "settled on lambda architecture"
+                    "end": "confirming Spark-Kafka integration feasibility"
                 },
                 "14": {
-                    "start": "lambda architecture",
-                    "relation": "SUPPORTS",
-                    "end": "streaming processing"
+                    "start": "Challenges",
+                    "relation": "INVOLVE",
+                    "end": "balancing latency and throughput"
                 },
                 "15": {
-                    "start": "lambda architecture",
-                    "relation": "SUPPORTS",
-                    "end": "batch processing"
+                    "start": "Challenges",
+                    "relation": "INVOLVE",
+                    "end": "fault tolerance"
                 },
                 "16": {
-                    "start": "challenges issues faced",
-                    "relation": "INCLUDE",
-                    "end": "balancing latency and throughput in hybrid design"
+                    "start": "Challenges",
+                    "relation": "INVOLVE",
+                    "end": "scalability"
                 },
                 "17": {
-                    "start": "challenges issues faced",
-                    "relation": "INCLUDE",
-                    "end": "evaluating faulttolerance for both modes"
+                    "start": "The project",
+                    "relation": "UTILIZES",
+                    "end": "Scala"
                 },
                 "18": {
-                    "start": "challenges issues faced",
-                    "relation": "INCLUDE",
-                    "end": "ensuring scalability of chosen architecture"
+                    "start": "The project",
+                    "relation": "UTILIZES",
+                    "end": "Spark SQL"
                 },
                 "19": {
-                    "start": "date",
-                    "relation": "IS",
-                    "end": "aug 2025"
+                    "start": "The project",
+                    "relation": "UTILIZES",
+                    "end": "Structured Streaming"
                 },
                 "20": {
-                    "start": "hybrid batch and streaming solutions",
-                    "relation": "HAS_NAME",
-                    "end": "hybrid batch and streaming solutions"
+                    "start": "The project",
+                    "relation": "UTILIZES",
+                    "end": "local infrastructure"
                 },
                 "21": {
-                    "start": "hybrid batch and streaming solutions",
-                    "relation": "HAS_DETAILS",
-                    "end": "any anticipated break due to exams etc gravitas september 2628"
+                    "start": "The project",
+                    "relation": "UTILIZES",
+                    "end": "cloud infrastructure"
                 },
                 "22": {
-                    "start": "resource requirement",
-                    "relation": "IDENTIFIED_WITH_STATUS",
-                    "end": "apache spark 3x college systems personal laptops"
+                    "start": "Resource requirements",
+                    "relation": "INCLUDE",
+                    "end": "Apache Spark"
                 },
                 "23": {
-                    "start": "resource requirement",
-                    "relation": "IDENTIFIED_WITH_STATUS",
-                    "end": "apache kafka cluster setup local possible cloud support no gpu requirement at this stage"
+                    "start": "Resource requirements",
+                    "relation": "INCLUDE",
+                    "end": "Apache Kafka cluster"
                 },
                 "24": {
-                    "start": "data collection",
-                    "relation": "INFORMATION_USING",
-                    "end": "opensource streaming datasets eg simulated iot data logs"
+                    "start": "Samsung PRISM logo",
+                    "relation": "FEATURES",
+                    "end": "the word \"PRISM\""
                 },
                 "25": {
-                    "start": "data collection",
-                    "relation": "INFORMATION_USING",
-                    "end": "batch datasets from public repositories kagglebig data repos"
+                    "start": "the word \"PRISM\"",
+                    "relation": "DESCRIBED_AS",
+                    "end": "large, blue, polygonal letters"
                 },
                 "26": {
-                    "start": "github repository link",
-                    "relation": "IS",
-                    "end": "httpsgithubecodesamsungcomsribprismvit25spf21vithybridbatchandstreamingsolutions"
+                    "start": "Samsung logo",
+                    "relation": "IS_LOCATED",
+                    "end": "above the word \"PRISM\""
                 },
                 "27": {
-                    "start": "prism portal registration",
-                    "relation": "STATUS",
-                    "end": "date aug 2025"
+                    "start": "tagline",
+                    "relation": "IS_LOCATED",
+                    "end": "below the word \"PRISM\""
                 },
                 "28": {
-                    "start": "worklet id",
-                    "relation": "IS",
-                    "end": "25spf21vit"
+                    "start": "Samsung PRISM logo",
+                    "relation": "FEATURES",
+                    "end": "large, blue, polygonal letters"
                 },
                 "29": {
-                    "start": "college name",
-                    "relation": "IS",
-                    "end": "vit vellore"
+                    "start": "large, blue, polygonal letters",
+                    "relation": "SPELL",
+                    "end": "PRISM"
                 },
                 "30": {
-                    "start": "worklet",
-                    "relation": "HAS_NAME",
-                    "end": "hybrid batch and streaming solutions"
+                    "start": "SAMSUNG",
+                    "relation": "APPEARS_ABOVE",
+                    "end": "PRISM"
                 },
                 "31": {
-                    "start": "data collection information",
-                    "relation": "USING",
-                    "end": "opensource streaming datasets"
+                    "start": "PREPARING AND INSPIRING STUDENTS MINDS",
+                    "relation": "IS_TAGLINE_BELOW",
+                    "end": "PRISM"
                 },
                 "32": {
-                    "start": "opensource streaming datasets",
-                    "relation": "EXAMPLE_OF",
-                    "end": "simulated iot data logs"
+                    "start": "Samsung PRISM logo",
+                    "relation": "DISPLAYS",
+                    "end": "word PRISM"
                 },
                 "33": {
-                    "start": "opensource streaming datasets",
-                    "relation": "EXAMPLE_OF",
-                    "end": "batch datasets from public repositories"
+                    "start": "word PRISM",
+                    "relation": "HAS_STYLE",
+                    "end": "large, blue, geometric lettering"
                 },
                 "34": {
-                    "start": "batch datasets from public repositories",
-                    "relation": "FROM",
-                    "end": "kaggle"
+                    "start": "Samsung logo",
+                    "relation": "IS_LOCATED",
+                    "end": "above word PRISM"
                 },
                 "35": {
-                    "start": "batch datasets from public repositories",
-                    "relation": "FROM",
-                    "end": "big data repos"
-                },
-                "36": {
-                    "start": "httpsgithubecodesamsungcomsribprismvit25spf21vithybridbatchandstreamingsolutions",
-                    "relation": "IS_A",
-                    "end": "github repository link"
-                },
-                "37": {
-                    "start": "prism",
-                    "relation": "HAS_A",
-                    "end": "portal registration status"
-                },
-                "38": {
-                    "start": "portal registration status",
-                    "relation": "DATE",
-                    "end": "aug 2025"
-                },
-                "39": {
-                    "start": "25spf21vit",
-                    "relation": "IS_A",
-                    "end": "worklet id"
-                },
-                "40": {
-                    "start": "vit vellore",
-                    "relation": "IS_A",
-                    "end": "college name"
-                },
-                "41": {
-                    "start": "hybrid batch and streaming solutions",
-                    "relation": "IS_A",
-                    "end": "worklet name"
-                },
-                "42": {
-                    "start": "worklet details",
-                    "relation": "HAS_A",
-                    "end": "professor comments"
-                },
-                "43": {
-                    "start": "professor comments",
-                    "relation": "TO_BE_FILLED_BY",
-                    "end": "professor"
-                },
-                "44": {
-                    "start": "date",
-                    "relation": "IS",
-                    "end": "aug 2025"
-                },
-                "45": {
-                    "start": "computation resource details",
-                    "relation": "HAS_A",
-                    "end": "language scala"
-                },
-                "46": {
-                    "start": "language scala",
-                    "relation": "RUNNING_ON",
-                    "end": "java jdk"
-                },
-                "47": {
-                    "start": "java jdk",
-                    "relation": "IS_A",
-                    "end": "processing engine"
-                },
-                "48": {
-                    "start": "processing engine",
-                    "relation": "EXAMPLE_OF",
-                    "end": "apache spark"
-                },
-                "49": {
-                    "start": "apache spark",
-                    "relation": "USING",
-                    "end": "spark sql"
-                },
-                "50": {
-                    "start": "apache spark",
-                    "relation": "USING",
-                    "end": "structured streaming"
-                },
-                "51": {
-                    "start": "data pipeline",
-                    "relation": "IS_A",
-                    "end": "apache kafka"
-                },
-                "52": {
-                    "start": "ide",
-                    "relation": "IS_A",
-                    "end": "intellij idea"
-                },
-                "53": {
-                    "start": "intellij idea",
-                    "relation": "WITH",
-                    "end": "scala plugin"
-                },
-                "54": {
-                    "start": "build tool",
-                    "relation": "IS_A",
-                    "end": "sbt"
-                },
-                "55": {
-                    "start": "infrastructure",
-                    "relation": "IS_A",
-                    "end": "docker desktop"
-                },
-                "56": {
-                    "start": "25spf21vit",
-                    "relation": "IS_A",
-                    "end": "worklet id"
-                },
-                "57": {
-                    "start": "vit vellore",
-                    "relation": "IS_A",
-                    "end": "college name"
-                },
-                "58": {
-                    "start": "Samsung",
-                    "relation": "HAS_LOGO_FOR",
-                    "end": "PRISM"
-                },
-                "59": {
-                    "start": "PRISM",
-                    "relation": "IS_A",
-                    "end": "program"
-                },
-                "60": {
-                    "start": "PRISM",
-                    "relation": "FOR",
-                    "end": "inspiring Silicon Valley startups"
-                },
-                "61": {
-                    "start": "Samsung PRISM",
-                    "relation": "IS_A",
-                    "end": "logo"
-                },
-                "62": {
-                    "start": "Samsung PRISM",
-                    "relation": "PROGRAM_FOR",
-                    "end": "inspiring Silicon Valley minds"
-                },
-                "63": {
-                    "start": "Samsung",
-                    "relation": "HAS_LOGO_FOR",
-                    "end": "PRISM"
-                },
-                "64": {
-                    "start": "PRISM",
-                    "relation": "IS_A",
-                    "end": "program"
-                },
-                "65": {
-                    "start": "program",
-                    "relation": "FOR",
-                    "end": "inspiring Silicon Valley startups"
+                    "start": "tagline",
+                    "relation": "IS_LOCATED",
+                    "end": "below word PRISM"
                 }
             }
         }
