@@ -1,0 +1,16 @@
+# Ignore editor-specific configuration
+.vscode/
+
+# Ignore environment file with secret keys
+.env
+
+# Ignore all generated output files and folders
+extracted_images/
+
+
+# Ignore all source data files
+*.pdf
+*.pptx
+*.docx
+*.xlsx
+
