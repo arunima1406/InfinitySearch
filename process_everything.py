@@ -17,6 +17,7 @@ from pptx import Presentation
 IMAGE_OUTPUT_DIR = "extracted_images"
 CHUNK_SIZE = 200
 OVERLAP_SIZE = 40
+MAX_TEXT_LENGTH_FOR_SUMMARY = 200000
 # ---------------------
 
 # Load API Key and configure Gemini
@@ -30,25 +31,25 @@ def describe_image_with_gemini(image_path):
     try:
         img = Image.open(image_path)
         model = genai.GenerativeModel('gemini-2.5-flash-lite')
-        response = model.generate_content(["Describe this image in a concise sentence.", img])
-        time.sleep(5)  # <-- IMPORTANT: Wait 5 seconds to respect the rate limit
-        return response.text
+        prompt = "Directly describe the content of this image in one factual, declarative sentence. Start the sentence with the main subject. Do not use phrases like 'This image shows' or 'The diagram depicts'."
+        response = model.generate_content([prompt, img])
+        time.sleep(5) # <-- IMPORTANT: Wait 5 seconds to respect the rate limit
+        return response.text.strip()
     except Exception as e:
         print(f"      ! Error describing image with Gemini: {e}")
         return "Error during Gemini description."
 
 def summarize_text_with_gemini(text):
     print("    > Summarizing text content...")
-    if len(text) > 200000:
-        text = text[:200000]
+    if len(text) > MAX_TEXT_LENGTH_FOR_SUMMARY:
+        text = text[:MAX_TEXT_LENGTH_FOR_SUMMARY]
         print("      ! Text was truncated for summarization due to extreme length.")
-        
     try:
         model = genai.GenerativeModel('gemini-2.5-flash-lite')
-        prompt = "Summarize the following text, focusing on the key topics, facts, and conclusions. Extract the most important and meaningful information, ignoring any filler, boilerplate, or conversational content. Provide only the concise summary."
+        prompt = "Analyze the following. Synthesize its core subject and key points into a single, concise, and factual paragraph. Start the sentence with the main subject. Describe the content directly as if explaining it. Do not use third person language like 'This text is about' or 'The author discusses'. under any circumstances do not use 'this' and start the sentence. just keep it generic start with the subject."
         response = model.generate_content([prompt, text])
-        time.sleep(5)  # <-- IMPORTANT: Wait 5 seconds to respect the rate limit
-        return response.text
+        time.sleep(5) # <-- IMPORTANT: Wait 5 seconds to respect the rate limit
+        return response.text.strip()
     except Exception as e:
         print(f"      ! Error during text summarization: {e}")
         return text
@@ -163,8 +164,8 @@ for file_path in all_files:
         
     except Exception as e: print(f"    ! FAILED to process {file_path}. Error: {e}")
 
-output_filename = "final_summarized_output.json"
+output_filename = "final_declarative_output.json"
 with open(output_filename, "w") as f:
     json.dump(consolidated_results, f, indent=4)
 
-print(f"\n--- ALL DONE! --- \nSummarized and chunked data saved to '{output_filename}'")
+print(f"\n--- ALL DONE! --- \nDeclarative summaries and descriptions saved to '{output_filename}'")
