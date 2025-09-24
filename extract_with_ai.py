@@ -1,5 +1,6 @@
 import os
 import json
+import time
 import google.generativeai as genai
 from dotenv import load_dotenv
 
@@ -13,7 +14,6 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 # 2. Configure the model to GUARANTEE JSON output
-# This is the most important fix!
 generation_config = {
   "response_mime_type": "application/json",
 }
@@ -29,7 +29,7 @@ You are an expert information extraction agent. Your task is to analyze the user
 Output a valid JSON array of objects. Each object represents a single relationship and must have three keys: "start", "relation", and "end".
 
 - "start": The subject or starting entity of the relationship.
-- "relation": A descriptive, uppercase, snake_case name for the relationship (e.g., WORKS_AT, LOCATED_IN, BORN_ON).
+- "relation": A descriptive, uppercase, snake_case name for the relationship (e.g., IS_A, HAS_PHASE, SUITABLE_FOR).
 - "end": The object or ending entity of the relationship.
 
 Do not include any relationships that are not explicitly stated in the text. Do not add any explanations or introductory text outside of the JSON array.
@@ -37,32 +37,57 @@ Do not include any relationships that are not explicitly stated in the text. Do 
 
 # --- Execution ---
 try:
-    # 4. Load text chunks from the file provided by Member 1
+    # 4. Load the list of source file data from Member 1
     with open("step1.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
-    chunks = data["chunks"]
-    
-    all_triples = []
-    
-    print(f"Found {len(chunks)} chunks to process...")
+        source_files_data = json.load(f)
 
-    # 5. Process each chunk with the more robust API call
-    for i, chunk in enumerate(chunks, start=1):
-        print(f"\n🔎 Processing chunk {i}/{len(chunks)}...")
+    # This will hold the final structured output
+    final_knowledge_graph = []
 
-        # The new, cleaner way to send the prompt
-        prompt_parts = [
-            SYSTEM_PROMPT,
-            "Text to analyze:",
-            chunk
-        ]
+    print(f"Found {len(source_files_data)} source file(s) to process...")
+
+    # 5. Process each source file object
+    for file_data in source_files_data:
+        source_file = file_data.get("source_file", "Unknown_Source")
+        print(f"\n--- Processing source: {source_file} ---")
+
+        # Combine text chunks and image descriptions into one list to process
+        texts_to_process = []
+        texts_to_process.extend(file_data.get("text_chunks", []))
+        for image in file_data.get("extracted_images", []):
+            if image.get("description"):
+                texts_to_process.append(image.get("description"))
+
+        if not texts_to_process:
+            print("No text chunks or image descriptions found. Skipping.")
+            continue
+            
+        file_triples = []
         
-        response = model.generate_content(prompt_parts)
-        
-        # 6. No more "try-except" for parsing! The API guarantees valid JSON.
-        triples = json.loads(response.text)
-        print(f"✅ Extracted {len(triples)} triples from chunk {i}.")
-        all_triples.extend(triples)
+        # 6. Process each piece of text from the combined list
+        for i, text_chunk in enumerate(texts_to_process, start=1):
+            print(f"  🔎 Processing text part {i}/{len(texts_to_process)}...")
+
+            prompt_parts = [SYSTEM_PROMPT, "Text to analyze:", text_chunk]
+            
+            try:
+                response = model.generate_content(prompt_parts)
+                triples = json.loads(response.text)
+                print(f"  ✅ Extracted {len(triples)} triples.")
+                file_triples.extend(triples)
+                
+                # Add a delay to respect API rate limits
+                time.sleep(2) 
+            except Exception as e:
+                print(f"  ⚠️ Error processing a text part: {e}")
+
+
+        # Add the collected triples for this file to our final structure
+        final_knowledge_graph.append({
+            "source_file": source_file,
+            "triples": file_triples
+        })
+
 
 except FileNotFoundError:
     print("Error: `step1.json` not found. Please create it with the text chunks.")
@@ -70,10 +95,10 @@ except Exception as e:
     print(f"An unexpected error occurred: {e}")
 
 # --- Output ---
-# 7. Save the final combined list of triples for Member 3
+# 7. Save the final structured graph for Member 3
 output_filename = "triples_gemini.json"
 with open(output_filename, "w", encoding="utf-8") as f:
-    json.dump(all_triples, f, indent=2, ensure_ascii=False)
+    json.dump({"knowledge_graph": final_knowledge_graph}, f, indent=4, ensure_ascii=False)
 
-print(f"\n\n📊 Total triples extracted: {len(all_triples)}")
+print(f"\n\n📊 Knowledge graph extraction complete.")
 print(f"Results saved to '{output_filename}'")
