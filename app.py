@@ -13,7 +13,7 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 NEO4J_URI = os.environ.get("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USERNAME = os.environ.get("NEO4J_USERNAME", "neo4j")
 NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD", "password")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
 
 if not GEMINI_API_KEY:
     raise RuntimeError("GEMINI_API_KEY is missing in .env")
@@ -64,7 +64,7 @@ Question: {question}
 """
         text = self._call_gemini(prompt, max_tokens=600, temperature=0.0)
 
-        # 🔥 Clean output (remove markdown fences like ```json ... ```)
+        # Clean output 
         clean_text = (
             text.replace("```json", "")
                 .replace("```", "")
