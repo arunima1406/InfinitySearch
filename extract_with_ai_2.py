@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import uuid
 import google.generativeai as genai
 from dotenv import load_dotenv
 
@@ -22,7 +23,7 @@ model = genai.GenerativeModel(
     generation_config=generation_config
 )
 
-# 3. System Prompt (REFINED)
+# 3. System Prompt (Refined and proven to work well)
 SYSTEM_PROMPT = """
 You are an expert information extraction agent. Your task is to analyze the user's text and extract knowledge triples.
 
@@ -48,7 +49,7 @@ Example for "Alan Turing proposed the universal machine in 1936.":
 
 # --- Execution ---
 try:
-    with open("step1.json", "r", encoding="utf-8") as f:
+    with open("chunks.json", "r", encoding="utf-8") as f:
         source_files_data = json.load(f)
 
     final_knowledge_graph = []
@@ -57,6 +58,9 @@ try:
     for file_data in source_files_data:
         source_file = file_data.get("source_file", "Unknown_Source")
         print(f"\n--- Processing source: {source_file} ---")
+
+        # **NEW:** Generate a unique ID for this document's "episode"
+        episode_id = f"ep_{uuid.uuid4()}"
 
         texts_to_process = []
         texts_to_process.extend(file_data.get("text_chunks", []))
@@ -76,7 +80,6 @@ try:
             
             try:
                 response = model.generate_content(prompt_parts)
-                # The AI will now return a list of dictionaries, e.g., [{"start":...}, {"start":...}]
                 list_of_dicts = json.loads(response.text)
                 print(f"  ✅ Extracted {len(list_of_dicts)} triples.")
                 all_triples_from_ai.extend(list_of_dicts)
@@ -84,7 +87,6 @@ try:
             except Exception as e:
                 print(f"  ⚠️ Error processing a text part: {e}")
 
-        # 7. **MODIFIED:** Convert the list of dictionaries from the AI into a numbered dictionary
         triples_dict = {}
         for i, triple_obj in enumerate(all_triples_from_ai, start=1):
             if isinstance(triple_obj, dict) and "start" in triple_obj and "relation" in triple_obj and "end" in triple_obj:
@@ -92,19 +94,21 @@ try:
             else:
                 print(f"  ⚠️ Skipping malformed triple from AI: {triple_obj}")
 
+        # Add the final structure including the new episode_id
         final_knowledge_graph.append({
             "source_file": source_file,
+            "episode_id": episode_id, # Add the new ID here
             "triples": triples_dict
         })
 
 
 except FileNotFoundError:
-    print("Error: `step1.json` not found.")
+    print("Error: `chunks.json` not found.")
 except Exception as e:
     print(f"An unexpected error occurred: {e}")
 
 # --- Output ---
-output_filename = "triples_final.json"
+output_filename = "triples_with_episodes.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump({"knowledge_graph": final_knowledge_graph}, f, indent=4, ensure_ascii=False)
 
