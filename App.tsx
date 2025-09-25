@@ -3,11 +3,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { View } from 'react-native';
-import BottomNavBar from '../../src/components/BottomNavBar';
-import FilePreviewScreen from '../../src/screens/FilePreviewScreen';
-import LoadingScreen from '../../src/screens/LoadingScreen';
-import SearchScreen from '../../src/screens/SearchScreen';
-import { colors } from '../../src/utils/styles';
+import BottomNavBar from './src/components/BottomNavBar';
+import FilePreviewScreen from './src/screens/FilePreviewScreen';
+import LoadingScreen from './src/screens/LoadingScreen';
+import SearchScreen from './src/screens/SearchScreen';
+import { colors } from './src/utils/styles';
 
 export type RootStackParamList = {
   Loading: undefined;
