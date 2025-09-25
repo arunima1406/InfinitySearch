@@ -1,0 +1,1726 @@
+{
+    "knowledge_graph": [
+        {
+            "source_file": "1_Embedded-product-design-life-cycle.pdf",
+            "triples": [
+                {
+                    "start": "embedded systems product development life cycle",
+                    "relation": "USES_APPROACH",
+                    "end": "waterfall model"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "IS_A",
+                    "end": "linear and sequential software development approach"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "CHARACTERIZED_BY",
+                    "end": "distinct phases"
+                },
+                {
+                    "start": "distinct phases",
+                    "relation": "INCLUDES",
+                    "end": "requirements gathering"
+                },
+                {
+                    "start": "distinct phases",
+                    "relation": "INCLUDES",
+                    "end": "design"
+                },
+                {
+                    "start": "distinct phases",
+                    "relation": "INCLUDES",
+                    "end": "implementation"
+                },
+                {
+                    "start": "distinct phases",
+                    "relation": "INCLUDES",
+                    "end": "testing"
+                },
+                {
+                    "start": "distinct phases",
+                    "relation": "INCLUDES",
+                    "end": "maintenance"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "projects with welldefined stable requirements"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_DRAWBACK",
+                    "end": "inflexibility"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "WORKS_BEST_WITH",
+                    "end": "clear and stable requirements"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_PROCESS",
+                    "end": "sequential phases"
+                },
+                {
+                    "start": "sequential phases",
+                    "relation": "HAS_ORDER",
+                    "end": "requirements, design, implementation, testing, deployment"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "EMPHASIZES",
+                    "end": "thorough documentation"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "certain projects"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "WELL_SUITED_FOR",
+                    "end": "embedded systems with clear specifications"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "WELL_SUITED_FOR",
+                    "end": "high reliability requirements"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "WELL_SUITED_FOR",
+                    "end": "embedded systems where changes are difficult or costly to implement"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "safetycritical systems"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "industrial control systems"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "automotive applications"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "welldefined phases"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "PROVIDES",
+                    "end": "structured approach"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "safety-critical systems"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "industrial control systems"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "automotive applications"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "well-defined phases"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "structured and organized approach to development"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "easy to manage the linear nature of the process"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "easier to track progress and manage resources"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "low risk when requirements are stable"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "high reliability"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "inflexible"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "difficult to accommodate changes in requirements"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "late testing"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "limited customer involvement"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "NOT_SUITABLE_FOR",
+                    "end": "complex projects"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "NOT_SUITABLE_FOR",
+                    "end": "projects with rapidly evolving requirements"
+                },
+                {
+                    "start": "waterfall model",
+                    "relation": "NOT_SUITABLE_FOR",
+                    "end": "complex functionalities"
+                },
+                {
+                    "start": "embedded system projects",
+                    "relation": "SUITABLE_FOR",
+                    "end": "agile methodologies"
+                },
+                {
+                    "start": "agile methodologies",
+                    "relation": "EMPHASIZE",
+                    "end": "iterative development collaboration and flexibility"
+                },
+                {
+                    "start": "agile methodologies",
+                    "relation": "ALLOW",
+                    "end": "changes and adjustments throughout the development process"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "IS_A",
+                    "end": "riskdriven software development process"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "embedded systems"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "COMBINE",
+                    "end": "elements of waterfall and iterative models"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "ALLOW",
+                    "end": "risk assessment and prototyping at each stage"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "MAKE",
+                    "end": "ideal for complex projects with evolving requirements"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "BENEFIT_FOR",
+                    "end": "embedded systems risk management"
+                },
+                {
+                    "start": "embedded systems",
+                    "relation": "INVOLVE",
+                    "end": "hardwaresoftware integration realtime constraints and specific resource limitations"
+                },
+                {
+                    "start": "spiral models iterative nature",
+                    "relation": "ALLOW",
+                    "end": "identifying and mitigating risks early in the development cycle"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "ALLOW",
+                    "end": "repeated cycles of planning risk analysis engineering and evaluation"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "ALLOW",
+                    "end": "continuous refinement and adaptation based on testing and feedback"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "SUPPORT",
+                    "end": "building prototypes at each iteration"
+                },
+                {
+                    "start": "prototyping",
+                    "relation": "ENABLE",
+                    "end": "developers to validate design choices test functionality and gather user feedback early on"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "SUPPORTS",
+                    "end": "building prototypes"
+                },
+                {
+                    "start": "prototyping",
+                    "relation": "ENABLES",
+                    "end": "developers to validate design choices"
+                },
+                {
+                    "start": "prototyping",
+                    "relation": "ENABLES",
+                    "end": "test functionality"
+                },
+                {
+                    "start": "prototyping",
+                    "relation": "ENABLES",
+                    "end": "gather user feedback"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "IS_PARTICULARLY_IMPORTANT_IN",
+                    "end": "embedded systems"
+                },
+                {
+                    "start": "embedded systems",
+                    "relation": "HAS_CHARACTERISTIC",
+                    "end": "hardware and software interact"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "incorporating changes"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "new functionalities"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "ENSURES",
+                    "end": "final product meets the changing needs of the system"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "complex systems"
+                },
+                {
+                    "start": "embedded systems",
+                    "relation": "IS_A",
+                    "end": "complex systems"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "HELPS_MANAGE",
+                    "end": "complexity"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "PROVIDES",
+                    "end": "flexible and riskaware framework"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "continuous improvement"
+                },
+                {
+                    "start": "spiral model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "adaptation"
+                },
+                {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "requirement analysis"
+                },
+                {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "system design"
+                },
+                {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "implementation"
+                },
+                {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "testing"
+                },
+                {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "deployment"
+                },
+                {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "maintenance"
+                },
+                {
+                    "start": "diagram",
+                    "relation": "ILLUSTRATES",
+                    "end": "spiral model of software design"
+                },
+                {
+                    "start": "spiral model of software design",
+                    "relation": "SHOWS",
+                    "end": "iterative development phases"
+                },
+                {
+                    "start": "iterative development phases",
+                    "relation": "FROM",
+                    "end": "system feasibility"
+                },
+                {
+                    "start": "iterative development phases",
+                    "relation": "TO",
+                    "end": "enhanced system"
+                }
+            ]
+        },
+        {
+            "source_file": "1_Sample-architectures.pdf",
+            "triples": [
+                {
+                    "start": "embedded system design architectures",
+                    "relation": "HAS_SAMPLE",
+                    "end": "microwave oven"
+                },
+                {
+                    "start": "embedded system design architectures",
+                    "relation": "HAS_SAMPLE",
+                    "end": "elevatorlift"
+                },
+                {
+                    "start": "embedded system design architectures",
+                    "relation": "HAS_SAMPLE",
+                    "end": "washing machine"
+                },
+                {
+                    "start": "microwave oven",
+                    "relation": "HAS_BEHAVIOR_MODEL",
+                    "end": "examples"
+                },
+                {
+                    "start": "elevator",
+                    "relation": "HAS_BEHAVIOR_MODEL",
+                    "end": "examples"
+                },
+                {
+                    "start": "washing machine",
+                    "relation": "HAS_BEHAVIOR_MODEL",
+                    "end": "examples"
+                },
+                {
+                    "start": "embedded system design architectures",
+                    "relation": "HAS_ABSTRACTION_LAYER",
+                    "end": "samples"
+                },
+                {
+                    "start": "diagram",
+                    "relation": "SHOWS_CLASS_DIAGRAM_OF",
+                    "end": "oven controller system"
+                },
+                {
+                    "start": "oven controller system",
+                    "relation": "HAS_COMPONENTS_AND",
+                    "end": "relationships"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "timer"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "door"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "buttons"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "keypad"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "sensors"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "display"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "buzzer"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "traction motor control"
+                },
+                {
+                    "start": "system controller",
+                    "relation": "CONNECTED_TO",
+                    "end": "floor calculator"
+                },
+                {
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "buttons"
+                },
+                {
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "sensors"
+                },
+                {
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "door"
+                },
+                {
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "display"
+                },
+                {
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "LED"
+                },
+                {
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "motor"
+                },
+                {
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "outlet"
+                },
+                {
+                    "start": "controller",
+                    "relation": "CONTROLS",
+                    "end": "inlet"
+                },
+                {
+                    "start": "flowchart",
+                    "relation": "DEPICTS",
+                    "end": "heating process"
+                },
+                {
+                    "start": "heating process",
+                    "relation": "CHECKS",
+                    "end": "door status"
+                },
+                {
+                    "start": "heating process",
+                    "relation": "CHECKS",
+                    "end": "heating duration"
+                },
+                {
+                    "start": "image",
+                    "relation": "IS_A",
+                    "end": "sequence diagram"
+                },
+                {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES",
+                    "end": "steps"
+                },
+                {
+                    "start": "steps",
+                    "relation": "INVOLVED_IN",
+                    "end": "passenger using a hall call button to request an elevator"
+                },
+                {
+                    "start": "image",
+                    "relation": "IS_A",
+                    "end": "state_diagram"
+                },
+                {
+                    "start": "state_diagram",
+                    "relation": "ILLUSTRATING",
+                    "end": "washing_machine's_control_logic"
+                },
+                {
+                    "start": "control_logic",
+                    "relation": "BASED_ON",
+                    "end": "sensor_readings"
+                },
+                {
+                    "start": "control_logic",
+                    "relation": "BASED_ON",
+                    "end": "timers"
+                },
+                {
+                    "start": "state diagram",
+                    "relation": "VISUALIZES",
+                    "end": "washing machine's control program"
+                },
+                {
+                    "start": "washing machine's control program",
+                    "relation": "USES",
+                    "end": "finite state machine"
+                },
+                {
+                    "start": "finite state machine",
+                    "relation": "IS_IN_STYLE",
+                    "end": "CSD"
+                }
+            ]
+        },
+        {
+            "source_file": "22BEC0807_report.pdf",
+            "triples": [
+                {
+                    "start": "chandrima manik 22bec0807",
+                    "relation": "SUBMITTED_BY",
+                    "end": "vlsi design internship program"
+                },
+                {
+                    "start": "vlsi design internship program",
+                    "relation": "IS_A",
+                    "end": "industrial internship report"
+                },
+                {
+                    "start": "vlsi design internship program",
+                    "relation": "HAS_PHASE",
+                    "end": "certification course"
+                },
+                {
+                    "start": "chandrima manik 22bec0807",
+                    "relation": "PURSUES_DEGREE_OF",
+                    "end": "B.Tech in electronics and communications engineering"
+                },
+                {
+                    "start": "chandrima manik 22bec0807",
+                    "relation": "RECEIVED_SUPPORT_FROM",
+                    "end": "vellore institute of technology"
+                },
+                {
+                    "start": "chandrima manik 22bec0807",
+                    "relation": "RECEIVED_SUPPORT_FROM",
+                    "end": "school of electronics and communication engineering"
+                },
+                {
+                    "start": "chandrima manik 22bec0807",
+                    "relation": "RECEIVED_OPPORTUNITY_FROM",
+                    "end": "maven silicon"
+                },
+                {
+                    "start": "maven silicon",
+                    "relation": "PROVIDED",
+                    "end": "vlsi design internship certification"
+                },
+                {
+                    "start": "chandrima manik 22bec0807",
+                    "relation": "RECEIVED_GUIDANCE_FROM",
+                    "end": "dr noor mohammed v"
+                },
+                {
+                    "start": "dr noor mohammed v",
+                    "relation": "IS_HOD_OF",
+                    "end": "chandrima manik 22bec0807's department"
+                },
+                {
+                    "start": "course",
+                    "relation": "AIMED_TO_PROVIDE",
+                    "end": "a comprehensive introduction to digital electronics"
+                },
+                {
+                    "start": "course",
+                    "relation": "COVERING",
+                    "end": "number systems"
+                },
+                {
+                    "start": "course",
+                    "relation": "COVERING",
+                    "end": "logic circuits"
+                },
+                {
+                    "start": "course",
+                    "relation": "COVERING",
+                    "end": "sequential circuits"
+                },
+                {
+                    "start": "course",
+                    "relation": "DELVED_INTO",
+                    "end": "Verilog HDL"
+                },
+                {
+                    "start": "course",
+                    "relation": "FOCUSING_ON",
+                    "end": "data types"
+                },
+                {
+                    "start": "course",
+                    "relation": "FOCUSING_ON",
+                    "end": "operators"
+                },
+                {
+                    "start": "course",
+                    "relation": "FOCUSING_ON",
+                    "end": "structured procedures"
+                },
+                {
+                    "start": "course",
+                    "relation": "GAVE",
+                    "end": "practical experience"
+                },
+                {
+                    "start": "practical experience",
+                    "relation": "IN",
+                    "end": "skills necessary to embark on a career in VLSI design"
+                },
+                {
+                    "start": "course",
+                    "relation": "EQUIP",
+                    "end": "learners with the necessary skills and knowledge to excel in VLSI design"
+                },
+                {
+                    "start": "course",
+                    "relation": "TARGET_DOMAIN",
+                    "end": "digital electronics and VLSI design"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "introduction to VLSI"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "SoC design"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "ASIC design flow"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "digital design"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "number systems"
+                },
+                {
+                    "start": "vlsi design",
+                    "relation": "TARGET_DOMAIN",
+                    "end": "digital electronics"
+                },
+                {
+                    "start": "vlsi design",
+                    "relation": "TARGET_DOMAIN",
+                    "end": "vlsi design"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "introduction to vlsi"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "system on a chip (soc) design"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "asic design flow"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "digital design"
+                },
+                {
+                    "start": "digital design",
+                    "relation": "HAS_TOPIC",
+                    "end": "number systems and codes"
+                },
+                {
+                    "start": "digital design",
+                    "relation": "HAS_TOPIC",
+                    "end": "logic circuits"
+                },
+                {
+                    "start": "logic circuits",
+                    "relation": "HAS_SUBTOPIC",
+                    "end": "combinational circuits"
+                },
+                {
+                    "start": "logic circuits",
+                    "relation": "HAS_SUBTOPIC",
+                    "end": "sequential circuits"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "fsm"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "verilog hdl"
+                },
+                {
+                    "start": "verilog hdl",
+                    "relation": "HAS_TOPIC",
+                    "end": "data types"
+                },
+                {
+                    "start": "verilog hdl",
+                    "relation": "HAS_TOPIC",
+                    "end": "verilog operators"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "structured procedures"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "spi design"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "instruction set architecture"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "architecture design"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_TOPIC",
+                    "end": "5 stage pipelined rtl design"
+                },
+                {
+                    "start": "vlsi design internship program",
+                    "relation": "HAS_ENROLLMENT_PROCESS",
+                    "end": "course enrollment"
+                },
+                {
+                    "start": "course enrollment",
+                    "relation": "GUIDED_BY",
+                    "end": "Prof. Jayakumar Sadhasivam"
+                },
+                {
+                    "start": "course enrollment",
+                    "relation": "COMPLETED_ON",
+                    "end": "June 3, 2024"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "internal assessments"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check introduction to vlsi"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check number systems and codes"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check logic circuits"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check combinational circuits"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check sequential circuits"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check fsm"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check combinational circuits"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check introduction to verilog hdl"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check data types"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check operators"
+                },
+                {
+                    "start": "internal assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "knowledge check synthesis coding style"
+                },
+                {
+                    "start": "course",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "external assessments"
+                },
+                {
+                    "start": "external assessments",
+                    "relation": "HAS_ASSESSMENT",
+                    "end": "final test riscv design"
+                },
+                {
+                    "start": "internship",
+                    "relation": "PROVIDED_FOUNDATION_IN",
+                    "end": "fundamentals_of_vlsi_design_and_digital_electronics"
+                },
+                {
+                    "start": "week_1",
+                    "relation": "IS_INITIAL_WEEK_OF",
+                    "end": "internship"
+                },
+                {
+                    "start": "I",
+                    "relation": "LEARNT_ABOUT",
+                    "end": "system-on-chip_(SOC)_architecture"
+                },
+                {
+                    "start": "SOC_architecture",
+                    "relation": "INCLUDES_COMPONENTS_LIKE",
+                    "end": "CPUs, GPUs, memory_units, and_input_output_controllers"
+                },
+                {
+                    "start": "I",
+                    "relation": "LEARNT_ABOUT",
+                    "end": "VLSI_design_flow"
+                },
+                {
+                    "start": "VLSI_design_flow",
+                    "relation": "INCLUDES",
+                    "end": "system_specification, architectural_design, logic_design, circuit_synthesis, and_physical_design"
+                },
+                {
+                    "start": "VLSI_design_flow",
+                    "relation": "EMPHASIZES",
+                    "end": "balancing_performance, power_consumption, and_area_constraints"
+                },
+                {
+                    "start": "I",
+                    "relation": "REVISITED",
+                    "end": "core_concepts_of_digital_electronics"
+                },
+                {
+                    "start": "digital_electronics",
+                    "relation": "INCLUDES",
+                    "end": "binary_number_systems"
+                },
+                {
+                    "start": "I",
+                    "relation": "STUDIED",
+                    "end": "building_blocks_of_digital_circuits"
+                },
+                {
+                    "start": "I",
+                    "relation": "STUDIED",
+                    "end": "boolean_algebra"
+                },
+                {
+                    "start": "I",
+                    "relation": "REINFORCED_UNDERSTANDING_OF",
+                    "end": "logic_gates"
+                },
+                {
+                    "start": "logic_gates",
+                    "relation": "ARE",
+                    "end": "fundamental_building_blocks_of_digital_circuits"
+                },
+                {
+                    "start": "core concepts of digital electronics",
+                    "relation": "WERE_REVISITED",
+                    "end": "binary number systems"
+                },
+                {
+                    "start": "building blocks of digital circuits",
+                    "relation": "WERE_STUDIED",
+                    "end": "boolean algebra"
+                },
+                {
+                    "start": "logic gates",
+                    "relation": "ARE",
+                    "end": "fundamental building blocks of digital circuits"
+                },
+                {
+                    "start": "week 2",
+                    "relation": "BUILT_ON",
+                    "end": "foundation laid in the first week"
+                },
+                {
+                    "start": "week 2",
+                    "relation": "DELVED_INTO",
+                    "end": "design and analysis of combinational and sequential circuits"
+                },
+                {
+                    "start": "combinational circuits",
+                    "relation": "ARE",
+                    "end": "those whose outputs depend solely on their current inputs"
+                },
+                {
+                    "start": "combinational circuits",
+                    "relation": "INCLUDED",
+                    "end": "design and implementation of essential components like adders subtractors multiplexers and decoders"
+                },
+                {
+                    "start": "understanding the behaviour and optimization techniques for these circuits",
+                    "relation": "IS_VITAL_FOR",
+                    "end": "efficient digital system design"
+                },
+                {
+                    "start": "sequential circuits",
+                    "relation": "INCORPORATE",
+                    "end": "memory elements to store information"
+                },
+                {
+                    "start": "sequential circuits",
+                    "relation": "EXHIBIT",
+                    "end": "state dependent behaviour"
+                },
+                {
+                    "start": "flipflops and latches",
+                    "relation": "ARE",
+                    "end": "fundamental building blocks of sequential circuits"
+                },
+                {
+                    "start": "concept of state machines",
+                    "relation": "IS",
+                    "end": "a powerful abstraction for modeling sequential behaviour"
+                },
+                {
+                    "start": "week 3",
+                    "relation": "MOVED_FROM",
+                    "end": "combinational and sequential circuits"
+                },
+                {
+                    "start": "powerful abstraction for modeling sequential behaviour",
+                    "relation": "LAID_GROUNDWORK_FOR",
+                    "end": "designing complex digital systems"
+                },
+                {
+                    "start": "complex digital systems",
+                    "relation": "PERFORM",
+                    "end": "various tasks"
+                },
+                {
+                    "start": "week 3",
+                    "relation": "INTRODUCED",
+                    "end": "Verilog HDL"
+                },
+                {
+                    "start": "Verilog HDL",
+                    "relation": "USED_IN",
+                    "end": "industry"
+                },
+                {
+                    "start": "Verilog HDL",
+                    "relation": "TOOL_FOR",
+                    "end": "modeling and designing digital systems"
+                },
+                {
+                    "start": "Verilog",
+                    "relation": "EXPLORED",
+                    "end": "syntax data types operators and structured procedures"
+                },
+                {
+                    "start": "Verilog",
+                    "relation": "DESCRIPTION_OF",
+                    "end": "hardware"
+                },
+                {
+                    "start": "finite state machines",
+                    "relation": "IMPLEMENTATION_IN",
+                    "end": "Verilog"
+                },
+                {
+                    "start": "fsms",
+                    "relation": "ESSENTIAL_FOR",
+                    "end": "designing sequential circuits"
+                },
+                {
+                    "start": "sequential circuits",
+                    "relation": "EXHIBIT",
+                    "end": "specific behaviours"
+                },
+                {
+                    "start": "fsm design",
+                    "relation": "POSSIBLE_TO_CREATE",
+                    "end": "complex digital systems"
+                },
+                {
+                    "start": "complex digital systems",
+                    "relation": "RESPOND_TO",
+                    "end": "various input conditions"
+                },
+                {
+                    "start": "complex digital systems",
+                    "relation": "EXECUTE",
+                    "end": "specific tasks"
+                },
+                {
+                    "start": "I",
+                    "relation": "INTRODUCED_TO",
+                    "end": "synthesis and optimization techniques"
+                },
+                {
+                    "start": "synthesis",
+                    "relation": "PROCESS_OF",
+                    "end": "translating a highlevel design description"
+                },
+                {
+                    "start": "synthesis",
+                    "relation": "RESULT_IN",
+                    "end": "physical implementation"
+                },
+                {
+                    "start": "optimization techniques",
+                    "relation": "IMPROVE",
+                    "end": "performance power consumption and area"
+                },
+                {
+                    "start": "understanding these concepts",
+                    "relation": "ENABLE",
+                    "end": "creating efficient"
+                },
+                {
+                    "start": "optimization techniques synthesis",
+                    "relation": "IS_A",
+                    "end": "process"
+                },
+                {
+                    "start": "optimization techniques synthesis",
+                    "relation": "GOAL",
+                    "end": "physical implementation"
+                },
+                {
+                    "start": "optimization techniques",
+                    "relation": "IMPROVE",
+                    "end": "performance"
+                },
+                {
+                    "start": "optimization techniques",
+                    "relation": "IMPROVE",
+                    "end": "power consumption"
+                },
+                {
+                    "start": "optimization techniques",
+                    "relation": "IMPROVE",
+                    "end": "area"
+                },
+                {
+                    "start": "week 4",
+                    "relation": "FOCUS_ON",
+                    "end": "consolidating theoretical knowledge"
+                },
+                {
+                    "start": "week 4",
+                    "relation": "FOCUS_ON",
+                    "end": "applying knowledge to practical design scenarios"
+                },
+                {
+                    "start": "week 4",
+                    "relation": "INCLUDE",
+                    "end": "comprehensive test"
+                },
+                {
+                    "start": "comprehensive test",
+                    "relation": "ASSESS",
+                    "end": "understanding of verilog hdl"
+                },
+                {
+                    "start": "comprehensive test",
+                    "relation": "ASSESS",
+                    "end": "understanding of digital electronics"
+                },
+                {
+                    "start": "comprehensive test",
+                    "relation": "ASSESS",
+                    "end": "understanding of finite state machines"
+                },
+                {
+                    "start": "comprehensive test",
+                    "relation": "ASSESS",
+                    "end": "understanding of synthesis techniques"
+                },
+                {
+                    "start": "handson laboratory sessions",
+                    "relation": "PROVIDE",
+                    "end": "opportunity to implement various digital circuits"
+                },
+                {
+                    "start": "handson laboratory sessions",
+                    "relation": "INCLUDE",
+                    "end": "adders"
+                },
+                {
+                    "start": "handson laboratory sessions",
+                    "relation": "INCLUDE",
+                    "end": "arithmetic logic units"
+                },
+                {
+                    "start": "handson laboratory sessions",
+                    "relation": "INCLUDE",
+                    "end": "multiplexers"
+                },
+                {
+                    "start": "handson laboratory sessions",
+                    "relation": "INCLUDE",
+                    "end": "flipflops"
+                },
+                {
+                    "start": "handson laboratory sessions",
+                    "relation": "INCLUDE",
+                    "end": "ram"
+                },
+                {
+                    "start": "handson laboratory sessions",
+                    "relation": "INCLUDE",
+                    "end": "finite state machines"
+                },
+                {
+                    "start": "quartus prime software",
+                    "relation": "USED_FOR",
+                    "end": "simulate and verify functionality of designed circuits"
+                },
+                {
+                    "start": "quartus prime software",
+                    "relation": "USED_FOR",
+                    "end": "writing testbenches"
+                },
+                {
+                    "start": "testbenches",
+                    "relation": "GENERATE",
+                    "end": "input stimuli"
+                },
+                {
+                    "start": "testbenches",
+                    "relation": "MONITOR",
+                    "end": "output responses"
+                },
+                {
+                    "start": "testbenches",
+                    "relation": "COMPARE",
+                    "end": "results against expected behaviour"
+                },
+                {
+                    "start": "quartus prime software",
+                    "relation": "USED_TO",
+                    "end": "simulate and verify the functionality of the designed circuits"
+                },
+                {
+                    "start": "quartus prime software",
+                    "relation": "USED_TO",
+                    "end": "writing testbenches"
+                },
+                {
+                    "start": "testbenches",
+                    "relation": "USED_TO",
+                    "end": "generate input stimuli"
+                },
+                {
+                    "start": "testbenches",
+                    "relation": "USED_TO",
+                    "end": "monitor output responses"
+                },
+                {
+                    "start": "testbenches",
+                    "relation": "USED_TO",
+                    "end": "compare the results against expected behaviour"
+                },
+                {
+                    "start": "week 5",
+                    "relation": "FOCUS_ON",
+                    "end": "design and implementation of a riscv processor module"
+                },
+                {
+                    "start": "riscv",
+                    "relation": "IS_A",
+                    "end": "open standard instruction set architecture"
+                },
+                {
+                    "start": "riscv",
+                    "relation": "INCREASINGLY_POPULAR_FOR",
+                    "end": "applications requiring a flexible lowpower and highperformance processor design"
+                },
+                {
+                    "start": "riscv module architecture",
+                    "relation": "DESIGNED_TO_INCORPORATE",
+                    "end": "a fivestage pipeline"
+                },
+                {
+                    "start": "each stage",
+                    "relation": "MANAGED_BY",
+                    "end": "finite state machines"
+                },
+                {
+                    "start": "finite state machines",
+                    "relation": "USED_FOR",
+                    "end": "instruction flow control and hazard handling"
+                },
+                {
+                    "start": "verilog hdl",
+                    "relation": "USED_TO",
+                    "end": "implement the core functionalities of the riscv processor"
+                },
+                {
+                    "start": "verilog hdl",
+                    "relation": "FOCUS_ON",
+                    "end": "efficient resource utilization and adherence to riscv specifications"
+                },
+                {
+                    "start": "testbenches",
+                    "relation": "DEVELOPED_TO",
+                    "end": "simulate instruction execution and check the interactions between pipeline stages"
+                },
+                {
+                    "start": "final project",
+                    "relation": "DEMONSTRATED",
+                    "end": "the ability to apply the acquired knowledge and skills to design and implement a complex digital system"
+                },
+                {
+                    "start": "final project",
+                    "relation": "DEMONSTRATED_ABILITY_TO_APPLY",
+                    "end": "acquired knowledge and skills to design and implement a complex digital system"
+                },
+                {
+                    "start": "final project",
+                    "relation": "REQUIRED_UNDERSTANDING_OF",
+                    "end": "course material"
+                },
+                {
+                    "start": "final project",
+                    "relation": "REQUIRED",
+                    "end": "further research from multiple sources"
+                },
+                {
+                    "start": "final project",
+                    "relation": "REQUIRED",
+                    "end": "practical understanding of existing projects in the same domain of vlsi"
+                },
+                {
+                    "start": "ModelSim",
+                    "relation": "IS_A",
+                    "end": "HDL language simulation software"
+                },
+                {
+                    "start": "ModelSim",
+                    "relation": "IS",
+                    "end": "industrys first singlecore simulator that supports VHDL and Verilog mixed simulation"
+                },
+                {
+                    "start": "ModelSim",
+                    "relation": "PROVIDES",
+                    "end": "nice simulation environment"
+                },
+                {
+                    "start": "ModelSim",
+                    "relation": "USES",
+                    "end": "singlecore simulation technology"
+                },
+                {
+                    "start": "ModelSim",
+                    "relation": "USES",
+                    "end": "TclTk technology"
+                },
+                {
+                    "start": "ModelSim",
+                    "relation": "USES",
+                    "end": "directly optimised compilation technology"
+                },
+                {
+                    "start": "ModelSim",
+                    "relation": "IS",
+                    "end": "first choice of simulation software for FPGA/ASIC design"
+                },
+                {
+                    "start": "ModelSim",
+                    "relation": "PROVIDES",
+                    "end": "powerful means"
+                },
+                {
+                    "start": "instructions",
+                    "relation": "LOADED_INTO",
+                    "end": "instruction memory from position 0"
+                },
+                {
+                    "start": "instructions",
+                    "relation": "EXECUTED_IN",
+                    "end": "pipeline fashion"
+                },
+                {
+                    "start": "simulation software",
+                    "relation": "FIRST_CHOICE_FOR",
+                    "end": "FPGA/ASIC design"
+                },
+                {
+                    "start": "modelsim",
+                    "relation": "USED_IN",
+                    "end": "simulation"
+                },
+                {
+                    "start": "instruction",
+                    "relation": "LOADED_INTO",
+                    "end": "instruction memory"
+                },
+                {
+                    "start": "instructions",
+                    "relation": "EXECUTED_IN",
+                    "end": "pipeline fashion"
+                },
+                {
+                    "start": "r4",
+                    "relation": "FETCHED_AND_ADDED_WITH",
+                    "end": "r6"
+                },
+                {
+                    "start": "sum_of_r4_and_r6",
+                    "relation": "STORED_INTO",
+                    "end": "r1"
+                },
+                {
+                    "start": "r6",
+                    "relation": "FETCHED_AND_SUBTRACTED_FROM",
+                    "end": "r4"
+                },
+                {
+                    "start": "difference_of_r6_and_r4",
+                    "relation": "STORED_INTO",
+                    "end": "r2"
+                },
+                {
+                    "start": "VLSI design course",
+                    "relation": "UPGRADED",
+                    "end": "skills"
+                },
+                {
+                    "start": "VLSI design course",
+                    "relation": "PROVIDED_FOUNDATION_IN",
+                    "end": "digital design and hardware description languages"
+                },
+                {
+                    "start": "handson labs and projects",
+                    "relation": "REINFORCED_UNDERSTANDING_OF",
+                    "end": "circuit design synthesis and verification processes"
+                },
+                {
+                    "start": "VLSI design course",
+                    "relation": "DEEPENED",
+                    "end": "technical knowledge"
+                },
+                {
+                    "start": "VLSI design course",
+                    "relation": "EQUIPPED_WITH",
+                    "end": "practical skills"
+                },
+                {
+                    "start": "VLSI design course",
+                    "relation": "PREPARED_FOR",
+                    "end": "industry demands"
+                },
+                {
+                    "start": "me",
+                    "relation": "IS_SUITABLE_FOR",
+                    "end": "industry demands"
+                },
+                {
+                    "start": "image",
+                    "relation": "IS_LOGO_FOR",
+                    "end": "Vellore Institute of Technology (VIT)"
+                },
+                {
+                    "start": "Vellore Institute of Technology (VIT)",
+                    "relation": "HAS_LOGO",
+                    "end": "image"
+                },
+                {
+                    "start": "Chandrima Manik",
+                    "relation": "COMPLETED_INTERNSHIP_IN",
+                    "end": "VLSI Design"
+                },
+                {
+                    "start": "Chandrima Manik",
+                    "relation": "COMPLETED_INTERNSHIP_AT",
+                    "end": "Maven Silicon"
+                },
+                {
+                    "start": "VLSI Design Internship",
+                    "relation": "OCCURRED_FROM",
+                    "end": "June 5th"
+                },
+                {
+                    "start": "VLSI Design Internship",
+                    "relation": "OCCURRED_TO",
+                    "end": "July 13th, 2024"
+                },
+                {
+                    "start": "screenshot",
+                    "relation": "SHOWS",
+                    "end": "digital logic simulator"
+                },
+                {
+                    "start": "digital logic simulator",
+                    "relation": "DISPLAYING",
+                    "end": "multiple waveforms"
+                },
+                {
+                    "start": "digital logic simulator",
+                    "relation": "DISPLAYING",
+                    "end": "binary data"
+                },
+                {
+                    "start": "multiple waveforms",
+                    "relation": "REPRESENTING",
+                    "end": "execution of a RISC-V processor"
+                },
+                {
+                    "start": "binary data",
+                    "relation": "REPRESENTING",
+                    "end": "execution of a RISC-V processor"
+                },
+                {
+                    "start": "digital logic simulator",
+                    "relation": "REPRESENTING",
+                    "end": "execution of a RISC-V processor"
+                }
+            ]
+        },
+        {
+            "source_file": "sample.pdf",
+            "triples": [
+                {
+                    "start": "gravitas24 vit vellore design and merch team",
+                    "relation": "PARTICIPATED_IN_MAKING_OF",
+                    "end": "official website for gravitas"
+                },
+                {
+                    "start": "gravitas24 vit vellore design and merch team",
+                    "relation": "CONTRIBUTED_TO_SUCCESS_OF",
+                    "end": "tech fest"
+                },
+                {
+                    "start": "gravitas24 vit vellore design and merch team",
+                    "relation": "INCREASED_WEBSITE_VISITORS_BY",
+                    "end": "over 1050 yoy with 400000 visitors"
+                },
+                {
+                    "start": "riviera24 vit vellore tech team sales team",
+                    "relation": "DESIGNED",
+                    "end": "website and app"
+                },
+                {
+                    "start": "riviera24 vit vellore tech team sales team",
+                    "relation": "INCREASED_WEBSITE_VISITORS_BY",
+                    "end": "over 1200 yoy with 800000 visitors"
+                },
+                {
+                    "start": "riviera24 vit vellore tech team sales team",
+                    "relation": "CREATED",
+                    "end": "marketing assets for the event"
+                },
+                {
+                    "start": "riviera24 vit vellore tech team sales team",
+                    "relation": "DROVE",
+                    "end": "sales efforts"
+                },
+                {
+                    "start": "riviera24 vit vellore tech team sales team",
+                    "relation": "IS_A",
+                    "end": "pivotal member of the riviera sales team"
+                },
+                {
+                    "start": "electrohack",
+                    "relation": "ACHIEVEMENT",
+                    "end": "winner 2nd place"
+                },
+                {
+                    "start": "yantra25",
+                    "relation": "DESIGN_AREA",
+                    "end": "vlsi design"
+                },
+                {
+                    "start": "yantra25",
+                    "relation": "USED_TECHNOLOGY",
+                    "end": "silicon riscv isa rv32i rtl design"
+                },
+                {
+                    "start": "atomic energy central school student council",
+                    "relation": "LEADERSHIP_EXPERIENCE",
+                    "end": "captain"
+                },
+                {
+                    "start": "atomic energy central school student council",
+                    "relation": "PLANNED_AND_EXECUTED",
+                    "end": "cocurricular activities"
+                },
+                {
+                    "start": "atomic energy central school student council",
+                    "relation": "ENHANCED",
+                    "end": "student engagement by over 150"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "cadence virtuoso"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "quartus prime fpga"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "awr"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "matlab"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "multisim"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "modelsim"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "c"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "python"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "java"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "verilog"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "keil vision"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "figma"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "adobe illustrator"
+                },
+                {
+                    "start": null,
+                    "relation": "SKILL",
+                    "end": "procreate"
+                },
+                {
+                    "start": null,
+                    "relation": "LANGUAGE",
+                    "end": "english fluent"
+                },
+                {
+                    "start": null,
+                    "relation": "LANGUAGE",
+                    "end": "japanese beginner"
+                },
+                {
+                    "start": null,
+                    "relation": "LANGUAGE",
+                    "end": "hindi fluent"
+                },
+                {
+                    "start": null,
+                    "relation": "LANGUAGE",
+                    "end": "bengali fluent"
+                },
+                {
+                    "start": null,
+                    "relation": "LANGUAGE",
+                    "end": "kannada intermediate"
+                }
+            ]
+        },
+        {
+            "source_file": "A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx",
+            "triples": []
+        },
+        {
+            "source_file": "material_requirements.xlsx",
+            "triples": []
+        },
+        {
+            "source_file": "25SPF21VIT_2nd_Monthly_Connect.pptx",
+            "triples": []
+        }
+    ]
+}
