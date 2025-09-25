@@ -1,0 +1,24 @@
+# Secret files
+# This is the most important rule to keep your API keys safe.
+.env
+
+# Editor-specific configuration
+.vscode/
+
+# Python cache and virtual environment folders
+__pycache__/
+venv/
+*.pyc
+
+# Generated output from your script
+# These folders and files can be recreated by running your code.
+extracted_images/
+intermediate_chunks/
+
+
+# Source data files
+# It's good practice to not track large data files in Git.
+*.pdf
+*.docx
+*.pptx
+*.xlsx
