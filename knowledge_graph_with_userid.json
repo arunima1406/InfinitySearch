@@ -1,0 +1,2009 @@
+{
+    "knowledge_graph": [
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "1_Embedded-product-design-life-cycle.pdf",
+            "episode_id": "ep_ba0af326-e85e-4f07-b465-43c18988c99a",
+            "summary": "The core subject is the application of different software development life cycle models to embedded systems, contrasting the waterfall and spiral models. The waterfall model is a linear, sequential approach suitable for embedded systems with clear, stable requirements, emphasizing documentation and structured phases but lacking flexibility. The spiral model, a risk-driven, iterative approach, is particularly beneficial for embedded systems due to its ability to manage risks, incorporate changing requirements, and utilize prototyping at each stage, making it well-suited for complex and evolving projects.",
+            "triples": {
+                "1": {
+                    "start": "waterfall model",
+                    "relation": "IS_A",
+                    "end": "linear and sequential software development approach"
+                },
+                "2": {
+                    "start": "waterfall model",
+                    "relation": "CAN_BE_APPLIED_TO",
+                    "end": "embedded systems"
+                },
+                "3": {
+                    "start": "waterfall model",
+                    "relation": "CHARACTERIZED_BY",
+                    "end": "distinct phases"
+                },
+                "4": {
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "requirements gathering"
+                },
+                "5": {
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "design"
+                },
+                "6": {
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "implementation"
+                },
+                "7": {
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "testing"
+                },
+                "8": {
+                    "start": "waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "maintenance"
+                },
+                "9": {
+                    "start": "waterfall model",
+                    "relation": "SUITABLE_FOR",
+                    "end": "projects with well-defined, stable requirements"
+                },
+                "10": {
+                    "start": "waterfall model",
+                    "relation": "DRAWBACK_IN",
+                    "end": "dynamic embedded systems landscape"
+                },
+                "11": {
+                    "start": "waterfall model",
+                    "relation": "WORKS_BEST_WHEN",
+                    "end": "requirements for the embedded system are well-understood and unlikely to change significantly"
+                },
+                "12": {
+                    "start": "waterfall model",
+                    "relation": "PROCESS_FLOWS",
+                    "end": "linear fashion"
+                },
+                "13": {
+                    "start": "waterfall model",
+                    "relation": "EMPHASIZES",
+                    "end": "thorough documentation"
+                },
+                "14": {
+                    "start": "waterfall model",
+                    "relation": "PARTICULARLY_WELL_SUITED_FOR",
+                    "end": "embedded systems with clear specifications"
+                },
+                "15": {
+                    "start": "waterfall model",
+                    "relation": "PARTICULARLY_WELL_SUITED_FOR",
+                    "end": "embedded systems with high reliability requirements"
+                },
+                "16": {
+                    "start": "waterfall model",
+                    "relation": "PARTICULARLY_WELL_SUITED_FOR",
+                    "end": "embedded systems where changes are difficult or costly to implement"
+                },
+                "17": {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "well-defined phases"
+                },
+                "18": {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "easy to manage"
+                },
+                "19": {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "low risk"
+                },
+                "20": {
+                    "start": "waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "high reliability"
+                },
+                "21": {
+                    "start": "waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "inflexible"
+                },
+                "22": {
+                    "start": "waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "late testing"
+                },
+                "23": {
+                    "start": "waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "limited customer involvement"
+                },
+                "24": {
+                    "start": "waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "not ideal for complex projects"
+                },
+                "25": {
+                    "start": "Agile",
+                    "relation": "EMPHASIZES",
+                    "end": "iterative development"
+                },
+                "26": {
+                    "start": "Agile",
+                    "relation": "EMPHASIZES",
+                    "end": "collaboration"
+                },
+                "27": {
+                    "start": "Agile",
+                    "relation": "EMPHASIZES",
+                    "end": "flexibility"
+                },
+                "28": {
+                    "start": "spiral model",
+                    "relation": "IS_A",
+                    "end": "risk-driven software development process"
+                },
+                "29": {
+                    "start": "spiral model",
+                    "relation": "PARTICULARLY_WELL_SUITED_FOR",
+                    "end": "embedded systems"
+                },
+                "30": {
+                    "start": "spiral model",
+                    "relation": "COMBINES_ELEMENTS_OF",
+                    "end": "waterfall"
+                },
+                "31": {
+                    "start": "spiral model",
+                    "relation": "COMBINES_ELEMENTS_OF",
+                    "end": "iterative models"
+                },
+                "32": {
+                    "start": "spiral model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "risk assessment"
+                },
+                "33": {
+                    "start": "spiral model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "prototyping"
+                },
+                "34": {
+                    "start": "spiral model",
+                    "relation": "BENEFICIAL_FOR",
+                    "end": "embedded systems"
+                },
+                "35": {
+                    "start": "spiral model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "identifying and mitigating risks early"
+                },
+                "36": {
+                    "start": "spiral model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "continuous refinement and adaptation"
+                },
+                "37": {
+                    "start": "spiral model",
+                    "relation": "SUPPORTS",
+                    "end": "building prototypes"
+                },
+                "38": {
+                    "start": "spiral model",
+                    "relation": "ENSURES",
+                    "end": "final product meets changing needs"
+                },
+                "39": {
+                    "start": "spiral model",
+                    "relation": "HELPS_MANAGE",
+                    "end": "complexity"
+                },
+                "40": {
+                    "start": "spiral model",
+                    "relation": "PROVIDES",
+                    "end": "flexible framework"
+                },
+                "41": {
+                    "start": "spiral model",
+                    "relation": "PROVIDES",
+                    "end": "risk-aware framework"
+                },
+                "42": {
+                    "start": "spiral model",
+                    "relation": "VISUALIZES",
+                    "end": "system life cycle"
+                },
+                "43": {
+                    "start": "waterfall model",
+                    "relation": "OUTLINES",
+                    "end": "sequential phases"
+                },
+                "44": {
+                    "start": "Requirement Analysis",
+                    "relation": "PHASE_OF",
+                    "end": "waterfall model"
+                },
+                "45": {
+                    "start": "System Design",
+                    "relation": "PHASE_OF",
+                    "end": "waterfall model"
+                },
+                "46": {
+                    "start": "Implementation",
+                    "relation": "PHASE_OF",
+                    "end": "waterfall model"
+                },
+                "47": {
+                    "start": "Testing",
+                    "relation": "PHASE_OF",
+                    "end": "waterfall model"
+                },
+                "48": {
+                    "start": "Deployment",
+                    "relation": "PHASE_OF",
+                    "end": "waterfall model"
+                },
+                "49": {
+                    "start": "Maintenance",
+                    "relation": "PHASE_OF",
+                    "end": "waterfall model"
+                },
+                "50": {
+                    "start": "spiral model",
+                    "relation": "REPRESENTS",
+                    "end": "phases"
+                },
+                "51": {
+                    "start": "system feasibility",
+                    "relation": "PHASE_OF",
+                    "end": "spiral model"
+                },
+                "52": {
+                    "start": "specification",
+                    "relation": "PHASE_OF",
+                    "end": "spiral model"
+                },
+                "53": {
+                    "start": "prototype",
+                    "relation": "PHASE_OF",
+                    "end": "spiral model"
+                },
+                "54": {
+                    "start": "initial system",
+                    "relation": "PHASE_OF",
+                    "end": "spiral model"
+                },
+                "55": {
+                    "start": "enhanced system",
+                    "relation": "PHASE_OF",
+                    "end": "spiral model"
+                },
+                "56": {
+                    "start": "spiral model",
+                    "relation": "INCLUDES",
+                    "end": "iterative cycles"
+                },
+                "57": {
+                    "start": "design",
+                    "relation": "ITERATIVE_CYCLE_OF",
+                    "end": "spiral model"
+                },
+                "58": {
+                    "start": "test",
+                    "relation": "ITERATIVE_CYCLE_OF",
+                    "end": "spiral model"
+                },
+                "59": {
+                    "start": "requirements",
+                    "relation": "ITERATIVE_CYCLE_OF",
+                    "end": "spiral model"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "1_Sample-architectures.pdf",
+            "episode_id": "ep_20e059b8-5934-4b7c-a8d1-a889fde0fb2f",
+            "summary": "The core subject is embedded system design architectures, specifically focusing on the abstraction layer, illustrated through behavioral models of common appliances like microwave ovens, elevators, and washing machines. Key points include how abstraction simplifies complex systems by hiding internal details, allowing designers to focus on functionality. For a microwave oven, this might involve abstracting the heating element and control panel into functions like \"heat food\" or \"set timer.\" Similarly, an elevator's complex motor and sensor systems are abstracted into commands such as \"go to floor 5\" or \"open door.\" A washing machine's various cycles and water levels are represented by abstract operations like \"start wash\" or \"select spin speed.\" These models demonstrate how a higher-level understanding of a device's behavior can be achieved by abstracting away the intricate hardware and software components.",
+            "triples": {
+                "1": {
+                    "start": "Microwave oven",
+                    "relation": "IS_A",
+                    "end": "Embedded system design architectures"
+                },
+                "2": {
+                    "start": "ELEVATOR/LIFT",
+                    "relation": "IS_A",
+                    "end": "Embedded system design architectures"
+                },
+                "3": {
+                    "start": "Washing machine",
+                    "relation": "IS_A",
+                    "end": "Embedded system design architectures"
+                },
+                "4": {
+                    "start": "Microwave oven",
+                    "relation": "IS_A",
+                    "end": "Behaviour model examples"
+                },
+                "5": {
+                    "start": "Elevator",
+                    "relation": "IS_A",
+                    "end": "Behaviour model examples"
+                },
+                "6": {
+                    "start": "Washing machine",
+                    "relation": "IS_A",
+                    "end": "Behaviour model examples"
+                },
+                "7": {
+                    "start": "OvenController",
+                    "relation": "ASSOCIATED_WITH",
+                    "end": "DoorSensor"
+                },
+                "8": {
+                    "start": "OvenController",
+                    "relation": "ASSOCIATED_WITH",
+                    "end": "Light"
+                },
+                "9": {
+                    "start": "OvenController",
+                    "relation": "ASSOCIATED_WITH",
+                    "end": "Beeper"
+                },
+                "10": {
+                    "start": "OvenController",
+                    "relation": "ASSOCIATED_WITH",
+                    "end": "PowerTube"
+                },
+                "11": {
+                    "start": "OvenController",
+                    "relation": "ASSOCIATED_WITH",
+                    "end": "Button"
+                },
+                "12": {
+                    "start": "CookButton",
+                    "relation": "INHERITS_FROM",
+                    "end": "Button"
+                },
+                "13": {
+                    "start": "CancelButton",
+                    "relation": "INHERITS_FROM",
+                    "end": "Button"
+                },
+                "14": {
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "door"
+                },
+                "15": {
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "buttons"
+                },
+                "16": {
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "keypad"
+                },
+                "17": {
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "sensors"
+                },
+                "18": {
+                    "start": "controller",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "timer"
+                },
+                "19": {
+                    "start": "controller",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "traction motor control"
+                },
+                "20": {
+                    "start": "controller",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "display"
+                },
+                "21": {
+                    "start": "controller",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "buzzer"
+                },
+                "22": {
+                    "start": "controller",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "floor calculator"
+                },
+                "23": {
+                    "start": "controller",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "LED"
+                },
+                "24": {
+                    "start": "controller",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "motor"
+                },
+                "25": {
+                    "start": "controller",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "outlet"
+                },
+                "26": {
+                    "start": "controller",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "inlet"
+                },
+                "27": {
+                    "start": "flowchart",
+                    "relation": "ILLUSTRATES_PROCESS_FOR",
+                    "end": "controlling heating"
+                },
+                "28": {
+                    "start": "flowchart",
+                    "relation": "ILLUSTRATES_PROCESS_FOR",
+                    "end": "checking door status"
+                },
+                "29": {
+                    "start": "flowchart",
+                    "relation": "ILLUSTRATES_PROCESS_FOR",
+                    "end": "deciding whether to reheat or conclude the operation"
+                },
+                "30": {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES_INTERACTION_BETWEEN",
+                    "end": "passenger"
+                },
+                "31": {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES_INTERACTION_BETWEEN",
+                    "end": "hall button"
+                },
+                "32": {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES_INTERACTION_BETWEEN",
+                    "end": "hall button control"
+                },
+                "33": {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES_INTERACTION_BETWEEN",
+                    "end": "dispatcher"
+                },
+                "34": {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES_INTERACTION_BETWEEN",
+                    "end": "drive control"
+                },
+                "35": {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES_INTERACTION_BETWEEN",
+                    "end": "drive"
+                },
+                "36": {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES_INTERACTION_BETWEEN",
+                    "end": "door control"
+                },
+                "37": {
+                    "start": "sequence diagram",
+                    "relation": "ILLUSTRATES_INTERACTION_BETWEEN",
+                    "end": "door"
+                },
+                "38": {
+                    "start": "sequence diagram",
+                    "relation": "DESCRIBES",
+                    "end": "hall call service"
+                },
+                "39": {
+                    "start": "diagram",
+                    "relation": "SHOWS",
+                    "end": "state machine"
+                },
+                "40": {
+                    "start": "state machine",
+                    "relation": "FOR",
+                    "end": "washing machine cycle"
+                },
+                "41": {
+                    "start": "image",
+                    "relation": "DISPLAYS",
+                    "end": "state diagram"
+                },
+                "42": {
+                    "start": "state diagram",
+                    "relation": "FOR",
+                    "end": "control software of a washing machine"
+                },
+                "43": {
+                    "start": "state diagram",
+                    "relation": "ILLUSTRATES_TRANSITIONS_BETWEEN",
+                    "end": "states"
+                },
+                "44": {
+                    "start": "states",
+                    "relation": "INCLUDE",
+                    "end": "Ready"
+                },
+                "45": {
+                    "start": "states",
+                    "relation": "INCLUDE",
+                    "end": "Fill water"
+                },
+                "46": {
+                    "start": "states",
+                    "relation": "INCLUDE",
+                    "end": "Heat water"
+                },
+                "47": {
+                    "start": "states",
+                    "relation": "INCLUDE",
+                    "end": "Wash"
+                },
+                "48": {
+                    "start": "states",
+                    "relation": "INCLUDE",
+                    "end": "Rinse"
+                },
+                "49": {
+                    "start": "states",
+                    "relation": "INCLUDE",
+                    "end": "Spin"
+                },
+                "50": {
+                    "start": "states",
+                    "relation": "INCLUDE",
+                    "end": "Fault"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "22BEC0807_report.pdf",
+            "episode_id": "ep_977d172a-105d-4b5f-a083-92758436fc9e",
+            "summary": "This report details a VLSI Design Internship Program, focusing on a certification course that provided a comprehensive introduction to digital electronics and Verilog HDL. The program covered number systems, logic circuits, sequential circuits, and Verilog's data types, operators, and structured procedures. Practical skills were developed through hands-on labs implementing designs like UART, alarm clock, SPI, and VGA, culminating in the design of a RISC-V processor module. The course utilized software such as Quartus Prime for simulation and verification, and ModelSim for HDL simulation, aiming to equip learners with the knowledge and practical experience necessary for a career in VLSI design.",
+            "triples": {
+                "1": {
+                    "start": "CHANDRIMA MANIK",
+                    "relation": "SUBMITTED",
+                    "end": "Industrial Internship Report"
+                },
+                "2": {
+                    "start": "Industrial Internship Report",
+                    "relation": "FOR_AWARD_OF",
+                    "end": "B. TECH in ELECTRONICS AND COMMUNICATIONS ENGINEERING"
+                },
+                "3": {
+                    "start": "CHANDRIMA MANIK",
+                    "relation": "HAS_ID",
+                    "end": "22BEC0807"
+                },
+                "4": {
+                    "start": "Industrial Internship Report",
+                    "relation": "FROM",
+                    "end": "5th June 2024"
+                },
+                "5": {
+                    "start": "Industrial Internship Report",
+                    "relation": "TO",
+                    "end": "13th July 2024"
+                },
+                "6": {
+                    "start": "Vellore Institute of Technology",
+                    "relation": "IS_LOCATED_IN",
+                    "end": "Vellore"
+                },
+                "7": {
+                    "start": "School of Electronics and Communication Engineering (SENSE)",
+                    "relation": "PART_OF",
+                    "end": "Vellore Institute of Technology"
+                },
+                "8": {
+                    "start": "CHANDRIMA MANIK",
+                    "relation": "PARTICIPATED_IN",
+                    "end": "certification course"
+                },
+                "9": {
+                    "start": "certification course",
+                    "relation": "OCCURRED_DURING",
+                    "end": "vacation period in 2024"
+                },
+                "10": {
+                    "start": "CHANDRIMA MANIK",
+                    "relation": "RECEIVED_OPPORTUNITY_FROM",
+                    "end": "Maven Silicon"
+                },
+                "11": {
+                    "start": "Maven Silicon",
+                    "relation": "PROVIDED",
+                    "end": "VLSI Design Internship Certification"
+                },
+                "12": {
+                    "start": "CHANDRIMA MANIK",
+                    "relation": "EXPRESSED_GRATITUDE_TO",
+                    "end": "Maven Silicon"
+                },
+                "13": {
+                    "start": "CHANDRIMA MANIK",
+                    "relation": "EXPRESSED_APPRECIATION_TO",
+                    "end": "Dr. NOOR MOHAMMED V"
+                },
+                "14": {
+                    "start": "Dr. NOOR MOHAMMED V",
+                    "relation": "IS_HOD_OF",
+                    "end": "department"
+                },
+                "15": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_COURSE_OBJECTIVES",
+                    "end": "introduction to digital electronics"
+                },
+                "16": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_COURSE_OBJECTIVES",
+                    "end": "Verilog HDL"
+                },
+                "17": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_COURSE_OBJECTIVES",
+                    "end": "practical experience in VLSI design"
+                },
+                "18": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_EXPECTED_OUTCOMES",
+                    "end": "understanding of digital electronics fundamentals"
+                },
+                "19": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_EXPECTED_OUTCOMES",
+                    "end": "Proficiency in Verilog HDL"
+                },
+                "20": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_EXPECTED_OUTCOMES",
+                    "end": "Practical experience through hands-on labs"
+                },
+                "21": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_EXPECTED_OUTCOMES",
+                    "end": "skills to excel in VLSI design"
+                },
+                "22": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_TARGET_DOMAIN",
+                    "end": "digital electronics"
+                },
+                "23": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_TARGET_DOMAIN",
+                    "end": "VLSI design"
+                },
+                "24": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_SYLLABUS_MODULE",
+                    "end": "Introduction to VLSI"
+                },
+                "25": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_SYLLABUS_MODULE",
+                    "end": "Digital design"
+                },
+                "26": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_SYLLABUS_MODULE",
+                    "end": "Verilog HDL"
+                },
+                "27": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "HAS_SYLLABUS_MODULE",
+                    "end": "SPI design"
+                },
+                "28": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "ENROLLMENT_GUIDED_BY",
+                    "end": "Prof. Jayakumar Sadhasivam, Ph.D."
+                },
+                "29": {
+                    "start": "Prof. Jayakumar Sadhasivam, Ph.D.",
+                    "relation": "IS",
+                    "end": "Placement Co-ordinator"
+                },
+                "30": {
+                    "start": "Course enrollment",
+                    "relation": "OCCURRED_ON",
+                    "end": "June 3, 2024"
+                },
+                "31": {
+                    "start": "Week 1",
+                    "relation": "COVERED",
+                    "end": "fundamentals of VLSI design"
+                },
+                "32": {
+                    "start": "Week 1",
+                    "relation": "COVERED",
+                    "end": "digital electronics"
+                },
+                "33": {
+                    "start": "Week 1",
+                    "relation": "LEARNED_ABOUT",
+                    "end": "System-on-Chip (SoC) architecture"
+                },
+                "34": {
+                    "start": "Week 1",
+                    "relation": "LEARNED_ABOUT",
+                    "end": "VLSI design flow"
+                },
+                "35": {
+                    "start": "Week 1",
+                    "relation": "REVISITED",
+                    "end": "core concepts of digital electronics"
+                },
+                "36": {
+                    "start": "Week 1",
+                    "relation": "STUDIED",
+                    "end": "Binary number systems"
+                },
+                "37": {
+                    "start": "Week 1",
+                    "relation": "STUDIED",
+                    "end": "Boolean algebra"
+                },
+                "38": {
+                    "start": "Week 1",
+                    "relation": "REINFORCED_UNDERSTANDING_OF",
+                    "end": "logic gates"
+                },
+                "39": {
+                    "start": "Week 2",
+                    "relation": "DELVED_INTO",
+                    "end": "design and analysis of combinational and sequential circuits"
+                },
+                "40": {
+                    "start": "Week 2",
+                    "relation": "STUDIED_IN_DETAIL",
+                    "end": "Combinational circuits"
+                },
+                "41": {
+                    "start": "Week 2",
+                    "relation": "FOCUSED_ON",
+                    "end": "Sequential circuits"
+                },
+                "42": {
+                    "start": "Week 2",
+                    "relation": "STUDIED_IN_DEPTH",
+                    "end": "Flip-flops and latches"
+                },
+                "43": {
+                    "start": "Week 2",
+                    "relation": "INTRODUCED",
+                    "end": "concept of state machines"
+                },
+                "44": {
+                    "start": "Week 3",
+                    "relation": "MOVED_TO",
+                    "end": "practical implementation"
+                },
+                "45": {
+                    "start": "Week 3",
+                    "relation": "INTRODUCED",
+                    "end": "Verilog HDL"
+                },
+                "46": {
+                    "start": "Week 3",
+                    "relation": "EXPLORED",
+                    "end": "syntax of Verilog HDL"
+                },
+                "47": {
+                    "start": "Week 3",
+                    "relation": "EXPLORED",
+                    "end": "data types of Verilog HDL"
+                },
+                "48": {
+                    "start": "Week 3",
+                    "relation": "EXPLORED",
+                    "end": "operators of Verilog HDL"
+                },
+                "49": {
+                    "start": "Week 3",
+                    "relation": "EXPLORED",
+                    "end": "structured procedures of Verilog HDL"
+                },
+                "50": {
+                    "start": "Week 3",
+                    "relation": "REVISITED",
+                    "end": "finite state machines (FSMs)"
+                },
+                "51": {
+                    "start": "Week 3",
+                    "relation": "DEMONSTRATED",
+                    "end": "implementation of FSMs in Verilog"
+                },
+                "52": {
+                    "start": "Week 3",
+                    "relation": "INTRODUCED_TO",
+                    "end": "synthesis and optimization techniques"
+                },
+                "53": {
+                    "start": "Week 4",
+                    "relation": "FOCUSED_ON",
+                    "end": "consolidating theoretical knowledge"
+                },
+                "54": {
+                    "start": "Week 4",
+                    "relation": "APPLIED_KNOWLEDGE_TO",
+                    "end": "practical design scenarios"
+                },
+                "55": {
+                    "start": "Week 4",
+                    "relation": "CONDUCTED",
+                    "end": "comprehensive test"
+                },
+                "56": {
+                    "start": "comprehensive test",
+                    "relation": "ASSESSED",
+                    "end": "understanding of Verilog HDL"
+                },
+                "57": {
+                    "start": "comprehensive test",
+                    "relation": "ASSESSED",
+                    "end": "digital electronics"
+                },
+                "58": {
+                    "start": "comprehensive test",
+                    "relation": "ASSESSED",
+                    "end": "finite state machines"
+                },
+                "59": {
+                    "start": "comprehensive test",
+                    "relation": "ASSESSED",
+                    "end": "synthesis techniques"
+                },
+                "60": {
+                    "start": "Week 4",
+                    "relation": "CONDUCTED",
+                    "end": "hands-on laboratory sessions"
+                },
+                "61": {
+                    "start": "hands-on laboratory sessions",
+                    "relation": "PROVIDED_OPPORTUNITY_TO",
+                    "end": "implement various digital circuits"
+                },
+                "62": {
+                    "start": "Week 4",
+                    "relation": "EXTENSIVELY_USED",
+                    "end": "Quartus Prime software"
+                },
+                "63": {
+                    "start": "Quartus Prime software",
+                    "relation": "USED_FOR",
+                    "end": "simulate and verify functionality of designed circuits"
+                },
+                "64": {
+                    "start": "Week 5",
+                    "relation": "FOCUSED_ON",
+                    "end": "design and implementation of a RISC-V processor module"
+                },
+                "65": {
+                    "start": "Week 5",
+                    "relation": "STUDIED",
+                    "end": "Key RISC-V concepts"
+                },
+                "66": {
+                    "start": "Week 5",
+                    "relation": "USED",
+                    "end": "Verilog HDL"
+                },
+                "67": {
+                    "start": "Week 5",
+                    "relation": "IMPLEMENTED",
+                    "end": "core functionalities of the RISC-V processor"
+                },
+                "68": {
+                    "start": "Week 5",
+                    "relation": "DEVELOPED",
+                    "end": "testbenches"
+                },
+                "69": {
+                    "start": "testbenches",
+                    "relation": "USED_TO",
+                    "end": "simulate instruction execution"
+                },
+                "70": {
+                    "start": "testbenches",
+                    "relation": "USED_TO",
+                    "end": "check interactions between pipeline stages"
+                },
+                "71": {
+                    "start": "ModelSim",
+                    "relation": "IS_A",
+                    "end": "HDL language simulation software"
+                },
+                "72": {
+                    "start": "ModelSim",
+                    "relation": "SUPPORTS",
+                    "end": "VHDL and Verilog mixed simulation"
+                },
+                "73": {
+                    "start": "ModelSim",
+                    "relation": "PROVIDES",
+                    "end": "nice simulation environment"
+                },
+                "74": {
+                    "start": "ModelSim",
+                    "relation": "USES",
+                    "end": "single-core simulation technology"
+                },
+                "75": {
+                    "start": "ModelSim",
+                    "relation": "USES",
+                    "end": "Tcl/Tk technology"
+                },
+                "76": {
+                    "start": "ModelSim",
+                    "relation": "USES",
+                    "end": "directly optimised compilation technology"
+                },
+                "77": {
+                    "start": "ModelSim",
+                    "relation": "IS",
+                    "end": "first choice of simulation software for FPGA/ASIC design"
+                },
+                "78": {
+                    "start": "VLSI Design course",
+                    "relation": "UPGRADED_SKILLS_BY",
+                    "end": "providing strong foundation in digital design"
+                },
+                "79": {
+                    "start": "VLSI Design course",
+                    "relation": "UPGRADED_SKILLS_BY",
+                    "end": "providing strong foundation in hardware description languages"
+                },
+                "80": {
+                    "start": "VLSI Design course",
+                    "relation": "REINFORCED_UNDERSTANDING_OF",
+                    "end": "circuit design"
+                },
+                "81": {
+                    "start": "VLSI Design course",
+                    "relation": "REINFORCED_UNDERSTANDING_OF",
+                    "end": "synthesis processes"
+                },
+                "82": {
+                    "start": "VLSI Design course",
+                    "relation": "REINFORCED_UNDERSTANDING_OF",
+                    "end": "verification processes"
+                },
+                "83": {
+                    "start": "VLSI Design course",
+                    "relation": "DEEPENED",
+                    "end": "technical knowledge"
+                },
+                "84": {
+                    "start": "VLSI Design course",
+                    "relation": "EQUIPPED_WITH",
+                    "end": "practical skills"
+                },
+                "85": {
+                    "start": "VLSI Design course",
+                    "relation": "PREPARED_FOR",
+                    "end": "industry demands"
+                },
+                "86": {
+                    "start": "Vellore Institute of Technology logo",
+                    "relation": " DISPLAYS",
+                    "end": "VIT"
+                },
+                "87": {
+                    "start": "Vellore Institute of Technology logo",
+                    "relation": " DISPLAYS",
+                    "end": "circular emblem with buildings and text"
+                },
+                "88": {
+                    "start": "Vellore Institute of Technology logo",
+                    "relation": " DISPLAYS",
+                    "end": "full name of the institution"
+                },
+                "89": {
+                    "start": "Certificate",
+                    "relation": "CONFIRMS",
+                    "end": "Chandrima Manik has successfully completed VLSI Design Internship Program"
+                },
+                "90": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "OCCURRED_FROM",
+                    "end": "June 5, 2024"
+                },
+                "91": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "OCCURRED_TO",
+                    "end": "July 13, 2024"
+                },
+                "92": {
+                    "start": "VLSI Design Internship Program",
+                    "relation": "INVOLVED_PROJECT",
+                    "end": "RISC-V ISA & RV32I RTL Design"
+                },
+                "93": {
+                    "start": "logic analyzer",
+                    "relation": "DISPLAYS",
+                    "end": "waveforms of multiple digital signals"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "sample.pdf",
+            "episode_id": "ep_a5207867-48fe-4d19-bd53-0f4d1d9a7ac6",
+            "summary": "This profile highlights Chandrima Manik's academic background in Electronics and Communication Engineering from Vellore Institute of Technology, her practical experience in robotics through the GreenIntel project focusing on autonomous weed detection and control with FPGA programming and machine learning integration, and her significant contributions to organizing and developing web platforms for major university events like DevJams, Hexathon, and Gravitas'24, alongside leadership roles in student councils and a strong proficiency in various design and programming tools.",
+            "triples": {
+                "1": {
+                    "start": "Chandrima Manik",
+                    "relation": "ASSOCIATED_WITH",
+                    "end": "LinkedIn"
+                },
+                "2": {
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_PHONE_NUMBER",
+                    "end": "+91-9483050465"
+                },
+                "3": {
+                    "start": "Chandrima Manik",
+                    "relation": "HAS_EMAIL",
+                    "end": "chandrimamanik@gmail.com"
+                },
+                "4": {
+                    "start": "Chandrima Manik",
+                    "relation": "STUDENT_AT",
+                    "end": "Vellore Institute of Technology"
+                },
+                "5": {
+                    "start": "Vellore Institute of Technology",
+                    "relation": "LOCATED_IN",
+                    "end": "Vellore, TN"
+                },
+                "6": {
+                    "start": "Chandrima Manik",
+                    "relation": "MAJOR_IN",
+                    "end": "Electronics and Communication Engineering"
+                },
+                "7": {
+                    "start": "Chandrima Manik",
+                    "relation": "GRADUATION_YEAR",
+                    "end": "2026"
+                },
+                "8": {
+                    "start": "Chandrima Manik",
+                    "relation": "ATTENDED",
+                    "end": "Vyasa International School"
+                },
+                "9": {
+                    "start": "Vyasa International School",
+                    "relation": "LOCATED_IN",
+                    "end": "Bengaluru, KA"
+                },
+                "10": {
+                    "start": "Chandrima Manik",
+                    "relation": "COMPLETED_GRADE",
+                    "end": "CLASS 12"
+                },
+                "11": {
+                    "start": "Chandrima Manik",
+                    "relation": "GRADUATION_YEAR",
+                    "end": "2022"
+                },
+                "12": {
+                    "start": "Chandrima Manik",
+                    "relation": "ATTENDED",
+                    "end": "Atomic Energy Central School, Mysore"
+                },
+                "13": {
+                    "start": "Atomic Energy Central School, Mysore",
+                    "relation": "LOCATED_IN",
+                    "end": "Mysuru, KA"
+                },
+                "14": {
+                    "start": "Chandrima Manik",
+                    "relation": "COMPLETED_GRADE",
+                    "end": "CLASS 10"
+                },
+                "15": {
+                    "start": "Chandrima Manik",
+                    "relation": "GRADUATION_YEAR",
+                    "end": "2020"
+                },
+                "16": {
+                    "start": "Chandrima Manik",
+                    "relation": "DEVELOPED",
+                    "end": "GreenIntel"
+                },
+                "17": {
+                    "start": "GreenIntel",
+                    "relation": "IS_A",
+                    "end": "Autonomous Weed Detection and Control Robot"
+                },
+                "18": {
+                    "start": "GreenIntel",
+                    "relation": "DEVELOPED_USING",
+                    "end": "TensorFlow"
+                },
+                "19": {
+                    "start": "GreenIntel",
+                    "relation": "DEVELOPED_USING",
+                    "end": "Python"
+                },
+                "20": {
+                    "start": "GreenIntel",
+                    "relation": "DEVELOPED_USING",
+                    "end": "C"
+                },
+                "21": {
+                    "start": "GreenIntel",
+                    "relation": "DEVELOPED_USING",
+                    "end": "Verilog"
+                },
+                "22": {
+                    "start": "GreenIntel",
+                    "relation": "DEVELOPED_USING",
+                    "end": "FPGA programming"
+                },
+                "23": {
+                    "start": "GreenIntel",
+                    "relation": "DEVELOPED_USING",
+                    "end": "robotics"
+                },
+                "24": {
+                    "start": "Chandrima Manik",
+                    "relation": "IMPLEMENTED_STATE_MACHINE_ON",
+                    "end": "FPGA (Cyclone IV E)"
+                },
+                "25": {
+                    "start": "Chandrima Manik",
+                    "relation": "INTEGRATED",
+                    "end": "MobileNetv2"
+                },
+                "26": {
+                    "start": "Chandrima Manik",
+                    "relation": "ACHIEVED_COORDINATION_OF",
+                    "end": "four robotic arms"
+                },
+                "27": {
+                    "start": "Chandrima Manik",
+                    "relation": "MEMBER_OF",
+                    "end": "Google Developers Student Club VIT"
+                },
+                "28": {
+                    "start": "Google Developers Student Club VIT",
+                    "relation": "LOCATED_IN",
+                    "end": "Vellore"
+                },
+                "29": {
+                    "start": "Chandrima Manik",
+                    "relation": "CORE_COMMITTEE_MEMBER_FROM",
+                    "end": "Apr’23"
+                },
+                "30": {
+                    "start": "Chandrima Manik",
+                    "relation": "DESIGNED_WEBSITE_FOR",
+                    "end": "DevJams"
+                },
+                "31": {
+                    "start": "Chandrima Manik",
+                    "relation": "DESIGNED_WEBSITE_FOR",
+                    "end": "Hexathon"
+                },
+                "32": {
+                    "start": "Chandrima Manik",
+                    "relation": "DESIGNED_WEBSITE_FOR",
+                    "end": "Women Techies"
+                },
+                "33": {
+                    "start": "Chandrima Manik",
+                    "relation": "LED_PRODUCT_DESIGN_FOR",
+                    "end": "VITTY"
+                },
+                "34": {
+                    "start": "Chandrima Manik",
+                    "relation": "LED_PRODUCT_DESIGN_FOR",
+                    "end": "FFWriter"
+                },
+                "35": {
+                    "start": "Chandrima Manik",
+                    "relation": "PARTICIPATED_IN_MAKING_OF",
+                    "end": "official website for Gravitas’24"
+                },
+                "36": {
+                    "start": "Chandrima Manik",
+                    "relation": "PARTICIPATED_IN_MAKING_OF",
+                    "end": "merchandise for Gravitas’24"
+                },
+                "37": {
+                    "start": "Chandrima Manik",
+                    "relation": "INCREASED_VISITORS_ON_WEBSITE_BY",
+                    "end": "over 1050% YoY"
+                },
+                "38": {
+                    "start": "Chandrima Manik",
+                    "relation": "MANAGED_WEBSITE_VISITORS",
+                    "end": "400,000+"
+                },
+                "39": {
+                    "start": "Chandrima Manik",
+                    "relation": "MEMBER_OF",
+                    "end": "Gravitas’24 VIT"
+                },
+                "40": {
+                    "start": "Gravitas’24 VIT",
+                    "relation": "LOCATED_IN",
+                    "end": "Vellore"
+                },
+                "41": {
+                    "start": "Chandrima Manik",
+                    "relation": "TEAM_MEMBER_OF",
+                    "end": "Design and Merch Team"
+                },
+                "42": {
+                    "start": "Chandrima Manik",
+                    "relation": "TEAM_MEMBER_OF",
+                    "end": "Riviera’24 VIT"
+                },
+                "43": {
+                    "start": "Riviera’24 VIT",
+                    "relation": "LOCATED_IN",
+                    "end": "Vellore"
+                },
+                "44": {
+                    "start": "Chandrima Manik",
+                    "relation": "TEAM",
+                    "end": "Tech Team"
+                },
+                "45": {
+                    "start": "Chandrima Manik",
+                    "relation": "TEAM",
+                    "end": "Sales Team"
+                },
+                "46": {
+                    "start": "Chandrima Manik",
+                    "relation": "DESIGNED",
+                    "end": "website for Riviera’24"
+                },
+                "47": {
+                    "start": "Chandrima Manik",
+                    "relation": "DESIGNED",
+                    "end": "app for Riviera’24"
+                },
+                "48": {
+                    "start": "Chandrima Manik",
+                    "relation": "INCREASED_VISITORS_ON_WEBSITE_BY",
+                    "end": "over 1200% YoY"
+                },
+                "49": {
+                    "start": "Chandrima Manik",
+                    "relation": "MANAGED_WEBSITE_VISITORS",
+                    "end": "800,000+"
+                },
+                "50": {
+                    "start": "Chandrima Manik",
+                    "relation": "CREATED",
+                    "end": "marketing assets for Riviera’24"
+                },
+                "51": {
+                    "start": "Chandrima Manik",
+                    "relation": "DROVE_SALES_EFFORTS_AS_MEMBER_OF",
+                    "end": "Riviera sales team"
+                },
+                "52": {
+                    "start": "Chandrima Manik",
+                    "relation": "WON",
+                    "end": "2nd Place in Electrohack (Yantra’25)"
+                },
+                "53": {
+                    "start": "Chandrima Manik",
+                    "relation": "COMPLETED_COURSE_IN",
+                    "end": "VLSI Design (Maven Silicon)"
+                },
+                "54": {
+                    "start": "Chandrima Manik",
+                    "relation": "COMPLETED_COURSE_IN",
+                    "end": "RISC-V ISA & RV32I RTL Design"
+                },
+                "55": {
+                    "start": "Chandrima Manik",
+                    "relation": "LEAD_COORDINATOR_OF",
+                    "end": "co-curricular activities"
+                },
+                "56": {
+                    "start": "Chandrima Manik",
+                    "relation": "COORDINATED_ACTIVITIES_FOR",
+                    "end": "school of around 400+ students"
+                },
+                "57": {
+                    "start": "Chandrima Manik",
+                    "relation": "ENHANCED_STUDENT_ENGAGEMENT_BY",
+                    "end": "over 150%"
+                },
+                "58": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Cadence Virtuoso"
+                },
+                "59": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Quartus Prime"
+                },
+                "60": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "FPGA"
+                },
+                "61": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "AWR"
+                },
+                "62": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "MATLAB"
+                },
+                "63": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Multisim"
+                },
+                "64": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Modelsim"
+                },
+                "65": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "C"
+                },
+                "66": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Python"
+                },
+                "67": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Java"
+                },
+                "68": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Verilog"
+                },
+                "69": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Keil µVision"
+                },
+                "70": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Figma"
+                },
+                "71": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Adobe Illustrator"
+                },
+                "72": {
+                    "start": "Chandrima Manik",
+                    "relation": "SKILLED_IN",
+                    "end": "Procreate"
+                },
+                "73": {
+                    "start": "Chandrima Manik",
+                    "relation": "NATIVE_SPEAKER_OF",
+                    "end": "English"
+                },
+                "74": {
+                    "start": "Chandrima Manik",
+                    "relation": "NATIVE_SPEAKER_OF",
+                    "end": "Hindi"
+                },
+                "75": {
+                    "start": "Chandrima Manik",
+                    "relation": "NATIVE_SPEAKER_OF",
+                    "end": "Bengali"
+                },
+                "76": {
+                    "start": "Chandrima Manik",
+                    "relation": "BEGINNER_IN",
+                    "end": "Japanese"
+                },
+                "77": {
+                    "start": "Chandrima Manik",
+                    "relation": "INTERMEDIATE_IN",
+                    "end": "Kannada"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx",
+            "episode_id": "ep_5447f69f-897f-45cf-9211-0edd1011c06c",
+            "summary": "This novel approximate adder design significantly improves computational accuracy and hardware efficiency through an error-reduced carry prediction (ERCP) technique and constant truncation with error reduction. The ERCP method, by incorporating inputs from the two most significant bits and considering propagation bits, reduces carry prediction error rates to 12.3% for two bits, a substantial improvement over existing methods. Constant truncation further minimizes errors by setting least significant bits to a constant value (1 or 0) based on carry generation, effectively reducing the error distance. These combined approaches lead to remarkable reductions in metrics like Normalized Mean Error Distance (NMED) by 91.4% and Mean Relative Error Distance (MRED) by 98.9%, while also achieving significant power, energy, and area-delay product (ADP) savings, making it highly suitable for applications such as digital image processing and machine learning.",
+            "triples": {
+                "1": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCE",
+                    "end": "prediction error rate"
+                },
+                "2": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCTION_PERCENTAGE",
+                    "end": "75%"
+                },
+                "3": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "PROPOSED",
+                    "end": "carry prediction technique"
+                },
+                "4": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "ENHANCES",
+                    "end": "overall computation accuracy"
+                },
+                "5": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "DECREASE",
+                    "end": "error distance (ED)"
+                },
+                "6": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "IMPROVES",
+                    "end": "NMED"
+                },
+                "7": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "IMPROVEMENT_PERCENTAGE",
+                    "end": "91.4%"
+                },
+                "8": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "IMPROVES",
+                    "end": "MRED"
+                },
+                "9": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "IMPROVEMENT_PERCENTAGE",
+                    "end": "98.9%"
+                },
+                "10": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTIONS",
+                    "end": "power-NMED"
+                },
+                "11": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTION_PERCENTAGE",
+                    "end": "95.7%"
+                },
+                "12": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTIONS",
+                    "end": "energy-NMED"
+                },
+                "13": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTION_PERCENTAGE",
+                    "end": "91.1%"
+                },
+                "14": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTIONS",
+                    "end": "area-delay product (ADP)-NMED"
+                },
+                "15": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTION_PERCENTAGE",
+                    "end": "93.2%"
+                },
+                "16": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTIONS",
+                    "end": "power-MRED products"
+                },
+                "17": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTION_PERCENTAGE",
+                    "end": "99.4%"
+                },
+                "18": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTIONS",
+                    "end": "energy-MRED products"
+                },
+                "19": {
+                    "start": "Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation",
+                    "relation": "REDUCTIONS",
+                    "end": "ADP-MRED products"
+                },
+                "20": {
+                    "start": "Approximate adder",
+                    "relation": "IMPROVES",
+                    "end": "computational accuracy"
+                },
+                "21": {
+                    "start": "Approximate adder",
+                    "relation": "MINIMIZES",
+                    "end": "hardware"
+                },
+                "22": {
+                    "start": "Error-reduced carry prediction (ERCP)",
+                    "relation": "IS_A",
+                    "end": "Core Concept"
+                },
+                "23": {
+                    "start": "Constant truncation with error reduction",
+                    "relation": "IS_A",
+                    "end": "Core Concept"
+                },
+                "24": {
+                    "start": "Setting lsb to constant",
+                    "relation": "REDUCES",
+                    "end": "power"
+                },
+                "25": {
+                    "start": "Setting lsb to constant",
+                    "relation": "REDUCES",
+                    "end": "area"
+                },
+                "26": {
+                    "start": "Setting lsb to constant",
+                    "relation": "MINIMIZES",
+                    "end": "errors"
+                },
+                "27": {
+                    "start": "Approximate full adder cells",
+                    "relation": "ARE USED IN",
+                    "end": "LSB"
+                },
+                "28": {
+                    "start": "Appx FA cells",
+                    "relation": "USED INSTEAD OF",
+                    "end": "exact FA"
+                },
+                "29": {
+                    "start": "xor",
+                    "relation": "REPLACED WITH",
+                    "end": "or"
+                },
+                "30": {
+                    "start": "xor",
+                    "relation": "ELIMINATED FROM",
+                    "end": "sum"
+                },
+                "31": {
+                    "start": "xor",
+                    "relation": "ELIMINATED FROM",
+                    "end": "Cin"
+                },
+                "32": {
+                    "start": "carry propagation chain",
+                    "relation": "REMOVED",
+                    "end": "greatly reduces delay"
+                },
+                "33": {
+                    "start": "carry propagation chain",
+                    "relation": "REMOVED",
+                    "end": "greatly reduces power consumption"
+                },
+                "34": {
+                    "start": "xor",
+                    "relation": "USED IN",
+                    "end": "MSB"
+                },
+                "35": {
+                    "start": "or",
+                    "relation": "USED IN",
+                    "end": "LSB"
+                },
+                "36": {
+                    "start": "Proposed carry prediction technique",
+                    "relation": "PRODUCES",
+                    "end": "carry"
+                },
+                "37": {
+                    "start": "Proposed carry prediction technique",
+                    "relation": "USES",
+                    "end": "simple logic gates"
+                },
+                "38": {
+                    "start": "Traditional AND based prediction scheme",
+                    "relation": "IS_A",
+                    "end": "carry prediction scheme"
+                },
+                "39": {
+                    "start": "Cin",
+                    "relation": "PRODUCED BY",
+                    "end": "AMSB"
+                },
+                "40": {
+                    "start": "Cin",
+                    "relation": "PRODUCED BY",
+                    "end": "BMSB"
+                },
+                "41": {
+                    "start": "AND operation",
+                    "relation": "APPLIED TO",
+                    "end": "most significant bits"
+                },
+                "42": {
+                    "start": "most significant bits",
+                    "relation": "BELONG TO",
+                    "end": "inaccurate part"
+                },
+                "43": {
+                    "start": "Traditional AND based prediction scheme",
+                    "relation": "LIMITATION",
+                    "end": "A carry may come from lower-order bits"
+                },
+                "44": {
+                    "start": "Traditional AND based prediction scheme",
+                    "relation": "ERROR RATE",
+                    "end": "25%"
+                },
+                "45": {
+                    "start": "Proposed AND-OR",
+                    "relation": "IS",
+                    "end": "more accurate"
+                },
+                "46": {
+                    "start": "Proposed AND-OR",
+                    "relation": "IS",
+                    "end": "more efficient"
+                },
+                "47": {
+                    "start": "Proposed AND-OR",
+                    "relation": "EXPENSE",
+                    "end": "2 extra gates"
+                },
+                "48": {
+                    "start": "Proposed AND-OR",
+                    "relation": "ADDS",
+                    "end": "a and b"
+                },
+                "49": {
+                    "start": "Proposed AND-OR",
+                    "relation": "TAKES CARRY FROM",
+                    "end": "1st msb"
+                },
+                "50": {
+                    "start": "Proposed AND-OR",
+                    "relation": "TAKES CARRY FROM",
+                    "end": "2nd msb"
+                },
+                "51": {
+                    "start": "Proposed AND-OR",
+                    "relation": "CALCULATES",
+                    "end": "propagation bit"
+                },
+                "52": {
+                    "start": "Cn-k-1",
+                    "relation": "IS SET TO",
+                    "end": "0"
+                },
+                "53": {
+                    "start": "Cn-k-2",
+                    "relation": "IS SET TO",
+                    "end": "0"
+                },
+                "54": {
+                    "start": "Pn-k-1",
+                    "relation": "IS SET TO",
+                    "end": "1"
+                },
+                "55": {
+                    "start": "Pn-k-1",
+                    "relation": "CALCULATED BY",
+                    "end": "xor first two bits"
+                },
+                "56": {
+                    "start": "Cn-k-2",
+                    "relation": "IS SET TO",
+                    "end": "1"
+                },
+                "57": {
+                    "start": "Proposed AND-OR",
+                    "relation": "REDUCES ERROR TO",
+                    "end": "12.3%"
+                },
+                "58": {
+                    "start": "Proposed AND-OR",
+                    "relation": "USED FOR",
+                    "end": "2 bits"
+                },
+                "59": {
+                    "start": "Carry input Cin",
+                    "relation": "GENERATED BY",
+                    "end": "One XOR gate"
+                },
+                "60": {
+                    "start": "Carry input Cin",
+                    "relation": "GENERATED BY",
+                    "end": "three AND gates"
+                },
+                "61": {
+                    "start": "Carry input Cin",
+                    "relation": "GENERATED BY",
+                    "end": "one OR gate"
+                },
+                "62": {
+                    "start": "XOR",
+                    "relation": "GENERATES",
+                    "end": "P bit"
+                },
+                "63": {
+                    "start": "AND",
+                    "relation": "GENERATES",
+                    "end": "C bits"
+                },
+                "64": {
+                    "start": "AND",
+                    "relation": "GENERATES",
+                    "end": "P.C"
+                },
+                "65": {
+                    "start": "OR",
+                    "relation": "GENERATES",
+                    "end": "final carry"
+                },
+                "66": {
+                    "start": "carry prediction",
+                    "relation": "ACHIEVED USING",
+                    "end": "inputs of the two MSB positions"
+                },
+                "67": {
+                    "start": "carry prediction",
+                    "relation": "IS CORRECT WHEN",
+                    "end": "a carry is generated from any of these two bit positions"
+                },
+                "68": {
+                    "start": "Proposed AND-OR",
+                    "relation": "LIMITATION",
+                    "end": "If lower bits have carry, then error increases"
+                },
+                "69": {
+                    "start": "Constant Truncation With Error Reduction",
+                    "relation": "IS_A",
+                    "end": "Method"
+                },
+                "70": {
+                    "start": "Constant 1 Truncation",
+                    "relation": "OCCURS WHEN",
+                    "end": "no carry"
+                },
+                "71": {
+                    "start": "Constant 1 Truncation",
+                    "relation": "SETS",
+                    "end": "LSB of the inaccurate part to 1"
+                },
+                "72": {
+                    "start": "Constant 0 Truncation",
+                    "relation": "OCCURS WHEN",
+                    "end": "carry is generated"
+                },
+                "73": {
+                    "start": "Constant 0 Truncation",
+                    "relation": "OCCURS WHEN",
+                    "end": "propagated to (n - k - 2)th bit"
+                },
+                "74": {
+                    "start": "Constant 0 Truncation",
+                    "relation": "PERFORMS",
+                    "end": "error reduction"
+                },
+                "75": {
+                    "start": "error reduction",
+                    "relation": "DONE WHEN",
+                    "end": "Pn−k−1.Cn−k−2 = 1"
+                },
+                "76": {
+                    "start": "error reduction",
+                    "relation": "REDUCES ERROR FROM",
+                    "end": "211"
+                },
+                "77": {
+                    "start": "error reduction",
+                    "relation": "REDUCES ERROR TO",
+                    "end": "84"
+                },
+                "78": {
+                    "start": "error reduction",
+                    "relation": "REDUCES",
+                    "end": "error distance"
+                },
+                "79": {
+                    "start": "Error Rate Analysis",
+                    "relation": "IS",
+                    "end": "probability of the complement of the event"
+                },
+                "80": {
+                    "start": "ERERCPAA",
+                    "relation": "IS GIVEN BY",
+                    "end": "1 - P(Eco)"
+                },
+                "81": {
+                    "start": "ERERCPAA",
+                    "relation": "IS EQUAL TO",
+                    "end": "1 - (3/4)n-k-l-1 * (1/2)l"
+                },
+                "82": {
+                    "start": "Ercp(n, k)",
+                    "relation": "IS SHOWN TO BE EQUAL TO",
+                    "end": "P(Pn-k-1)P(Pn-k-2)P(Eca)"
+                },
+                "83": {
+                    "start": "Ercp(n, k)",
+                    "relation": "SIMPLIFIES TO",
+                    "end": "1/2³ (1 - 1/2ⁿ⁻ᵏ⁻²)"
+                },
+                "84": {
+                    "start": "Hardware characteristics",
+                    "relation": "EXAMINED IN TERMS OF",
+                    "end": "area"
+                },
+                "85": {
+                    "start": "Hardware characteristics",
+                    "relation": "EXAMINED IN TERMS OF",
+                    "end": "delay"
+                },
+                "86": {
+                    "start": "Hardware characteristics",
+                    "relation": "EXAMINED IN TERMS OF",
+                    "end": "power"
+                },
+                "87": {
+                    "start": "Hardware characteristics",
+                    "relation": "EXAMINED IN TERMS OF",
+                    "end": "energy"
+                },
+                "88": {
+                    "start": "16-bit adder",
+                    "relation": "USED IN",
+                    "end": "Experiment Setup And Evaluation"
+                },
+                "89": {
+                    "start": "8-bit RCA-based precise adder",
+                    "relation": "USED AS PART OF",
+                    "end": "16-bit adder"
+                },
+                "90": {
+                    "start": "hardware and error char.",
+                    "relation": "ANALYZED USING",
+                    "end": "10 million input pairs"
+                },
+                "91": {
+                    "start": "area, power, and energy performance",
+                    "relation": "DEGRADE WHEN",
+                    "end": "design parameter l decreases"
+                },
+                "92": {
+                    "start": "overall computation accuracy performance",
+                    "relation": "IMPROVES AS",
+                    "end": "l decreases"
+                },
+                "93": {
+                    "start": "l decreases",
+                    "relation": "RESULTS IN",
+                    "end": "more logic gates"
+                },
+                "94": {
+                    "start": "Tradeoff analysis",
+                    "relation": "BETWEEN",
+                    "end": "hardware and cost"
+                },
+                "95": {
+                    "start": "ADP-NMED product",
+                    "relation": "REDUCTION PERCENTAGE",
+                    "end": "93.2%"
+                },
+                "96": {
+                    "start": "NMED",
+                    "relation": "IMPROVEMENT PERCENTAGE",
+                    "end": "91.4%"
+                },
+                "97": {
+                    "start": "MRED",
+                    "relation": "IMPROVEMENT PERCENTAGE",
+                    "end": "98.9%"
+                },
+                "98": {
+                    "start": "No Carry Prediction (LOAWA, ETAI)",
+                    "relation": "ERROR RATE",
+                    "end": "50%"
+                },
+                "99": {
+                    "start": "AND-Based Carry Prediction (LOA, CPETA)",
+                    "relation": "ERROR RATE",
+                    "end": "25%"
+                },
+                "100": {
+                    "start": "Proposed ERCP Method",
+                    "relation": "ERROR RATE",
+                    "end": "12.3%"
+                },
+                "101": {
+                    "start": "Digital Image Processing (Gaussian Smoothing)",
+                    "relation": "IMPROVEMENT",
+                    "end": "12.64dB"
+                },
+                "102": {
+                    "start": "Machine Learning (k-Means Clustering)",
+                    "relation": "IMPROVEMENT",
+                    "end": "378%"
+                },
+                "103": {
+                    "start": "Compressor based hybrid approximate multiplier architectures",
+                    "relation": "FEATURES",
+                    "end": "efficient error correction logic"
+                },
+                "104": {
+                    "start": "binary arithmetic operations",
+                    "relation": "ILLUSTRATED BY",
+                    "end": "diagram"
+                },
+                "105": {
+                    "start": "diagram",
+                    "relation": "SHOWS",
+                    "end": "accurate part"
+                },
+                "106": {
+                    "start": "diagram",
+                    "relation": "SHOWS",
+                    "end": "inaccurate part"
+                },
+                "107": {
+                    "start": "diagram",
+                    "relation": "SHOWS",
+                    "end": "carry-in"
+                },
+                "108": {
+                    "start": "binary addition operation",
+                    "relation": "SHOWN BY",
+                    "end": "equation"
+                },
+                "109": {
+                    "start": "binary addition operation",
+                    "relation": "DIVIDED INTO",
+                    "end": "accurate part"
+                },
+                "110": {
+                    "start": "binary addition operation",
+                    "relation": "DIVIDED INTO",
+                    "end": "inaccurate part"
+                },
+                "111": {
+                    "start": "carry-in (Cin)",
+                    "relation": "INDICATED FOR",
+                    "end": "inaccurate part"
+                },
+                "112": {
+                    "start": "Cn-k = C(n-k-1) + P(n-k-1)C(n-k-2)",
+                    "relation": "RELATES",
+                    "end": "terms of a sequence"
+                },
+                "113": {
+                    "start": "carry prediction error rate",
+                    "relation": "DISPLAYED IN",
+                    "end": "bar chart"
+                },
+                "114": {
+                    "start": "Pi = Ai XOR Bi",
+                    "relation": "PRESENTS",
+                    "end": "equation"
+                }
+            }
+        }
+    ]
+}

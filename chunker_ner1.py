@@ -15,10 +15,10 @@ import openpyxl
 from pptx import Presentation
 
 # --- Configuration ---
-IMAGE_OUTPUT_DIR = "extracted_images"
+IMAGE_OUTPUT_DIR = "/tmp/extracted_images" # Use /tmp in a cloud environment
 MAX_TEXT_LENGTH_FOR_SUMMARY = 200000
 QUICK_TASK_MODEL = 'gemini-2.5-flash-lite'
-EXTRACTION_MODEL = 'gemini-2.5-flash-lite' # Changed to 1.5 for larger context
+EXTRACTION_MODEL = 'gemini-2.5-flash-lite'
 API_DELAY_SECONDS = 3
 # ---------------------
 
@@ -75,7 +75,6 @@ def summarize_text_with_gemini(text):
     print("    > Summarizing document text...")
     if len(text) > MAX_TEXT_LENGTH_FOR_SUMMARY:
         text = text[:MAX_TEXT_LENGTH_FOR_SUMMARY]
-        print("      ! Text was truncated for summarization due to extreme length.")
     try:
         prompt = "Analyze the following. Synthesize its core subject and key points into a single, concise, and factual paragraph. Describe the content directly as if explaining it, starting with the main subject. Do not use third-person language like 'This text is about' or 'The author discusses'."
         response = quick_model.generate_content([prompt, text])
@@ -127,91 +126,109 @@ def process_txt(file_path):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         return f.read(), []
 
-# --- MODIFIED Knowledge Extraction Function ---
+# --- Knowledge Extraction (Unchanged) ---
 def extract_knowledge_triples(full_text):
     print("    > Extracting knowledge triples from full text...")
     if not full_text.strip():
-        print("      ! No text content to extract triples from.")
         return []
-
     prompt_parts = [TRIPLE_EXTRACTION_PROMPT, "Text to analyze:", full_text]
     try:
         response = extraction_model.generate_content(prompt_parts)
         list_of_dicts = json.loads(response.text)
-        print(f"      + Extracted {len(list_of_dicts)} triples from the document.")
+        print(f"      + Extracted {len(list_of_dicts)} triples.")
         time.sleep(API_DELAY_SECONDS)
         return list_of_dicts
     except Exception as e:
         print(f"      ! Error processing the full text for triples: {e}")
         return []
 
-# --- Main Execution Pipeline ---
+# --- Main Execution Pipeline (MODIFIED FOR CLOUD) ---
+def process_single_file(file_path, user_id):
+    """
+    Processes a single file and associates the output with a user_id.
+    This function is designed to be called by a cloud function.
+    """
+    print(f"--- 🎬 Processing File: {file_path} for User ID: {user_id} ---")
+    full_text, images_data = "", []
+    try:
+        ext = os.path.splitext(file_path)[1].lower()
+        if ext == ".pdf": full_text, images_data = process_pdf(file_path)
+        elif ext == ".docx": full_text, images_data = process_docx(file_path)
+        elif ext == ".txt": full_text, images_data = process_txt(file_path)
+        # Add other file handlers (pptx, xlsx, etc.) here if needed
+
+        cleaned_text = re.sub(r'\s+', ' ', full_text).strip()
+        summary = summarize_text_with_gemini(cleaned_text) if cleaned_text else "No text to summarize."
+
+        all_content_text = cleaned_text
+        for img in images_data:
+            all_content_text += " " + img["description"]
+        
+        extracted_triples = extract_knowledge_triples(all_content_text)
+        
+        unique_triples_list = []
+        seen_triples = set()
+        for triple in extracted_triples:
+            canonical_triple = (
+                triple.get('start', '').strip().lower(),
+                triple.get('relation', '').strip().lower(),
+                triple.get('end', '').strip().lower()
+            )
+            if all(canonical_triple) and canonical_triple not in seen_triples:
+                seen_triples.add(canonical_triple)
+                unique_triples_list.append(triple)
+
+        print(f"    > Found {len(unique_triples_list)} unique triples after de-duplication.")
+        triples_dict = {str(i): triple for i, triple in enumerate(unique_triples_list, 1)}
+
+        # --- THIS IS THE KEY CHANGE ---
+        # Assemble the final JSON object with the user_id
+        file_knowledge = {
+            "user_id": user_id,
+            "source_file": os.path.basename(file_path),
+            "episode_id": f"ep_{uuid.uuid4()}",
+            "summary": summary,
+            "triples": triples_dict
+        }
+        # --------------------------------
+
+        print(f"--- ✅ Finished Processing: {file_path} ---\n")
+        return file_knowledge
+        
+    except Exception as e:
+        print(f"--- ❌ FAILED to process {file_path}. Error: {e} ---\n")
+        return None
+
+# --- Local Testing Main Function ---
+# This function simulates the cloud environment for local testing.
 def main():
+    # In a real cloud environment, the user_id would come from the trigger.
+    # For local testing, we can simulate it.
+    test_user_id = "123456789-local-test-user"
+    
     os.makedirs(IMAGE_OUTPUT_DIR, exist_ok=True)
     file_types = ["*.pdf", "*.docx", "*.txt"]
     all_files = [file for ftype in file_types for file in glob.glob(ftype)]
     
     if not all_files:
-        print("No files found to process. Please add supported files to this directory.")
+        print("No files found to process for local testing.")
         return
 
+    print(f"--- LOCAL TEST RUN ---")
     print(f"Found {len(all_files)} file(s) to process.\n")
     final_knowledge_graph_data = []
 
     for file_path in all_files:
-        print(f"--- 🎬 Processing File: {file_path} ---")
-        full_text, images_data = "", []
-        try:
-            ext = os.path.splitext(file_path)[1].lower()
-            if ext == ".pdf": full_text, images_data = process_pdf(file_path)
-            elif ext == ".docx": full_text, images_data = process_docx(file_path)
-            elif ext == ".txt": full_text, images_data = process_txt(file_path)
+        # Call the main processing function with the test user_id
+        processed_data = process_single_file(file_path, test_user_id)
+        if processed_data:
+            final_knowledge_graph_data.append(processed_data)
 
-            cleaned_text = re.sub(r'\s+', ' ', full_text).strip()
-            summary = summarize_text_with_gemini(cleaned_text) if cleaned_text else "No text to summarize."
-
-            # Combine text and image descriptions for a complete context
-            all_content_text = cleaned_text
-            for img in images_data:
-                all_content_text += " " + img["description"]
-            
-            # **MODIFIED**: Extract triples from the entire combined content at once
-            extracted_triples = extract_knowledge_triples(all_content_text)
-            
-            # **NEW**: Post-processing to remove duplicates
-            unique_triples_list = []
-            seen_triples = set()
-            for triple in extracted_triples:
-                # Create a canonical representation for checking duplicates
-                canonical_triple = (
-                    triple.get('start', '').strip().lower(),
-                    triple.get('relation', '').strip().lower(),
-                    triple.get('end', '').strip().lower()
-                )
-                if all(canonical_triple) and canonical_triple not in seen_triples:
-                    seen_triples.add(canonical_triple)
-                    unique_triples_list.append(triple)
-
-            print(f"    > Found {len(unique_triples_list)} unique triples after de-duplication.")
-
-            triples_dict = {str(i): triple for i, triple in enumerate(unique_triples_list, 1)}
-
-            file_knowledge = {
-                "source_file": os.path.basename(file_path),
-                "episode_id": f"ep_{uuid.uuid4()}",
-                "summary": summary,
-                "triples": triples_dict
-            }
-            final_knowledge_graph_data.append(file_knowledge)
-            print(f"--- ✅ Finished Processing: {file_path} ---\n")
-
-        except Exception as e:
-            print(f"--- ❌ FAILED to process {file_path}. Error: {e} ---\n")
-
-    output_filename = "knowledge_graph1.json"
+    output_filename = "knowledge_graph_with_userid.json"
     with open(output_filename, "w", encoding="utf-8") as f:
         json.dump({"knowledge_graph": final_knowledge_graph_data}, f, indent=4, ensure_ascii=False)
     print(f"--- 🎉 ALL DONE! --- \nKnowledge graph saved to '{output_filename}'")
+
 
 if __name__ == "__main__":
     main()
