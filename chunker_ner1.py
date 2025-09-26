@@ -13,14 +13,16 @@ import docx
 import csv
 import openpyxl
 from pptx import Presentation
+import boto3
 
 # --- Configuration ---
-IMAGE_OUTPUT_DIR = "/tmp/extracted_images" # Use /tmp in a cloud environment
+IMAGE_OUTPUT_DIR = "/tmp/extracted_images"  # Cloud-friendly temp folder
 MAX_TEXT_LENGTH_FOR_SUMMARY = 200000
 QUICK_TASK_MODEL = 'gemini-2.5-flash-lite'
 EXTRACTION_MODEL = 'gemini-2.5-flash-lite'
 API_DELAY_SECONDS = 3
-# ---------------------
+BUCKET_NAME = "infinity-search-v1"
+S3_FOLDER = "kg-json"
 
 # --- Setup ---
 load_dotenv()
@@ -28,6 +30,13 @@ api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
     raise ValueError("API key not found. Please set GOOGLE_API_KEY in your .env file.")
 genai.configure(api_key=api_key)
+
+s3 = boto3.client(
+    "s3",
+    aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
+    aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
+    region_name="ap-south-1"
+)
 
 # --- Gemini Models and Prompts ---
 quick_model = genai.GenerativeModel(QUICK_TASK_MODEL)
@@ -84,7 +93,7 @@ def summarize_text_with_gemini(text):
         print(f"      ! Error during text summarization: {e}")
         return "Error during summarization."
 
-# --- File Processors (Unchanged) ---
+# --- File Processors ---
 def process_pdf(file_path):
     print("    > Extracting text and images from PDF...")
     full_text, images_data = "", []
@@ -120,13 +129,13 @@ def process_docx(file_path):
             description = describe_image_with_gemini(img_path)
             images_data.append({"image_path": img_path, "description": description})
     return full_text, images_data
-    
+
 def process_txt(file_path):
     print("    > Extracting text from TXT...")
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         return f.read(), []
 
-# --- Knowledge Extraction (Unchanged) ---
+# --- Knowledge Extraction ---
 def extract_knowledge_triples(full_text):
     print("    > Extracting knowledge triples from full text...")
     if not full_text.strip():
@@ -142,12 +151,8 @@ def extract_knowledge_triples(full_text):
         print(f"      ! Error processing the full text for triples: {e}")
         return []
 
-# --- Main Execution Pipeline (MODIFIED FOR CLOUD) ---
+# --- Single File Processing ---
 def process_single_file(file_path, user_id):
-    """
-    Processes a single file and associates the output with a user_id.
-    This function is designed to be called by a cloud function.
-    """
     print(f"--- 🎬 Processing File: {file_path} for User ID: {user_id} ---")
     full_text, images_data = "", []
     try:
@@ -155,19 +160,14 @@ def process_single_file(file_path, user_id):
         if ext == ".pdf": full_text, images_data = process_pdf(file_path)
         elif ext == ".docx": full_text, images_data = process_docx(file_path)
         elif ext == ".txt": full_text, images_data = process_txt(file_path)
-        # Add other file handlers (pptx, xlsx, etc.) here if needed
 
         cleaned_text = re.sub(r'\s+', ' ', full_text).strip()
         summary = summarize_text_with_gemini(cleaned_text) if cleaned_text else "No text to summarize."
 
-        all_content_text = cleaned_text
-        for img in images_data:
-            all_content_text += " " + img["description"]
-        
+        all_content_text = cleaned_text + " " + " ".join([img["description"] for img in images_data])
         extracted_triples = extract_knowledge_triples(all_content_text)
-        
-        unique_triples_list = []
-        seen_triples = set()
+
+        unique_triples_list, seen_triples = [], set()
         for triple in extracted_triples:
             canonical_triple = (
                 triple.get('start', '').strip().lower(),
@@ -178,11 +178,8 @@ def process_single_file(file_path, user_id):
                 seen_triples.add(canonical_triple)
                 unique_triples_list.append(triple)
 
-        print(f"    > Found {len(unique_triples_list)} unique triples after de-duplication.")
         triples_dict = {str(i): triple for i, triple in enumerate(unique_triples_list, 1)}
 
-        # --- THIS IS THE KEY CHANGE ---
-        # Assemble the final JSON object with the user_id
         file_knowledge = {
             "user_id": user_id,
             "source_file": os.path.basename(file_path),
@@ -190,36 +187,26 @@ def process_single_file(file_path, user_id):
             "summary": summary,
             "triples": triples_dict
         }
-        # --------------------------------
 
         print(f"--- ✅ Finished Processing: {file_path} ---\n")
         return file_knowledge
-        
     except Exception as e:
         print(f"--- ❌ FAILED to process {file_path}. Error: {e} ---\n")
         return None
 
-# --- Local Testing Main Function ---
-# This function simulates the cloud environment for local testing.
+# --- Main Execution Pipeline ---
 def main():
-    # In a real cloud environment, the user_id would come from the trigger.
-    # For local testing, we can simulate it.
     test_user_id = "123456789-local-test-user"
-    
     os.makedirs(IMAGE_OUTPUT_DIR, exist_ok=True)
-    file_types = ["*.pdf", "*.docx", "*.txt"]
+    file_types = [".pdf", ".docx", "*.txt"]
     all_files = [file for ftype in file_types for file in glob.glob(ftype)]
-    
+
     if not all_files:
-        print("No files found to process for local testing.")
+        print("No files found to process.")
         return
 
-    print(f"--- LOCAL TEST RUN ---")
-    print(f"Found {len(all_files)} file(s) to process.\n")
     final_knowledge_graph_data = []
-
     for file_path in all_files:
-        # Call the main processing function with the test user_id
         processed_data = process_single_file(file_path, test_user_id)
         if processed_data:
             final_knowledge_graph_data.append(processed_data)
@@ -227,8 +214,17 @@ def main():
     output_filename = "knowledge_graph_with_userid.json"
     with open(output_filename, "w", encoding="utf-8") as f:
         json.dump({"knowledge_graph": final_knowledge_graph_data}, f, indent=4, ensure_ascii=False)
-    print(f"--- 🎉 ALL DONE! --- \nKnowledge graph saved to '{output_filename}'")
 
+    print(f"Knowledge graph saved to '{output_filename}'")
 
-if __name__ == "__main__":
+    # --- Upload to S3 ---
+    try:
+        s3_object_key = f"{S3_FOLDER}/{output_filename}"
+        s3.upload_file(output_filename, BUCKET_NAME, s3_object_key)
+        public_url = f"https://{BUCKET_NAME}.s3.amazonaws.com/{s3_object_key}"
+        print(f"✅ JSON uploaded successfully to S3!")
+        print(f"🌐 File URL: {public_url}")
+    except Exception as e:
+        print(f"❌ Failed to upload JSON to S3: {e}")
+if __name__ == "_main_":
     main()
