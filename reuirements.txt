@@ -1,0 +1,16 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+openai==0.28.0
+python-dotenv==1.0.0
+pydantic==2.5.0
+sentence-transformers==2.2.2
+PyPDF2==3.0.1
+docx2txt==0.8
+python-magic==0.4.27
+aiofiles==23.2.1
+chromadb==0.4.15
+boto3==1.28.62  # For AWS S3
+google-cloud-storage==2.10.0  # For Google Cloud Storage
+pillow==10.0.1  # For image processing (if needed)
+python-multipart==0.0.6
