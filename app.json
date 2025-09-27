@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "SemanticSearchApp",
-    "slug": "SemanticSearchApp",
+    "name": "Infinity Search",
+    "slug": "Infinity Search",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "semanticsearchapp",
+    "scheme": "infinitysearch",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "permissions": [
@@ -45,7 +45,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.anonymous.SemanticSearchApp"
+      "package": "com.anonymous.infinitysearch"
     },
     "web": {
       "output": "static",

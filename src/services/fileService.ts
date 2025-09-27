@@ -15,6 +15,16 @@ export interface UploadProgress {
   fileName: string;
   progress: number;
   status: 'uploading' | 'completed' | 'error';
+  key?: string;
+  url?: string;
+}
+
+export interface UploadResult{
+  success: boolean;
+  fileId: string;
+  key?: string;
+  url?: string;
+  error?: string;
 }
 
 class FileService {
@@ -29,6 +39,7 @@ class FileService {
     'image/*',
   ];
 
+  private readonly API_BASE_URL = 'http://your-backend-url:8000';
   /**
    * Scan device for images and documents
    */
@@ -109,27 +120,111 @@ class FileService {
     }
   }
 
-  /**
-   * Upload files to backend (simulated)
-   */
+
   async uploadFiles(
     files: LocalFile[],
+    userId: string,
+    projectId?: string,
     onProgress?: (progress: UploadProgress) => void
-  ): Promise<void> {
+  ): Promise<UploadResult[]> {
+    const results: UploadResult[] = [];
     for (const file of files) {
       try {
         onProgress?.({ fileId: file.id, fileName: file.name, progress: 0, status: 'uploading' });
 
-        for (let progress = 0; progress <= 100; progress += 20) {
-          await new Promise((resolve) => setTimeout(resolve, 300));
-          onProgress?.({ fileId: file.id, fileName: file.name, progress, status: 'uploading' });
+        const formData = new FormData();
+
+        const fileBlob = await this.uriToBlob(file.uri, file.mimeType);
+
+         formData.append('file', fileBlob as any);
+        formData.append('userId', userId);
+        formData.append('originalName', file.name);
+        formData.append('fileType', file.type);
+
+         if (projectId) {
+          formData.append('projectId', projectId);
         }
 
-        onProgress?.({ fileId: file.id, fileName: file.name, progress: 100, status: 'completed' });
+         const response = await fetch(`${this.API_BASE_URL}/upload-file/`, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`Upload failed: ${response.statusText}`);
+        }
+
+        const result = await response.json();
+
+
+              
+
+        onProgress?.({ fileId: file.id, fileName: file.name, progress: 100, status: 'completed', key:result.key, url:result.url });
+         results.push({
+          success: true,
+          fileId: file.id,
+          key: result.key,
+          url: result.url
+        });
       } catch (error) {
         console.error(`Error uploading file ${file.name}:`, error);
         onProgress?.({ fileId: file.id, fileName: file.name, progress: 0, status: 'error' });
+        results.push({
+          success: false,
+          fileId: file.id,
+          error: error instanceof Error ? error.message : 'Upload failed'
+        });
       }
+    }
+    return results;
+  }
+
+  private async uriToBlob(uri: string, mimeType: string = ''): Promise<Blob> {
+    try {
+      const response = await fetch(uri);
+      return await response.blob();
+    } catch (error) {
+      console.error('Error converting URI to blob:', error);
+      throw error;
+    }
+  }
+
+   async uploadMultipleFiles(
+    files: LocalFile[],
+    userId: string,
+    projectId?: string,
+    onProgress?: (progress: UploadProgress) => void
+  ): Promise<{ results: UploadResult[], combinedResult?: any }> {
+    try {
+      const formData = new FormData();
+      
+      // Append all files and metadata
+      files.forEach((file, index) => {
+        // We'll handle individual file uploads for better progress tracking
+        // This method is kept for potential batch optimization
+      });
+
+      // For now, use individual uploads for better progress tracking
+      const results = await this.uploadFiles(files, userId, projectId, onProgress);
+
+      // Get combined knowledge graph result
+      const combinedResponse = await fetch(
+        `${this.API_BASE_URL}/s3/users/${userId}/files?limit=100`
+      );
+      
+      const combinedResult = combinedResponse.ok ? await combinedResponse.json() : null;
+
+      return {
+        results,
+        combinedResult
+      };
+
+    } catch (error) {
+      console.error('Error in batch upload:', error);
+      throw error;
     }
   }
 
