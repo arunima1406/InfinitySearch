@@ -3,8 +3,8 @@ import requests
 url = "http://127.0.0.1:8000/chat"
 
 payload = {
-    "query": "How is Alice related to Bob?",
-    "top_k": 5  
+    "query": "What is a waterfall model?",
+    "top_k": 5
 }
 
 response = requests.post(url, json=payload)
