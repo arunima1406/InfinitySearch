@@ -1,6 +1,7 @@
 import os
 import re
 import json
+from uuid import uuid4
 from typing import List, Dict
 
 from dotenv import load_dotenv
@@ -50,8 +51,8 @@ def generate_embedding(text: str) -> List[float]:
 
 
 # ---------------- S3 HELPERS ----------------
-def list_user_json_files(bucket: str, user_id: str):
-    prefix = f"kg-json/"
+def list_user_json_files(bucket: str):
+    prefix = "kg-json/"
     response = s3_client.list_objects_v2(Bucket=bucket, Prefix=prefix)
     if "Contents" not in response:
         return []
@@ -90,15 +91,14 @@ def insert_triples(triples: List[Dict], user_id: str):
             relation = t["relation"].upper()
             relation = re.sub(r"[^A-Z0-9_]", "_", relation)
 
-            embedding_vector = generate_embedding(t["summary"])
-
             session.execute_write(
                 insert_triple,
                 t["start"], relation, t["end"],
-                t["source_file"], t["episode_id"], t["summary"], user_id, embedding_vector
+                t["source_file"], t["episode_id"], t["summary"], user_id, t["embedding"]
             )
             inserted_count += 1
     print(f"✅ Inserted {inserted_count} triples into Neo4j for user {user_id}!")
+
 
 def create_vector_index():
     """Create vector index only if it doesn't exist using Neo4j 5.x vector syntax."""
@@ -116,21 +116,30 @@ def create_vector_index():
                 "FOR (e:Episode) "
                 "ON (e.embedding) "
                 "OPTIONS {indexProvider: 'vector-3.0', "
-                "indexConfig: {`vector.dimensions`: 768, `vector.similarity_function`: 'cosine'}}"
+                "`indexConfig`: {`vector.dimensions`: 768, `vector.similarity_function`: 'cosine'}}"
             )
             print("✅ Vector index 'episode_index' created successfully!")
         except Exception as e:
             print("⚠️ Failed to create vector index:", e)
 
+
 # ---------------- MAIN ----------------
 if __name__ == "__main__":
     user_id = "test_user_123"
 
-    json_files = list_user_json_files(S3_BUCKET, user_id)
+    json_files = list_user_json_files(S3_BUCKET)
     if not json_files:
         print(f"⚠️ No JSON files found for user {user_id} in {S3_BUCKET}")
     else:
         print(f"📂 Found {len(json_files)} files for {user_id}: {json_files}")
+        for key in json_files:
+            print(f"🔍 File: {key}")
+            data = load_json_from_s3(S3_BUCKET, key)
+            print(f"📄 Loaded data keys: {list(data.keys())}")
+            kg_list = data.get("knowledge_graph", [])
+            print(f"📚 Knowledge graph items: {len(kg_list)}")
+            for i, kg_item in enumerate(kg_list):
+                print(f"  Item {i+1}: source_file={kg_item.get('source_file')}, episode_id={kg_item.get('episode_id')}, summary_preview={kg_item.get('summary', '')[:100]}...")
 
     total_triples = 0
     for key in json_files:
@@ -140,20 +149,29 @@ if __name__ == "__main__":
         triples = []
         for kg_item in data.get("knowledge_graph", []):
             source_file = kg_item.get("source_file", "unknown")
-            episode_id = kg_item.get("episode_id", "unknown")
+            episode_id = kg_item.get("episode_id") or str(uuid4())
             summary = kg_item.get("summary", "")
-            triples_dict = kg_item.get("triples", {})
 
-            for _, t in triples_dict.items():
+            print(f"🎬 Processing episode: source_file={source_file}, episode_id={episode_id}, summary_length={len(summary)}")
+
+            # ✅ Generate embedding once per episode
+            episode_embedding = generate_embedding(summary)
+
+            triples_dict = kg_item.get("triples", {})
+            print(f"🔗 Triples in this episode: {len(triples_dict)}")
+            for triple_key, t in triples_dict.items():
                 if not t.get("start") or not t.get("end") or not t.get("relation"):
+                    print(f"⚠️ Skipping invalid triple: {t}")
                     continue
+                print(f"  Triple: {t['start']} --{t['relation']}--> {t['end']}")
                 triples.append({
                     "start": t["start"],
                     "relation": t["relation"],
                     "end": t["end"],
                     "source_file": source_file,
                     "episode_id": episode_id,
-                    "summary": summary
+                    "summary": summary,
+                    "embedding": episode_embedding   # <— attach embedding once per episode
                 })
 
         print(f"✅ Prepared {len(triples)} triples from {key}")
