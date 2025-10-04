@@ -11,7 +11,7 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { RootStackParamList } from '../../App';
+import { RootStackParamList } from '../utils/type';
 import LoadingIndicator from '../components/LoadingIndicator';
 import { fileService } from '../services/fileService';
 import { colors, globalStyles, spacing, typography } from '../utils/styles';

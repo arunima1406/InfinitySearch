@@ -18,11 +18,27 @@ export interface SearchResult {
 export type RootStackParamList = {
   Loading: undefined;
   Search: undefined;
-  FilePreview: { file: FileInfo };
+  SignIn: undefined;
+  FilePreview: { fileId: string; fileName: string; fileType: string; };
 };
 
 export interface ScanProgress {
   current: number;
   total: number;
   currentFile: string;
+}
+
+// Auth-related types
+export interface User {
+  id: string;
+  email: string;
+  firstName?: string;
+  lastName?: string;
+  imageUrl?: string;
+}
+
+export interface AuthState {
+  isSignedIn: boolean;
+  user: User | null;
+  isLoaded: boolean;
 }

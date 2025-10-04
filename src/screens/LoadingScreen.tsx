@@ -10,10 +10,10 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { RootStackParamList } from '../../App';
+import { RootStackParamList } from '../utils/type';
 import LoadingIndicator from '../components/LoadingIndicator';
 import ProgressCard from '../components/ProgressCard';
-import { fileService, LocalFile } from '../services/fileService';
+import { fileService, LocalFile, UploadProgress } from '../services/fileService';
 import { colors, globalStyles, spacing, typography } from '../utils/styles';
 
 type LoadingScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Loading'>;
@@ -82,7 +82,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ navigation }) => {
     setUploadProgress({});
 
     try {
-      await fileService.uploadFiles(files, (progress) => {
+      await fileService.uploadFiles(files, 'placeholder-user-id', undefined, (progress) => {
         setUploadProgress(prev => ({
           ...prev,
           [progress.fileId]: progress,
