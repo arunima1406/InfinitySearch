@@ -8,16 +8,23 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
 import google.generativeai as genai
+import numpy as np
 
-
+# ------------------ Setup ------------------
 load_dotenv()
 
+# Env variables
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 NEO4J_URI = os.environ.get("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USERNAME = os.environ.get("NEO4J_USERNAME", "neo4j")
 NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD", "password")
 NEO4J_DATABASE = os.environ.get("NEO4J_DATABASE", "neo4j")
-EMBED_MODEL = os.environ.get("EMBED_MODEL", "text-embedding-004")
+
+# Try multiple embedding models in order
+EMBED_MODELS = [
+    "text-embedding-004",        # default (newer)
+    "textembedding-gecko",       # fallback
+]
 
 if not GEMINI_API_KEY:
     raise RuntimeError("GEMINI_API_KEY is missing in .env")
@@ -27,7 +34,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 logging.basicConfig(level=logging.INFO)
 
 
-# Timeout if query takes too long to execute
+# Timeout Helper
 def run_with_timeout(func, *args, timeout: int = 15, **kwargs):
     """Run a function with timeout (cross-platform)."""
     with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -38,21 +45,36 @@ def run_with_timeout(func, *args, timeout: int = 15, **kwargs):
             raise TimeoutError(f"Operation timed out after {timeout}s")
 
 
-# RAG pipeline
+# Normalization 
+def normalize(vec: List[float]) -> List[float]:
+    """L2 normalize embedding vector for cosine similarity"""
+    arr = np.array(vec, dtype=float)
+    norm = np.linalg.norm(arr)
+    return (arr / norm).tolist() if norm > 0 else arr.tolist()
+
+
+# RAG
 class RAGPipeline:
     def __init__(self, uri: str, user: str, password: str, database: str = "neo4j"):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
         self.database = database
 
     def embed(self, text: str) -> List[float]:
-        """Generate Gemini embeddings for text"""
-        logging.info("Generating embedding for query...")
-        return run_with_timeout(
-            genai.embed_content,
-            model=EMBED_MODEL,
-            content=text,
-            timeout=15
-        )["embedding"]
+        """Generate embeddings using fallback models"""
+        for model in EMBED_MODELS:
+            try:
+                logging.info(f"Generating embedding with model={model}...")
+                response = run_with_timeout(
+                    genai.embed_content,
+                    model=model,
+                    content=text,
+                    timeout=15
+                )
+                return normalize(response["embedding"])
+            except Exception as e:
+                logging.warning(f"Embedding with {model} failed: {e}")
+                continue
+        raise RuntimeError("All embedding models failed")
 
     def semantic_search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
         """Run vector similarity search in Neo4j"""
@@ -98,7 +120,7 @@ class RAGPipeline:
 
 
 # FASTAPI backend
-app = FastAPI(title="PrismBreak — Semantic RAG with Episode Summaries")
+app = FastAPI(title="PrismBreak — Semantic RAG with Multi-Model Embeddings")
 
 rag = RAGPipeline(
     uri=NEO4J_URI,

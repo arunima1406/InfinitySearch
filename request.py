@@ -3,7 +3,7 @@ import requests
 url = "http://127.0.0.1:8000/chat"
 
 payload = {
-    "query": "What is a waterfall model?",
+    "query": "What is an approximate adder?",
     "top_k": 5
 }
 
