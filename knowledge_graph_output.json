@@ -1,0 +1,2386 @@
+{
+    "knowledge_graph": [
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "1_Embedded-product-design-life-cycle.pdf",
+            "episode_id": "ep_158b59bf-b678-4f3e-a19f-6fa5a7bc5c30",
+            "summary": "Embedded systems product development life cycles are analyzed through distinct models. The waterfall model, a linear and sequential approach, suits projects with clear, stable requirements and emphasizes thorough documentation, leading to well-defined phases, easier management, and potentially high reliability, but it is inflexible and delays testing. The spiral model, a risk-driven, iterative approach, combines waterfall and iterative elements, allowing for risk assessment and prototyping at each stage, making it adaptable to changing requirements and complex embedded systems by facilitating early identification and mitigation of risks.",
+            "triples": {
+                "1": {
+                    "start": "Waterfall model",
+                    "relation": "IS_A",
+                    "end": "software development approach"
+                },
+                "2": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_PROPERTY",
+                    "end": "linear and sequential"
+                },
+                "3": {
+                    "start": "Waterfall model",
+                    "relation": "CAN_BE_APPLIED_TO",
+                    "end": "embedded systems"
+                },
+                "4": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "requirements gathering"
+                },
+                "5": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "design"
+                },
+                "6": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "implementation"
+                },
+                "7": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "testing"
+                },
+                "8": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_PHASE",
+                    "end": "maintenance"
+                },
+                "9": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_PROPERTY",
+                    "end": "inflexibility"
+                },
+                "10": {
+                    "start": "Waterfall model",
+                    "relation": "BEST_FOR",
+                    "end": "projects with well-defined, stable requirements"
+                },
+                "11": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "WORKS_BEST_WHEN",
+                    "end": "requirements are well-understood and unlikely to change significantly"
+                },
+                "12": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "HAS_PHASE",
+                    "end": "requirements"
+                },
+                "13": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "HAS_PHASE",
+                    "end": "design"
+                },
+                "14": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "HAS_PHASE",
+                    "end": "implementation"
+                },
+                "15": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "HAS_PHASE",
+                    "end": "testing"
+                },
+                "16": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "HAS_PHASE",
+                    "end": "deployment"
+                },
+                "17": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "EMPHASIZES",
+                    "end": "thorough documentation"
+                },
+                "18": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "SUITABLE_FOR",
+                    "end": "embedded systems with clear specifications"
+                },
+                "19": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "SUITABLE_FOR",
+                    "end": "embedded systems with high reliability requirements"
+                },
+                "20": {
+                    "start": "Waterfall Model in Embedded Systems",
+                    "relation": "SUITABLE_FOR",
+                    "end": "embedded systems where changes are difficult or costly to implement"
+                },
+                "21": {
+                    "start": "Waterfall model",
+                    "relation": "EXAMPLE_USE_CASE",
+                    "end": "safety-critical systems"
+                },
+                "22": {
+                    "start": "Waterfall model",
+                    "relation": "EXAMPLE_USE_CASE",
+                    "end": "industrial control systems"
+                },
+                "23": {
+                    "start": "Waterfall model",
+                    "relation": "EXAMPLE_USE_CASE",
+                    "end": "some automotive applications"
+                },
+                "24": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "well-defined phases"
+                },
+                "25": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "easy to manage"
+                },
+                "26": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "low risk (when requirements are stable)"
+                },
+                "27": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_ADVANTAGE",
+                    "end": "high reliability"
+                },
+                "28": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "inflexible"
+                },
+                "29": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "late testing"
+                },
+                "30": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "limited customer involvement"
+                },
+                "31": {
+                    "start": "Waterfall model",
+                    "relation": "HAS_DISADVANTAGE",
+                    "end": "not ideal for complex projects"
+                },
+                "32": {
+                    "start": "Agile",
+                    "relation": "IS_A",
+                    "end": "development methodology"
+                },
+                "33": {
+                    "start": "Agile",
+                    "relation": "IS_AN_ALTERNATIVE_TO",
+                    "end": "Waterfall model"
+                },
+                "34": {
+                    "start": "Agile",
+                    "relation": "EMPHASIZES",
+                    "end": "iterative development"
+                },
+                "35": {
+                    "start": "Agile",
+                    "relation": "EMPHASIZES",
+                    "end": "collaboration"
+                },
+                "36": {
+                    "start": "Agile",
+                    "relation": "EMPHASIZES",
+                    "end": "flexibility"
+                },
+                "37": {
+                    "start": "Agile",
+                    "relation": "ALLOWS_FOR",
+                    "end": "changes and adjustments throughout the development process"
+                },
+                "38": {
+                    "start": "Spiral Model",
+                    "relation": "IS_A",
+                    "end": "software development process"
+                },
+                "39": {
+                    "start": "Spiral Model",
+                    "relation": "HAS_PROPERTY",
+                    "end": "risk-driven"
+                },
+                "40": {
+                    "start": "Spiral Model",
+                    "relation": "WELL_SUITED_FOR",
+                    "end": "embedded systems"
+                },
+                "41": {
+                    "start": "Spiral Model",
+                    "relation": "HAS_PROPERTY",
+                    "end": "iterative"
+                },
+                "42": {
+                    "start": "Spiral Model",
+                    "relation": "HAS_PROPERTY",
+                    "end": "prototyping approach"
+                },
+                "43": {
+                    "start": "Spiral Model",
+                    "relation": "COMBINES_ELEMENTS_OF",
+                    "end": "waterfall model"
+                },
+                "44": {
+                    "start": "Spiral Model",
+                    "relation": "COMBINES_ELEMENTS_OF",
+                    "end": "iterative models"
+                },
+                "45": {
+                    "start": "Spiral Model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "risk assessment"
+                },
+                "46": {
+                    "start": "Spiral Model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "prototyping at each stage"
+                },
+                "47": {
+                    "start": "Spiral Model",
+                    "relation": "IDEAL_FOR",
+                    "end": "complex projects with evolving requirements"
+                },
+                "48": {
+                    "start": "Spiral Model",
+                    "relation": "BENEFICIAL_FOR",
+                    "end": "embedded systems"
+                },
+                "49": {
+                    "start": "Spiral Model",
+                    "relation": "ENABLES",
+                    "end": "identifying and mitigating risks early"
+                },
+                "50": {
+                    "start": "Spiral Model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "continuous refinement and adaptation"
+                },
+                "51": {
+                    "start": "Spiral Model",
+                    "relation": "SUPPORTS",
+                    "end": "building prototypes at each iteration"
+                },
+                "52": {
+                    "start": "Spiral Model",
+                    "relation": "ALLOWS_FOR",
+                    "end": "incorporating changes and new functionalities"
+                },
+                "53": {
+                    "start": "Spiral Model",
+                    "relation": "HELPS_MANAGE",
+                    "end": "complexity of embedded systems"
+                },
+                "54": {
+                    "start": "Spiral Model",
+                    "relation": "PROVIDES",
+                    "end": "flexible framework"
+                },
+                "55": {
+                    "start": "Spiral Model",
+                    "relation": "PROVIDES",
+                    "end": "risk-aware framework"
+                },
+                "56": {
+                    "start": "image",
+                    "relation": "DEPICTS",
+                    "end": "Waterfall Model"
+                },
+                "57": {
+                    "start": "Waterfall Model",
+                    "relation": "IS_ILLUSTRATED_AS",
+                    "end": "flowchart"
+                },
+                "58": {
+                    "start": "Waterfall Model",
+                    "relation": "REPRESENTS",
+                    "end": "sequential software development process"
+                },
+                "59": {
+                    "start": "Waterfall Model",
+                    "relation": "MAIN_SUBJECT_OF",
+                    "end": "image"
+                },
+                "60": {
+                    "start": "Waterfall Model",
+                    "relation": "DEPICTED_AS",
+                    "end": "series of interconnected rectangular boxes"
+                },
+                "61": {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "Requirement Analysis"
+                },
+                "62": {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "System Design"
+                },
+                "63": {
+                    "start": "Waterfall Model",
+                    "relation": "HAS_PHASE",
+                    "end": "Deployment"
+                },
+                "64": {
+                    "start": "image",
+                    "relation": "DEPICTS",
+                    "end": "spiral model of software design"
+                },
+                "65": {
+                    "start": "spiral model of software design",
+                    "relation": "MAIN_SUBJECT_OF",
+                    "end": "image"
+                },
+                "66": {
+                    "start": "spiral model of software design",
+                    "relation": "DEPICTED_AS",
+                    "end": "stylized cone with multiple concentric ellipses"
+                },
+                "67": {
+                    "start": "spiral model of software design",
+                    "relation": "HAS_STAGE",
+                    "end": "System feasibility"
+                },
+                "68": {
+                    "start": "spiral model of software design",
+                    "relation": "HAS_STAGE",
+                    "end": "Specification"
+                },
+                "69": {
+                    "start": "spiral model of software design",
+                    "relation": "HAS_STAGE",
+                    "end": "Prototype"
+                },
+                "70": {
+                    "start": "spiral model of software design",
+                    "relation": "HAS_STAGE",
+                    "end": "Initial system"
+                },
+                "71": {
+                    "start": "spiral model of software design",
+                    "relation": "HAS_STAGE",
+                    "end": "Enhanced system"
+                },
+                "72": {
+                    "start": "System life cycle",
+                    "relation": "ENCOMPASSES",
+                    "end": "Design"
+                },
+                "73": {
+                    "start": "System life cycle",
+                    "relation": "ENCOMPASSES",
+                    "end": "Test"
+                },
+                "74": {
+                    "start": "System life cycle",
+                    "relation": "INTERRELATES",
+                    "end": "Requirements"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "1_Sample-architectures.pdf",
+            "episode_id": "ep_7e4ed2cb-0644-435a-9ee9-73ef58e4d189",
+            "summary": "The core subject is understanding embedded system design architectures, specifically focusing on the abstraction layer through examples of common household appliances. These examples, including a microwave oven, an elevator/lift, and a washing machine, illustrate how different layers of abstraction are employed to manage complexity. Behavior models are presented for each of these devices to demonstrate how their functionalities are conceptualized and implemented within these architectures.",
+            "triples": {
+                "1": {
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "DoorSensor"
+                },
+                "2": {
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "Light"
+                },
+                "3": {
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "PowerTube"
+                },
+                "4": {
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "Beeper"
+                },
+                "5": {
+                    "start": "OvenController",
+                    "relation": "HAS_RELATIONSHIP_WITH",
+                    "end": "Button"
+                },
+                "6": {
+                    "start": "Button",
+                    "relation": "IS_A",
+                    "end": "CookButton"
+                },
+                "7": {
+                    "start": "Button",
+                    "relation": "IS_A",
+                    "end": "CancelButton"
+                },
+                "8": {
+                    "start": "CONTROLLER",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "DOOR"
+                },
+                "9": {
+                    "start": "CONTROLLER",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "BUTTONS"
+                },
+                "10": {
+                    "start": "CONTROLLER",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "KEYPAD"
+                },
+                "11": {
+                    "start": "CONTROLLER",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "SENSORS"
+                },
+                "12": {
+                    "start": "CONTROLLER",
+                    "relation": "RECEIVES_INPUT_FROM",
+                    "end": "TIMER"
+                },
+                "13": {
+                    "start": "CONTROLLER",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "TRACTION MOTOR CONTROL"
+                },
+                "14": {
+                    "start": "CONTROLLER",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "DISPLAY"
+                },
+                "15": {
+                    "start": "CONTROLLER",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "BUZZER"
+                },
+                "16": {
+                    "start": "CONTROLLER",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "FLOOR CALCULATOR"
+                },
+                "17": {
+                    "start": "CONTROLLER",
+                    "relation": "INTERACTS_WITH",
+                    "end": "BUTTONS"
+                },
+                "18": {
+                    "start": "CONTROLLER",
+                    "relation": "INTERACTS_WITH",
+                    "end": "SENSORS"
+                },
+                "19": {
+                    "start": "CONTROLLER",
+                    "relation": "INTERACTS_WITH",
+                    "end": "DOOR"
+                },
+                "20": {
+                    "start": "CONTROLLER",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "LED"
+                },
+                "21": {
+                    "start": "CONTROLLER",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "MOTOR"
+                },
+                "22": {
+                    "start": "CONTROLLER",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "OUTLET"
+                },
+                "23": {
+                    "start": "CONTROLLER",
+                    "relation": "SENDS_OUTPUT_TO",
+                    "end": "INLET"
+                },
+                "24": {
+                    "start": "Heating Done?",
+                    "relation": "LEADS_TO",
+                    "end": "Is Door Open?"
+                },
+                "25": {
+                    "start": "Is Door Open?",
+                    "relation": "LEADS_TO",
+                    "end": "Past 2min.?"
+                },
+                "26": {
+                    "start": "Is Door Open?",
+                    "relation": "LEADS_TO",
+                    "end": "The Door is Open"
+                },
+                "27": {
+                    "start": "Is Door Close?",
+                    "relation": "LEADS_TO",
+                    "end": "Past 2min.?"
+                },
+                "28": {
+                    "start": "Past 2min.?",
+                    "relation": "LEADS_TO",
+                    "end": "Heating Completed"
+                },
+                "29": {
+                    "start": "Heating Completed",
+                    "relation": "LEADS_TO",
+                    "end": "Re Heat?"
+                },
+                "30": {
+                    "start": "The Door is Open",
+                    "relation": "LEADS_TO",
+                    "end": "Re Heat?"
+                },
+                "31": {
+                    "start": "Passenger",
+                    "relation": "PRESSES",
+                    "end": "HallButton"
+                },
+                "32": {
+                    "start": "HallButton",
+                    "relation": "TRIGGERS",
+                    "end": "HallCall"
+                },
+                "33": {
+                    "start": "HallCall",
+                    "relation": "SENT_TO",
+                    "end": "HallButtonControl"
+                },
+                "34": {
+                    "start": "HallButtonControl",
+                    "relation": "TURNS_ON",
+                    "end": "HallButtonControl"
+                },
+                "35": {
+                    "start": "HallButtonControl",
+                    "relation": "SENDS",
+                    "end": "Update"
+                },
+                "36": {
+                    "start": "Update",
+                    "relation": "SENT_TO",
+                    "end": "Dispatcher"
+                },
+                "37": {
+                    "start": "Dispatcher",
+                    "relation": "DETERMINES",
+                    "end": "DesiredFloor"
+                },
+                "38": {
+                    "start": "Dispatcher",
+                    "relation": "SENDS",
+                    "end": "Move"
+                },
+                "39": {
+                    "start": "Move",
+                    "relation": "COMMANDS",
+                    "end": "DriveControl"
+                },
+                "40": {
+                    "start": "DriveControl",
+                    "relation": "SIGNALS",
+                    "end": "Drive"
+                },
+                "41": {
+                    "start": "Drive",
+                    "relation": "CONFIRMS",
+                    "end": "AtFloor"
+                },
+                "42": {
+                    "start": "Drive",
+                    "relation": "STOPS",
+                    "end": "Drive"
+                },
+                "43": {
+                    "start": "DriveControl",
+                    "relation": "SENDS",
+                    "end": "AtFloor"
+                },
+                "44": {
+                    "start": "AtFloor",
+                    "relation": "RECEIVED_BY",
+                    "end": "HallButtonControl"
+                },
+                "45": {
+                    "start": "AtFloor",
+                    "relation": "RECEIVED_BY",
+                    "end": "Dispatcher"
+                },
+                "46": {
+                    "start": "Dispatcher",
+                    "relation": "SENDS",
+                    "end": "DesiredDwell"
+                },
+                "47": {
+                    "start": "DesiredDwell",
+                    "relation": "COMMANDS",
+                    "end": "DoorControl"
+                },
+                "48": {
+                    "start": "DoorControl",
+                    "relation": "INSTRUCTS",
+                    "end": "Door"
+                },
+                "49": {
+                    "start": "Door",
+                    "relation": "OPENS",
+                    "end": "Door"
+                },
+                "50": {
+                    "start": "Door",
+                    "relation": "CLOSES",
+                    "end": "Door"
+                },
+                "51": {
+                    "start": "START",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "FILL"
+                },
+                "52": {
+                    "start": "FILL",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "CHECK"
+                },
+                "53": {
+                    "start": "CHECK",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "AGITATE"
+                },
+                "54": {
+                    "start": "AGITATE",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "DRAIN"
+                },
+                "55": {
+                    "start": "DRAIN",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "SPIN"
+                },
+                "56": {
+                    "start": "SPIN",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "END"
+                },
+                "57": {
+                    "start": "AGITATE",
+                    "relation": "STAYS_IN_STATE_IF",
+                    "end": "Time NOT TERMINATED"
+                },
+                "58": {
+                    "start": "Ready",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Fill water"
+                },
+                "59": {
+                    "start": "Fill water",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Heat water"
+                },
+                "60": {
+                    "start": "Heat water",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Wash"
+                },
+                "61": {
+                    "start": "Wash",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Rinse"
+                },
+                "62": {
+                    "start": "Rinse",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Spin"
+                },
+                "63": {
+                    "start": "Spin",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Fault"
+                },
+                "64": {
+                    "start": "Ready",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Fault"
+                },
+                "65": {
+                    "start": "Fill water",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Fault"
+                },
+                "66": {
+                    "start": "Heat water",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Fault"
+                },
+                "67": {
+                    "start": "Wash",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Fault"
+                },
+                "68": {
+                    "start": "Rinse",
+                    "relation": "TRANSITIONS_TO",
+                    "end": "Fault"
+                },
+                "69": {
+                    "start": "Ready",
+                    "relation": "TRIGGERED_BY",
+                    "end": "User initiates"
+                },
+                "70": {
+                    "start": "Fill water",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Door closed"
+                },
+                "71": {
+                    "start": "Fill water",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Full level detected"
+                },
+                "72": {
+                    "start": "Heat water",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Required temperature reached"
+                },
+                "73": {
+                    "start": "Wash",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Function complete"
+                },
+                "74": {
+                    "start": "Rinse",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Function complete"
+                },
+                "75": {
+                    "start": "Spin",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Function complete"
+                },
+                "76": {
+                    "start": "Fault",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Time-out"
+                },
+                "77": {
+                    "start": "Fault",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Out of balance"
+                },
+                "78": {
+                    "start": "Fault",
+                    "relation": "TRIGGERED_BY",
+                    "end": "Motor failure"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "A Novel Approximate Adder Design Using Error Reduced Carry Prediction and Constant Truncation.docx",
+            "episode_id": "ep_02dd5a09-7f23-46d0-a90c-35f1e4c04199",
+            "summary": "This Novel Approximate Adder Design utilizes an Error-Reduced Carry Prediction (ERCP) technique and Constant Truncation to significantly improve computational accuracy while minimizing hardware resources. The core concept involves replacing exact full adder cells in the least significant bits (LSBs) with approximate cells that eliminate carry propagation, drastically reducing delay and power consumption at the cost of accuracy. To mitigate these errors, the design incorporates an enhanced carry prediction mechanism that leverages the most significant bits (MSBs) of the inaccurate portion to estimate carry inputs, achieving up to a 75% reduction in prediction error rate compared to existing methods. Furthermore, Constant Truncation strategies are employed to further reduce error distance by selectively setting LSBs to constant values or forcing bits to zero when specific carry conditions are met. This approach leads to substantial improvements, including a 91.4% enhancement in Normalized Mean Error Distance (NMED) and a 98.9% improvement in Mean Relative Error Distance (MRED), alongside significant reductions in power, energy, and area-delay product metrics. The design achieves a remarkable 93.05% smaller figure of merit when considering the trade-off between hardware efficiency and accuracy.",
+            "triples": {
+                "1": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCE",
+                    "end": "prediction error rate by up to 75%"
+                },
+                "2": {
+                    "start": "carry prediction technique",
+                    "relation": "IMPROVES",
+                    "end": "overall computation accuracy"
+                },
+                "3": {
+                    "start": "carry prediction technique",
+                    "relation": "DECREASE",
+                    "end": "error distance (ED)"
+                },
+                "4": {
+                    "start": "carry prediction technique",
+                    "relation": "IMPROVES",
+                    "end": "NMED by 91.4%"
+                },
+                "5": {
+                    "start": "carry prediction technique",
+                    "relation": "IMPROVES",
+                    "end": "MRED by 98.9%"
+                },
+                "6": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCES",
+                    "end": "power-NMED"
+                },
+                "7": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCES",
+                    "end": "energy-NMED"
+                },
+                "8": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCES",
+                    "end": "area-delay product (ADP)-NMED"
+                },
+                "9": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCES",
+                    "end": "power-MRED products"
+                },
+                "10": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCES",
+                    "end": "energy-MRED products"
+                },
+                "11": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCES",
+                    "end": "ADP-MRED products"
+                },
+                "12": {
+                    "start": "carry prediction technique",
+                    "relation": "REDUCES",
+                    "end": "figure of merit 93.05% smaller"
+                },
+                "13": {
+                    "start": "Approximate adder",
+                    "relation": "IMPROVES",
+                    "end": "computational accuracy with minimum hardware"
+                },
+                "14": {
+                    "start": "Error-reduced carry prediction (ERCP)",
+                    "relation": "IS_A",
+                    "end": "Core Concept"
+                },
+                "15": {
+                    "start": "Constant truncation with error reduction",
+                    "relation": "IS_A",
+                    "end": "Core Concept"
+                },
+                "16": {
+                    "start": "Setting lsb to constant",
+                    "relation": "REDUCES",
+                    "end": "power"
+                },
+                "17": {
+                    "start": "Setting lsb to constant",
+                    "relation": "REDUCES",
+                    "end": "area"
+                },
+                "18": {
+                    "start": "Setting lsb to constant",
+                    "relation": "MINIMIZES",
+                    "end": "errors"
+                },
+                "19": {
+                    "start": "Approximate full adder cells",
+                    "relation": "USED_IN",
+                    "end": "LSB"
+                },
+                "20": {
+                    "start": "xor",
+                    "relation": "REPLACED_BY",
+                    "end": "or in sum"
+                },
+                "21": {
+                    "start": "Cin",
+                    "relation": "ELIMINATED_FROM",
+                    "end": "carry"
+                },
+                "22": {
+                    "start": "carry propagation chain",
+                    "relation": "REDUCES",
+                    "end": "delay"
+                },
+                "23": {
+                    "start": "carry propagation chain",
+                    "relation": "REDUCES",
+                    "end": "power consumption"
+                },
+                "24": {
+                    "start": "xor",
+                    "relation": "USED_IN",
+                    "end": "MSB"
+                },
+                "25": {
+                    "start": "or",
+                    "relation": "USED_IN",
+                    "end": "LSB"
+                },
+                "26": {
+                    "start": "Proposed carry prediction technique",
+                    "relation": "REQUIRES",
+                    "end": "carry from the inaccurate part"
+                },
+                "27": {
+                    "start": "Proposed carry prediction technique",
+                    "relation": "PRODUCES",
+                    "end": "carry using simple logic gates"
+                },
+                "28": {
+                    "start": "Traditional AND based prediction scheme",
+                    "relation": "HAS_ERROR_RATE",
+                    "end": "25%"
+                },
+                "29": {
+                    "start": "Proposed AND-OR",
+                    "relation": "IS_MORE_ACCURATE_THAN",
+                    "end": "Traditional AND based prediction scheme"
+                },
+                "30": {
+                    "start": "Proposed AND-OR",
+                    "relation": "IS_MORE_EFFICIENT_THAN",
+                    "end": "Traditional AND based prediction scheme"
+                },
+                "31": {
+                    "start": "Proposed AND-OR",
+                    "relation": "REQUIRES",
+                    "end": "2 extra gates"
+                },
+                "32": {
+                    "start": "error",
+                    "relation": "REDUCED_TO",
+                    "end": "12.3% for 2 bits"
+                },
+                "33": {
+                    "start": "Carry input Cin",
+                    "relation": "GENERATED_BY",
+                    "end": "One XOR, three AND, and one OR gates"
+                },
+                "34": {
+                    "start": "XOR",
+                    "relation": "CALCULATES",
+                    "end": "P bit"
+                },
+                "35": {
+                    "start": "AND",
+                    "relation": "CALCULATES",
+                    "end": "C bits"
+                },
+                "36": {
+                    "start": "AND",
+                    "relation": "CALCULATES",
+                    "end": "P.C"
+                },
+                "37": {
+                    "start": "OR",
+                    "relation": "CALCULATES",
+                    "end": "final"
+                },
+                "38": {
+                    "start": "carry prediction",
+                    "relation": "ACHIEVED_USING",
+                    "end": "inputs of the two MSB positions"
+                },
+                "39": {
+                    "start": "carry prediction",
+                    "relation": "CORRECT_WHEN",
+                    "end": "carry is generated from any of these two bit positions"
+                },
+                "40": {
+                    "start": "Constant Truncation With Error Reduction",
+                    "relation": "IS_A",
+                    "end": "Error Reduction Method"
+                },
+                "41": {
+                    "start": "Constant 1 Truncation",
+                    "relation": "APPLIED_WHEN",
+                    "end": "no carry"
+                },
+                "42": {
+                    "start": "Constant 1 Truncation",
+                    "relation": "SETS",
+                    "end": "LSB of the inaccurate part to 1"
+                },
+                "43": {
+                    "start": "Constant 0 Truncation",
+                    "relation": "APPLIED_WHEN",
+                    "end": "carry is generated from (n - k - 2)th bit and propagated to (n - k - 2)th bit"
+                },
+                "44": {
+                    "start": "Constant 0 Truncation",
+                    "relation": "PERFORMS",
+                    "end": "error reduction"
+                },
+                "45": {
+                    "start": "Constant 0 Truncation",
+                    "relation": "REDUCES",
+                    "end": "error distance"
+                },
+                "46": {
+                    "start": "Proposed adder",
+                    "relation": "HAS_ERROR_RATE",
+                    "end": "ERERCPAA"
+                },
+                "47": {
+                    "start": "16-bit adder",
+                    "relation": "USING",
+                    "end": "8-bit RCA-based precise adder"
+                },
+                "48": {
+                    "start": "hardware and error char",
+                    "relation": "ANALYZED_USING",
+                    "end": "10 million input pairs"
+                },
+                "49": {
+                    "start": "area, power, and energy performance",
+                    "relation": "DEGRADE",
+                    "end": "as design parameter l decreases"
+                },
+                "50": {
+                    "start": "smaller l",
+                    "relation": "RESULTS_IN",
+                    "end": "more logic gates"
+                },
+                "51": {
+                    "start": "as l decreases",
+                    "relation": "IMPROVES",
+                    "end": "overall computation accuracy performance"
+                },
+                "52": {
+                    "start": "Tradeoff analysis",
+                    "relation": "BETWEEN",
+                    "end": "hardware and cost"
+                },
+                "53": {
+                    "start": "ADP-NMED product",
+                    "relation": "REDUCTION",
+                    "end": "93.2%"
+                },
+                "54": {
+                    "start": "NMED",
+                    "relation": "IMPROVEMENT",
+                    "end": "91.4%"
+                },
+                "55": {
+                    "start": "MRED",
+                    "relation": "IMPROVEMENT",
+                    "end": "98.9%"
+                },
+                "56": {
+                    "start": "LOAWA, ETAI",
+                    "relation": "HAS_ERROR_RATE",
+                    "end": "50%"
+                },
+                "57": {
+                    "start": "LOA, CPETA",
+                    "relation": "HAS_ERROR_RATE",
+                    "end": "25%"
+                },
+                "58": {
+                    "start": "Proposed ERCP Method",
+                    "relation": "HAS_ERROR_RATE",
+                    "end": "12.3%"
+                },
+                "59": {
+                    "start": "Digital Image Processing (Gaussian Smoothing)",
+                    "relation": "HAS_IMPROVEMENT",
+                    "end": "12.64dB increase"
+                },
+                "60": {
+                    "start": "Machine Learning (k-Means Clustering)",
+                    "relation": "HAS_IMPROVEMENT",
+                    "end": "378% improvement"
+                },
+                "61": {
+                    "start": "Compressor based hybrid approximate multiplier architectures",
+                    "relation": "HAS",
+                    "end": "efficient error correction logic"
+                },
+                "62": {
+                    "start": "image",
+                    "relation": "DISPLAYS",
+                    "end": "comparison of binary arithmetic operations"
+                },
+                "63": {
+                    "start": "image",
+                    "relation": "DIVIDED_INTO",
+                    "end": "Accurate Part and Inaccurate Part"
+                },
+                "64": {
+                    "start": "image",
+                    "relation": "SHOWS",
+                    "end": "binary numbers A_{n-1:0} and B_{n-1:0}"
+                },
+                "65": {
+                    "start": "image",
+                    "relation": "SHOWS",
+                    "end": "final sum S_{n-1:0}"
+                },
+                "66": {
+                    "start": "Inaccurate Part",
+                    "relation": "HIGHLIGHTED_WITH",
+                    "end": "dashed blue borders and gray shading"
+                },
+                "67": {
+                    "start": "carry-in signal",
+                    "relation": "POINTS_INTO",
+                    "end": "inaccurate region"
+                },
+                "68": {
+                    "start": "image",
+                    "relation": "CONTRASTS",
+                    "end": "two outcomes"
+                },
+                "69": {
+                    "start": "image",
+                    "relation": "MOOD",
+                    "end": "technical and illustrative"
+                },
+                "70": {
+                    "start": "image",
+                    "relation": "DEMONSTRATES",
+                    "end": "impact of potential errors and method for their reduction"
+                },
+                "71": {
+                    "start": "colors",
+                    "relation": "USED",
+                    "end": "black, gray, blue, white"
+                },
+                "72": {
+                    "start": "textures",
+                    "relation": "ARE",
+                    "end": "flat and digital"
+                },
+                "73": {
+                    "start": "image",
+                    "relation": "DISPLAYS",
+                    "end": "binary addition operation"
+                },
+                "74": {
+                    "start": "binary addition operation",
+                    "relation": "DIVIDED_INTO",
+                    "end": "Accurate Part and Inaccurate Part"
+                },
+                "75": {
+                    "start": "main subjects",
+                    "relation": "ARE",
+                    "end": "three rows of binary numbers labeled A_n-1:0, B_n-1:0, and S_n-1:0"
+                },
+                "76": {
+                    "start": "Accurate Part",
+                    "relation": "SHOWS",
+                    "end": "complete binary sequences for A and B, and accurate partial sum"
+                },
+                "77": {
+                    "start": "Inaccurate Part",
+                    "relation": "HIGHLIGHTS",
+                    "end": "segment of input operands A and B"
+                },
+                "78": {
+                    "start": "Inaccurate Part",
+                    "relation": "INDICATES",
+                    "end": "potential area of error"
+                },
+                "79": {
+                    "start": "gray boxes",
+                    "relation": "CONTAIN",
+                    "end": "binary digits"
+                },
+                "80": {
+                    "start": "gray boxes",
+                    "relation": "REPRESENT",
+                    "end": "Inaccurate Part of the operands"
+                },
+                "81": {
+                    "start": "carry-in signal",
+                    "relation": "ANNOTATED_WITH",
+                    "end": "0"
+                },
+                "82": {
+                    "start": "sum row S_n-1:0",
+                    "relation": "IN_INACCURATE_PART",
+                    "end": "contains all '1's"
+                },
+                "83": {
+                    "start": "sum row S_n-1:0",
+                    "relation": "SUGGESTS",
+                    "end": "incorrect result derived from inaccurate operand segments"
+                },
+                "84": {
+                    "start": "image",
+                    "relation": "MOOD",
+                    "end": "technical and informative"
+                },
+                "85": {
+                    "start": "image",
+                    "relation": "ILLUSTRATES",
+                    "end": "concept related to error propagation or approximation in digital arithmetic"
+                },
+                "86": {
+                    "start": "colors",
+                    "relation": "ARE",
+                    "end": "black, blue, gray, light blue"
+                },
+                "87": {
+                    "start": "setting",
+                    "relation": "IS",
+                    "end": "abstract"
+                },
+                "88": {
+                    "start": "setting",
+                    "relation": "REPRESENTS",
+                    "end": "logical operation"
+                },
+                "89": {
+                    "start": "main subject",
+                    "relation": "IS",
+                    "end": "mathematical equation"
+                },
+                "90": {
+                    "start": "equation displayed",
+                    "relation": "IS",
+                    "end": "C_in = C_{n-k-1} + P_{n-k-1} C_{n-k-2}"
+                },
+                "91": {
+                    "start": "colors",
+                    "relation": "ARE",
+                    "end": "monochromatic (black against white)"
+                },
+                "92": {
+                    "start": "texture",
+                    "relation": "IS",
+                    "end": "smooth"
+                },
+                "93": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "academic and technical"
+                },
+                "94": {
+                    "start": "image",
+                    "relation": "DISPLAY",
+                    "end": "bar chart"
+                },
+                "95": {
+                    "start": "bar chart",
+                    "relation": "ILLUSTRATES",
+                    "end": "Carry Prediction Error Rate (%)"
+                },
+                "96": {
+                    "start": "bars",
+                    "relation": "COLORED",
+                    "end": "bright blue"
+                },
+                "97": {
+                    "start": "bars",
+                    "relation": "REPRESENT",
+                    "end": "different categories"
+                },
+                "98": {
+                    "start": "ERCOPAA bar",
+                    "relation": "INDICATES",
+                    "end": "improvement"
+                },
+                "99": {
+                    "start": "ERCOPAA bar",
+                    "relation": "SIGNIFICANTLY_SHORTER",
+                    "end": "reaching around 12%"
+                },
+                "100": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "informative and analytical"
+                },
+                "101": {
+                    "start": "subject",
+                    "relation": "IS",
+                    "end": "mathematical equation"
+                },
+                "102": {
+                    "start": "equation",
+                    "relation": "DEFINES",
+                    "end": "P_i = A_i \\oplus B_i"
+                },
+                "103": {
+                    "start": "setting",
+                    "relation": "APPEARS_TO_BE",
+                    "end": "plain white background"
+                },
+                "104": {
+                    "start": "colors",
+                    "relation": "ARE",
+                    "end": "stark black for text against white background"
+                },
+                "105": {
+                    "start": "texture",
+                    "relation": "IS",
+                    "end": "smooth and flat"
+                },
+                "106": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "formal and academic"
+                },
+                "107": {
+                    "start": "image",
+                    "relation": "DISPLAYS",
+                    "end": "mathematical equation"
+                },
+                "108": {
+                    "start": "equation",
+                    "relation": "DEFINES",
+                    "end": "ER_ERcPAA(n, k, l)"
+                },
+                "109": {
+                    "start": "equation",
+                    "relation": "STATES",
+                    "end": "ER_ERcPAA(n, k, l) = 1 - P(Eco)"
+                },
+                "110": {
+                    "start": "equation",
+                    "relation": "PRESENTS",
+                    "end": "expanded form: '= 1 - (3/4)^(n-k-l-1) * (1/2)^l'"
+                },
+                "111": {
+                    "start": "colors",
+                    "relation": "ARE",
+                    "end": "black text on white"
+                },
+                "112": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "analytical and formal"
+                },
+                "113": {
+                    "start": "context",
+                    "relation": "IS",
+                    "end": "mathematical or probabilistic derivation"
+                },
+                "114": {
+                    "start": "image",
+                    "relation": "DISPLAYS",
+                    "end": "mathematical equations and a statement"
+                },
+                "115": {
+                    "start": "statement",
+                    "relation": "RELATED_TO",
+                    "end": "probability and statistical analysis"
+                },
+                "116": {
+                    "start": "equations",
+                    "relation": "DEFINE",
+                    "end": "ER_CP(n, k)"
+                },
+                "117": {
+                    "start": "ER_CP(n, k)",
+                    "relation": "EQUALS",
+                    "end": "probability of the event (P_{n-k-1}P_{n-k-2}E_{ca})"
+                },
+                "118": {
+                    "start": "probability",
+                    "relation": "EXPANDS_TO",
+                    "end": "P(P_{n-k-1})P(P_{n-k-2})P(E_{ca})"
+                },
+                "119": {
+                    "start": "probability",
+                    "relation": "SIMPLIFIES_TO",
+                    "end": "1/2^3 * (1 - 1/2^{n-k-2})"
+                },
+                "120": {
+                    "start": "variables P_{n-k-1}, P_{n-k-2}, and E_{ca}",
+                    "relation": "ARE",
+                    "end": "independent"
+                },
+                "121": {
+                    "start": "setting",
+                    "relation": "IS",
+                    "end": "white background"
+                },
+                "122": {
+                    "start": "colors",
+                    "relation": "ARE",
+                    "end": "black ink or digital pixels"
+                },
+                "123": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "informative and technical"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "Screenshot (4).png",
+            "episode_id": "ep_8eec2231-8cdc-4b19-a133-4d4c2d7f61ee",
+            "summary": "The image showcases a vibrant and modern presentation template. The main subject is a collection of diverse photographic slides, featuring individuals in stylish poses and contemporary settings. A prominent slide displays the title \"HIGORI\" with accompanying text \"Creative Multi-Purpose Premium PowerPoint Template,\" indicating the product being advertised. The setting is a digital presentation interface, with a dark green background contrasting with the brightly colored and richly textured slides. Some slides feature bold text overlays like \"HELLO\" and \"LET'S BREAK 01,\" contributing to a dynamic and engaging aesthetic. The overall color palette is a mix of warm oranges, deep greens, and neutral beige tones, creating a sophisticated and eye-catching visual appeal. Textures are varied, from the smooth surfaces of digital displays to the implied textures of clothing and skin in the photographs. The mood is energetic, fashionable, and professional, suggesting a template designed for creative professionals. The arrangement of overlapping slides creates a sense of depth and a curated viewing experience. Actions depicted within the slides include posing for photographs, with subjects looking directly at the camera or engaging in subtle gestures, conveying confidence and style. The context is clearly a promotional display for a graphic design or presentation template.",
+            "triples": {
+                "1": {
+                    "start": "presentation template",
+                    "relation": "IS_A",
+                    "end": "vibrant and modern"
+                },
+                "2": {
+                    "start": "presentation template",
+                    "relation": "FEATURES",
+                    "end": "collection of diverse photographic slides"
+                },
+                "3": {
+                    "start": "photographic slides",
+                    "relation": "FEATURE_INDIVIDUALS_IN",
+                    "end": "stylish poses and contemporary settings"
+                },
+                "4": {
+                    "start": "prominent slide",
+                    "relation": " DISPLAYS_TITLE",
+                    "end": "HIGORI"
+                },
+                "5": {
+                    "start": "prominent slide",
+                    "relation": "ACCOMPANYING_TEXT",
+                    "end": "Creative Multi-Purpose Premium PowerPoint Template"
+                },
+                "6": {
+                    "start": "prominent slide",
+                    "relation": "INDICATES",
+                    "end": "product being advertised"
+                },
+                "7": {
+                    "start": "setting",
+                    "relation": "IS_A",
+                    "end": "digital presentation interface"
+                },
+                "8": {
+                    "start": "digital presentation interface",
+                    "relation": "HAS_BACKGROUND",
+                    "end": "dark green background"
+                },
+                "9": {
+                    "start": "dark green background",
+                    "relation": "CONTRASTS_WITH",
+                    "end": "brightly colored and richly textured slides"
+                },
+                "10": {
+                    "start": "some slides",
+                    "relation": "FEATURE_BOLD_TEXT_OVERLAYS",
+                    "end": "HELLO"
+                },
+                "11": {
+                    "start": "some slides",
+                    "relation": "FEATURE_BOLD_TEXT_OVERLAYS",
+                    "end": "LET'S BREAK 01"
+                },
+                "12": {
+                    "start": "bold text overlays",
+                    "relation": "CONTRIBUTE_TO",
+                    "end": "dynamic and engaging aesthetic"
+                },
+                "13": {
+                    "start": "overall color palette",
+                    "relation": "IS_A",
+                    "end": "mix of warm oranges, deep greens, and neutral beige tones"
+                },
+                "14": {
+                    "start": "color palette",
+                    "relation": "CREATES",
+                    "end": "sophisticated and eye-catching visual appeal"
+                },
+                "15": {
+                    "start": "textures",
+                    "relation": "ARE",
+                    "end": "varied"
+                },
+                "16": {
+                    "start": "textures",
+                    "relation": "INCLUDE",
+                    "end": "smooth surfaces of digital displays"
+                },
+                "17": {
+                    "start": "textures",
+                    "relation": "INCLUDE",
+                    "end": "implied textures of clothing and skin in the photographs"
+                },
+                "18": {
+                    "start": "mood",
+                    "relation": "IS",
+                    "end": "energetic"
+                },
+                "19": {
+                    "start": "mood",
+                    "relation": "IS",
+                    "end": "fashionable"
+                },
+                "20": {
+                    "start": "mood",
+                    "relation": "IS",
+                    "end": "professional"
+                },
+                "21": {
+                    "start": "template",
+                    "relation": "IS_DESIGNED_FOR",
+                    "end": "creative professionals"
+                },
+                "22": {
+                    "start": "arrangement of overlapping slides",
+                    "relation": "CREATES",
+                    "end": "sense of depth"
+                },
+                "23": {
+                    "start": "arrangement of overlapping slides",
+                    "relation": "CREATES",
+                    "end": "curated viewing experience"
+                },
+                "24": {
+                    "start": "actions depicted within the slides",
+                    "relation": "INCLUDE",
+                    "end": "posing for photographs"
+                },
+                "25": {
+                    "start": "subjects",
+                    "relation": "ARE",
+                    "end": "looking directly at the camera"
+                },
+                "26": {
+                    "start": "subjects",
+                    "relation": "ARE",
+                    "end": "engaging in subtle gestures"
+                },
+                "27": {
+                    "start": "subtle gestures",
+                    "relation": "CONVEY",
+                    "end": "confidence and style"
+                },
+                "28": {
+                    "start": "context",
+                    "relation": "IS",
+                    "end": "promotional display"
+                },
+                "29": {
+                    "start": "context",
+                    "relation": "IS_FOR",
+                    "end": "graphic design or presentation template"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "Screenshot 2023-07-09 220647.png",
+            "episode_id": "ep_3e8848d3-3b50-4f7e-8762-6621933cde53",
+            "summary": "The subject is Eshita Chokhani, a young female wearing glasses and a pink headset. Eshita Chokhani's face is the primary focus, with dark hair framing her face and extending to her shoulders. Her expression is neutral, and her gaze appears directed downward. The setting is a virtual call interface, evident by the overlayed text \"Eshita Chokhani\" and a microphone icon indicating muted audio. The background is predominantly yellow, with a hint of a window or possibly a textured wall visible behind Eshita Chokhani. The lighting is somewhat dim, casting a soft glow on Eshita Chokhani's face. The overall mood is casual and participatory, suggesting Eshita Chokhani is engaged in an online discussion or class.",
+            "triples": {
+                "1": {
+                    "start": "Eshita Chokhani",
+                    "relation": "IS_A",
+                    "end": "young female"
+                },
+                "2": {
+                    "start": "Eshita Chokhani",
+                    "relation": "WEARS",
+                    "end": "glasses"
+                },
+                "3": {
+                    "start": "Eshita Chokhani",
+                    "relation": "WEARS",
+                    "end": "pink headset"
+                },
+                "4": {
+                    "start": "Eshita Chokhani",
+                    "relation": "HAS",
+                    "end": "dark hair"
+                },
+                "5": {
+                    "start": "dark hair",
+                    "relation": "FRAMES",
+                    "end": "her face"
+                },
+                "6": {
+                    "start": "dark hair",
+                    "relation": "EXTENDS_TO",
+                    "end": "her shoulders"
+                },
+                "7": {
+                    "start": "Eshita Chokhani",
+                    "relation": "HAS_EXPRESSION",
+                    "end": "neutral"
+                },
+                "8": {
+                    "start": "Eshita Chokhani",
+                    "relation": "GAZE_DIRECTED",
+                    "end": "downward"
+                },
+                "9": {
+                    "start": "setting",
+                    "relation": "IS_A",
+                    "end": "virtual call interface"
+                },
+                "10": {
+                    "start": "virtual call interface",
+                    "relation": "FEATURES",
+                    "end": "overlayed text 'Eshita Chokhani'"
+                },
+                "11": {
+                    "start": "virtual call interface",
+                    "relation": "FEATURES",
+                    "end": "microphone icon"
+                },
+                "12": {
+                    "start": "microphone icon",
+                    "relation": "INDICATES",
+                    "end": "muted audio"
+                },
+                "13": {
+                    "start": "background",
+                    "relation": "IS",
+                    "end": "predominantly yellow"
+                },
+                "14": {
+                    "start": "background",
+                    "relation": "HAS_HINT_OF",
+                    "end": "window"
+                },
+                "15": {
+                    "start": "background",
+                    "relation": "HAS_HINT_OF",
+                    "end": "textured wall"
+                },
+                "16": {
+                    "start": "lighting",
+                    "relation": "IS",
+                    "end": "somewhat dim"
+                },
+                "17": {
+                    "start": "lighting",
+                    "relation": "CASTS",
+                    "end": "soft glow on Eshita Chokhani's face"
+                },
+                "18": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "casual"
+                },
+                "19": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "participatory"
+                },
+                "20": {
+                    "start": "overall mood",
+                    "relation": "SUGGESTS",
+                    "end": "Eshita Chokhani is engaged in an online discussion or class"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "Screenshot 2023-08-09 220547.png",
+            "episode_id": "ep_b890c247-f8a8-4feb-96bf-fda44fc3072f",
+            "summary": "This image is a collection of graphic elements with a retro, bohemian aesthetic, displayed against a teal background. The main subjects are various text-based graphics and symbolic icons, rendered in warm, earthy tones like burnt orange, yellow, pink, and cream. Text such as \"House Of Swell,\" \"The Sun's Gonna Shine,\" and \"Doing Well\" are prominent, presented in stylized, flowing fonts with a wavy, layered appearance. Accompanying these phrases are illustrative elements: a stylized eye with radiating lines, various star shapes, two suns with radiating rays, a crescent moon and sun composite within a triangle, and two circular emblems featuring abstract patterns and text. The textures appear flat and graphic, with clean lines and defined shapes, evoking a sense of vintage signage or sticker art. The overall mood is optimistic and cheerful, with a strong emphasis on positive affirmations and a sunny, natural theme.",
+            "triples": {
+                "1": {
+                    "start": "image",
+                    "relation": "HAS_AESTHETIC",
+                    "end": "retro, bohemian"
+                },
+                "2": {
+                    "start": "image",
+                    "relation": "HAS_BACKGROUND_COLOR",
+                    "end": "teal"
+                },
+                "3": {
+                    "start": "image",
+                    "relation": "CONTAINS",
+                    "end": "graphic elements"
+                },
+                "4": {
+                    "start": "graphic elements",
+                    "relation": "ARE",
+                    "end": "text-based graphics"
+                },
+                "5": {
+                    "start": "graphic elements",
+                    "relation": "ARE",
+                    "end": "symbolic icons"
+                },
+                "6": {
+                    "start": "graphic elements",
+                    "relation": "RENDERED_IN_TONES",
+                    "end": "warm, earthy tones"
+                },
+                "7": {
+                    "start": "graphic elements",
+                    "relation": "RENDERED_IN_COLORS",
+                    "end": "burnt orange"
+                },
+                "8": {
+                    "start": "graphic elements",
+                    "relation": "RENDERED_IN_COLORS",
+                    "end": "yellow"
+                },
+                "9": {
+                    "start": "graphic elements",
+                    "relation": "RENDERED_IN_COLORS",
+                    "end": "pink"
+                },
+                "10": {
+                    "start": "graphic elements",
+                    "relation": "RENDERED_IN_COLORS",
+                    "end": "cream"
+                },
+                "11": {
+                    "start": "text",
+                    "relation": "IS_PROMINENT",
+                    "end": "House Of Swell"
+                },
+                "12": {
+                    "start": "text",
+                    "relation": "IS_PROMINENT",
+                    "end": "The Sun's Gonna Shine"
+                },
+                "13": {
+                    "start": "text",
+                    "relation": "IS_PROMINENT",
+                    "end": "Doing Well"
+                },
+                "14": {
+                    "start": "text",
+                    "relation": "PRESENTED_IN_FONT_STYLE",
+                    "end": "stylized, flowing fonts"
+                },
+                "15": {
+                    "start": "text",
+                    "relation": "HAS_APPEARANCE",
+                    "end": "wavy, layered"
+                },
+                "16": {
+                    "start": "image",
+                    "relation": "FEATURES",
+                    "end": "stylized eye with radiating lines"
+                },
+                "17": {
+                    "start": "image",
+                    "relation": "FEATURES",
+                    "end": "star shapes"
+                },
+                "18": {
+                    "start": "image",
+                    "relation": "FEATURES",
+                    "end": "suns with radiating rays"
+                },
+                "19": {
+                    "start": "image",
+                    "relation": "FEATURES",
+                    "end": "crescent moon and sun composite within a triangle"
+                },
+                "20": {
+                    "start": "image",
+                    "relation": "FEATURES",
+                    "end": "circular emblems"
+                },
+                "21": {
+                    "start": "circular emblems",
+                    "relation": "CONTAIN",
+                    "end": "abstract patterns"
+                },
+                "22": {
+                    "start": "circular emblems",
+                    "relation": "CONTAIN",
+                    "end": "text"
+                },
+                "23": {
+                    "start": "textures",
+                    "relation": "APPEAR",
+                    "end": "flat and graphic"
+                },
+                "24": {
+                    "start": "textures",
+                    "relation": "HAVE",
+                    "end": "clean lines"
+                },
+                "25": {
+                    "start": "textures",
+                    "relation": "HAVE",
+                    "end": "defined shapes"
+                },
+                "26": {
+                    "start": "image",
+                    "relation": "EVOKES",
+                    "end": "vintage signage"
+                },
+                "27": {
+                    "start": "image",
+                    "relation": "EVOKES",
+                    "end": "sticker art"
+                },
+                "28": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "optimistic"
+                },
+                "29": {
+                    "start": "overall mood",
+                    "relation": "IS",
+                    "end": "cheerful"
+                },
+                "30": {
+                    "start": "overall mood",
+                    "relation": "HAS_EMPHASIS",
+                    "end": "positive affirmations"
+                },
+                "31": {
+                    "start": "overall mood",
+                    "relation": "HAS_EMPHASIS",
+                    "end": "sunny, natural theme"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "Screenshot 2023-08-22 195703.png",
+            "episode_id": "ep_84f599d3-25a6-4736-bc44-fdd250c16b60",
+            "summary": "The image displays a computer screen showing Verilog code. The main subject is the Verilog code itself, detailing a module named \"ques1_c\" with inputs \"a, b, c, d\" and output \"y\". The code defines intermediate wires \"al, dl, t1, t2, t3\" and utilizes logical operations like \"not\", \"and\", and \"or\" to implement the circuit's functionality. The setting is a code editor, indicated by line numbers on the left and the file path \"D:/DSD/task1/ques1_c.v\" at the top. The colors are primarily white text on a dark background, with keywords like \"module\", \"input\", \"output\", \"wire\", \"not\", \"and\", and \"or\" highlighted in orange. The texture is that of digital text. The overall mood is technical and precise, reflecting the nature of programming.",
+            "triples": {
+                "1": {
+                    "start": "computer screen",
+                    "relation": "SHOWS",
+                    "end": "Verilog code"
+                },
+                "2": {
+                    "start": "Verilog code",
+                    "relation": "IS_ABOUT",
+                    "end": "module ques1_c"
+                },
+                "3": {
+                    "start": "module ques1_c",
+                    "relation": "HAS_INPUT",
+                    "end": "a"
+                },
+                "4": {
+                    "start": "module ques1_c",
+                    "relation": "HAS_INPUT",
+                    "end": "b"
+                },
+                "5": {
+                    "start": "module ques1_c",
+                    "relation": "HAS_INPUT",
+                    "end": "c"
+                },
+                "6": {
+                    "start": "module ques1_c",
+                    "relation": "HAS_INPUT",
+                    "end": "d"
+                },
+                "7": {
+                    "start": "module ques1_c",
+                    "relation": "HAS_OUTPUT",
+                    "end": "y"
+                },
+                "8": {
+                    "start": "module ques1_c",
+                    "relation": "DEFINES_WIRE",
+                    "end": "al"
+                },
+                "9": {
+                    "start": "module ques1_c",
+                    "relation": "DEFINES_WIRE",
+                    "end": "dl"
+                },
+                "10": {
+                    "start": "module ques1_c",
+                    "relation": "DEFINES_WIRE",
+                    "end": "t1"
+                },
+                "11": {
+                    "start": "module ques1_c",
+                    "relation": "DEFINES_WIRE",
+                    "end": "t2"
+                },
+                "12": {
+                    "start": "module ques1_c",
+                    "relation": "DEFINES_WIRE",
+                    "end": "t3"
+                },
+                "13": {
+                    "start": "Verilog code",
+                    "relation": "UTILIZES",
+                    "end": "logical operations"
+                },
+                "14": {
+                    "start": "logical operations",
+                    "relation": "INCLUDES",
+                    "end": "not"
+                },
+                "15": {
+                    "start": "logical operations",
+                    "relation": "INCLUDES",
+                    "end": "and"
+                },
+                "16": {
+                    "start": "logical operations",
+                    "relation": "INCLUDES",
+                    "end": "or"
+                },
+                "17": {
+                    "start": "Verilog code",
+                    "relation": "IS_DISPLAYED_IN",
+                    "end": "code editor"
+                },
+                "18": {
+                    "start": "code editor",
+                    "relation": "HAS_FEATURE",
+                    "end": "line numbers"
+                },
+                "19": {
+                    "start": "code editor",
+                    "relation": "SHOWS_FILE_PATH",
+                    "end": "D:/DSD/task1/ques1_c.v"
+                },
+                "20": {
+                    "start": "Verilog code",
+                    "relation": "HAS_COLOR_SCHEME",
+                    "end": "white text on dark background"
+                },
+                "21": {
+                    "start": "Verilog code",
+                    "relation": "HIGHLIGHTS_KEYWORD",
+                    "end": "module"
+                },
+                "22": {
+                    "start": "Verilog code",
+                    "relation": "HIGHLIGHTS_KEYWORD",
+                    "end": "input"
+                },
+                "23": {
+                    "start": "Verilog code",
+                    "relation": "HIGHLIGHTS_KEYWORD",
+                    "end": "output"
+                },
+                "24": {
+                    "start": "Verilog code",
+                    "relation": "HIGHLIGHTS_KEYWORD",
+                    "end": "wire"
+                },
+                "25": {
+                    "start": "Verilog code",
+                    "relation": "HIGHLIGHTS_KEYWORD",
+                    "end": "not"
+                },
+                "26": {
+                    "start": "Verilog code",
+                    "relation": "HIGHLIGHTS_KEYWORD",
+                    "end": "and"
+                },
+                "27": {
+                    "start": "Verilog code",
+                    "relation": "HIGHLIGHTS_KEYWORD",
+                    "end": "or"
+                },
+                "28": {
+                    "start": "Verilog code",
+                    "relation": "HAS_TEXTURE",
+                    "end": "digital text"
+                },
+                "29": {
+                    "start": "image",
+                    "relation": "CONVEYS_MOOD",
+                    "end": "technical"
+                },
+                "30": {
+                    "start": "image",
+                    "relation": "CONVEYS_MOOD",
+                    "end": "precise"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "25SPF21VIT_2nd_Monthly_Connect.pptx",
+            "episode_id": "ep_931152df-50b1-4d74-a7b6-d970d9188981",
+            "summary": "This project focuses on building hybrid batch and streaming data processing solutions. The core subject is the integration of Apache Kafka for data ingestion and Apache Spark 3.x for both batch and real-time structured streaming. Key points include the decision to adopt a Lambda architecture for its ability to handle both processing modes, the selection of Scala as the primary programming language with IntelliJ IDEA as the IDE and SBT as the build tool, and the use of Docker Desktop for infrastructure. Progress includes comparing Lambda and Kappa architectures, understanding Lambda's architecture, and confirming Spark and Kafka integration feasibility. Challenges revolve around balancing latency and throughput, evaluating fault tolerance, and ensuring scalability. Data will be sourced from open-source streaming datasets and public batch repositories.",
+            "triples": {
+                "1": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_ID",
+                    "end": "25SPF21VIT"
+                },
+                "2": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "IS_PART_OF",
+                    "end": "VIT Vellore"
+                },
+                "3": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "REQUIRES_INTEGRATION_WITH",
+                    "end": "Apache Kafka"
+                },
+                "4": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "REQUIRES_CONFIRMATION_OF_USE",
+                    "end": "Apache Spark 3.x"
+                },
+                "5": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "ACHIEVED_KPI",
+                    "end": "Completed comparison of Lambda vs Kappa"
+                },
+                "6": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "ACHIEVED_KPI",
+                    "end": "Understood architecture of Lambda"
+                },
+                "7": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "ACHIEVED_KPI",
+                    "end": "Reviewed Spark + Kafka integration feasibility"
+                },
+                "8": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "KEY_ACHIEVEMENT",
+                    "end": "Chosen Apache Spark 3.x + Kafka as primary stack"
+                },
+                "9": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "KEY_ACHIEVEMENT",
+                    "end": "Outlined hybrid system design"
+                },
+                "10": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "KEY_ACHIEVEMENT",
+                    "end": "Settled on Lambda architecture"
+                },
+                "11": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_CHALLENGE",
+                    "end": "Balancing latency and throughput in hybrid design"
+                },
+                "12": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_CHALLENGE",
+                    "end": "Evaluating fault-tolerance for both modes"
+                },
+                "13": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_CHALLENGE",
+                    "end": "Ensuring scalability of chosen architecture"
+                },
+                "14": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_ANTICIPATED_BREAK",
+                    "end": "Gravitas (September 26-28)"
+                },
+                "15": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_RESOURCE_REQUIREMENT",
+                    "end": "Apache Spark 3.x"
+                },
+                "16": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_RESOURCE_REQUIREMENT",
+                    "end": "Apache Kafka cluster setup"
+                },
+                "17": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "DATA_COLLECTION_METHOD",
+                    "end": "Using open-source streaming datasets"
+                },
+                "18": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "DATA_COLLECTION_METHOD",
+                    "end": "Batch datasets from public repositories"
+                },
+                "19": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_GITHUB_REPOSITORY_LINK",
+                    "end": "https://github.ecodesamsung.com/SRIB-PRISM/VIT_25SPF21VIT_Hybrid_Batch_and_Streaming_Solutions"
+                },
+                "20": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "Scala"
+                },
+                "21": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "Java JDK"
+                },
+                "22": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "Apache Spark"
+                },
+                "23": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "Spark SQL"
+                },
+                "24": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "Structured Streaming"
+                },
+                "25": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "Apache Kafka"
+                },
+                "26": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "IntelliJ IDEA"
+                },
+                "27": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "Scala Plugin"
+                },
+                "28": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "SBT"
+                },
+                "29": {
+                    "start": "Hybrid Batch and Streaming Solutions Worklet",
+                    "relation": "HAS_COMPUTATION_RESOURCE",
+                    "end": "Docker Desktop"
+                }
+            }
+        },
+        {
+            "user_id": "123456789-local-test-user",
+            "source_file": "KICKOFF MEETING (1).pptx",
+            "episode_id": "ep_2fca9591-497c-4c5c-afe5-ee2c49da7c47",
+            "summary": "This project aims to develop a hybrid batch and streaming solution using Apache Spark and Apache Kafka, addressing the current limitation where Spark operates in either complete streaming or batch mode. The core goal is to integrate Spark and Kafka to enable a single Spark context to process both streaming data from Kafka and perform multiple batch processes, creating a continuously running application that serves both request types until explicitly stopped. The project involves a three-month timeline, starting with a literature survey, followed by implementation, and concluding with testing, with a focus on Java and Scala prerequisites, and an exploration of Lambda and Kappa architectures for hybrid data processing.",
+            "triples": {
+                "1": {
+                    "start": "Samsung PRISM",
+                    "relation": "IS_A",
+                    "end": "Preliminary Discussion Team"
+                },
+                "2": {
+                    "start": "Somasundaram S K",
+                    "relation": "IS_A",
+                    "end": "College Professor"
+                },
+                "3": {
+                    "start": "somasundaram.sk@vit.ac.in",
+                    "relation": "HAS_EMAIL",
+                    "end": "Somasundaram S K"
+                },
+                "4": {
+                    "start": "Prabakaran Natarajan",
+                    "relation": "IS_A",
+                    "end": "College Professor"
+                },
+                "5": {
+                    "start": "prabakaran.n@vit.ac.in",
+                    "relation": "HAS_EMAIL",
+                    "end": "Prabakaran Natarajan"
+                },
+                "6": {
+                    "start": "Chandrima Manik",
+                    "relation": "IS_A",
+                    "end": "Student"
+                },
+                "7": {
+                    "start": "chandrima.manik2022@vitstudent.ac.in",
+                    "relation": "HAS_EMAIL",
+                    "end": "Chandrima Manik"
+                },
+                "8": {
+                    "start": "Chandrima Manik",
+                    "relation": "DEPARTMENT",
+                    "end": "Department of Electronics and Communication Engineering (SENSE)"
+                },
+                "9": {
+                    "start": "Lakshay Tuteja",
+                    "relation": "IS_A",
+                    "end": "Student"
+                },
+                "10": {
+                    "start": "lakshay.tuteja2023@vitstudent.ac.in",
+                    "relation": "HAS_EMAIL",
+                    "end": "Lakshay Tuteja"
+                },
+                "11": {
+                    "start": "Lakshay Tuteja",
+                    "relation": "DEPARTMENT",
+                    "end": "Department of Computer Science and Engineering (SCOPE)"
+                },
+                "12": {
+                    "start": "Sanjay R",
+                    "relation": "IS_A",
+                    "end": "Student"
+                },
+                "13": {
+                    "start": "sanjay.r2021a@vitstudent.ac.in",
+                    "relation": "HAS_EMAIL",
+                    "end": "Sanjay R"
+                },
+                "14": {
+                    "start": "Sanjay R",
+                    "relation": "DEPARTMENT",
+                    "end": "Department of Computer Science and Engineering (SCOPE)"
+                },
+                "15": {
+                    "start": "Soham Chhajed",
+                    "relation": "IS_A",
+                    "end": "Student"
+                },
+                "16": {
+                    "start": "soham.chhajed2022@vitstudent.ac.in",
+                    "relation": "HAS_EMAIL",
+                    "end": "Soham Chhajed"
+                },
+                "17": {
+                    "start": "Soham Chhajed",
+                    "relation": "DEPARTMENT",
+                    "end": "Department of Computer Science and Engineering (SCOPE)"
+                },
+                "18": {
+                    "start": "Bigdata Realtime - Hybrid Batch and Streaming Solutions",
+                    "relation": "HAS_WORK_LET_AREA",
+                    "end": "Bigdata Realtime"
+                },
+                "19": {
+                    "start": "Bigdata Realtime - Hybrid Batch and Streaming Solutions",
+                    "relation": "HAS_WORK_LET_AREA",
+                    "end": "Hybrid Batch and Streaming Solutions"
+                },
+                "20": {
+                    "start": "Apache Spark",
+                    "relation": "HAS_PROPERTY",
+                    "end": "complete streaming application"
+                },
+                "21": {
+                    "start": "Apache Spark",
+                    "relation": "HAS_PROPERTY",
+                    "end": "Batch Processing Application"
+                },
+                "22": {
+                    "start": "Bigdata Realtime - Hybrid Batch and Streaming Solutions",
+                    "relation": "EXPECTATION",
+                    "end": "Integrate Apache Spark and Apache Kafka"
+                },
+                "23": {
+                    "start": "Integrate Apache Spark and Apache Kafka",
+                    "relation": "FOR",
+                    "end": "streaming and batch process"
+                },
+                "24": {
+                    "start": "Apache Spark",
+                    "relation": "CAN_PROCESS",
+                    "end": "streaming from Kafka"
+                },
+                "25": {
+                    "start": "Apache Spark",
+                    "relation": "CAN_MAKE",
+                    "end": "batch processing"
+                },
+                "26": {
+                    "start": "Apache Spark application",
+                    "relation": "SHOULD_BE_LAUNCHED",
+                    "end": "multiple request"
+                },
+                "27": {
+                    "start": "Apache Spark application",
+                    "relation": "SHOULD_LIVE_TILL",
+                    "end": "stop invoked"
+                },
+                "28": {
+                    "start": "Apache Spark application",
+                    "relation": "SHOULD_SERVE_CONTINUOUSLY",
+                    "end": "streaming and batch process requests"
+                },
+                "29": {
+                    "start": "Java Programming",
+                    "relation": "IS_A",
+                    "end": "Training/ Pre-requisites"
+                },
+                "30": {
+                    "start": "Scala",
+                    "relation": "IS_A",
+                    "end": "Training/ Pre-requisites"
+                },
+                "31": {
+                    "start": "Any version of Apache Spark with version 3.0+",
+                    "relation": "IS_A",
+                    "end": "Training/ Pre-requisites"
+                },
+                "32": {
+                    "start": "3 months",
+                    "relation": "IS_THE",
+                    "end": "Work-let expected duration"
+                },
+                "33": {
+                    "start": "< 1 st Month >",
+                    "relation": "IS_FOR",
+                    "end": "Kick Off Study of related works and research"
+                },
+                "34": {
+                    "start": "<2 nd Month >",
+                    "relation": "IS_FOR",
+                    "end": "Kick Off Implementation"
+                },
+                "35": {
+                    "start": "< 3 rd Month >",
+                    "relation": "IS_FOR",
+                    "end": "Kick Off Test and End use case"
+                },
+                "36": {
+                    "start": "Lambda architecture",
+                    "relation": "IS_A",
+                    "end": "Hybrid Approach"
+                },
+                "37": {
+                    "start": "Kappa architecture",
+                    "relation": "IS_A",
+                    "end": "Hybrid Approach"
+                },
+                "38": {
+                    "start": "Lambda architecture",
+                    "relation": "COSTS",
+                    "end": "increased system complexity"
+                },
+                "39": {
+                    "start": "Kappa architecture",
+                    "relation": "SIMPLIFIES",
+                    "end": "design"
+                },
+                "40": {
+                    "start": "Vaghani Divyeshkumar",
+                    "relation": "AUTHORED",
+                    "end": "Hybrid Data Processing Approaches: Combining Batch and Real-Time Processing with Spark"
+                },
+                "41": {
+                    "start": "Santosh Vinnakota",
+                    "relation": "AUTHORED",
+                    "end": "Combining Batch and Stream Processing for Hybrid Data Workflows"
+                },
+                "42": {
+                    "start": "Integration of Real-Time Data Streaming in Hybrid Cloud: Kafka, Spark, Kubernetes",
+                    "relation": "PUBLISHED_IN",
+                    "end": "2022"
+                },
+                "43": {
+                    "start": "M. T. Tun, D. E. Nyaung and M. P. Phyu",
+                    "relation": "AUTHORED",
+                    "end": "Performance Evaluation of Intrusion Detection Streaming Transactions Using Apache Kafka and Spark Streaming"
+                },
+                "44": {
+                    "start": "Data reality",
+                    "relation": "IS",
+                    "end": "hybrid"
+                },
+                "45": {
+                    "start": "Separate architectures",
+                    "relation": "HAS_PROPERTY",
+                    "end": "duplication"
+                },
+                "46": {
+                    "start": "Unified state management",
+                    "relation": "IS_A",
+                    "end": "Expert Insight"
+                },
+                "47": {
+                    "start": "Semantic gap",
+                    "relation": "IS_A",
+                    "end": "Expert Insight"
+                },
+                "48": {
+                    "start": "Resource optimization",
+                    "relation": "IS_A",
+                    "end": "Expert Insight"
+                }
+            }
+        }
+    ]
+}
