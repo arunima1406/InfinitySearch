@@ -102,8 +102,8 @@ The backend provides RESTful APIs for:
 ## Submissions
 
 ### Resources
-- [Project Repository](https://github.com/username/InfinitySearch)
-- [Demo Video](https://example.com/demo)
+- [Project Repository](https://github.com/arunima1406/InfinitySearch)
+- [Demo Video + PPT](https://drive.google.com/drive/folders/16VGhchOzv8j8aJ3kQqDY9-tqthJA45E5?usp=sharing)
 
 ## License
 
