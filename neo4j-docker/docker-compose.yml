@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  neo4j:
+    image: neo4j:5.12   # latest stable version
+    container_name: neo4j
+    ports:
+      - "7474:7474"   # Neo4j Browser (HTTP)
+      - "7687:7687"   # Bolt protocol (for Python driver)
+    environment:
+      NEO4J_AUTH: "neo4j/Neo4jPass123"   # username/password
+      NEO4J_dbms_memory_pagecache_size: 512M
+      NEO4J_dbms_memory_heap_initial__size: 512M
+      NEO4J_dbms_memory_heap_max__size: 1G
+
+      # 👇 Add these lines to allow external access
+      NEO4J_dbms_default__listen__address: 0.0.0.0
+      NEO4J_dbms_default__advertised__address: 0.0.0.0
+      
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_import:/import
+      - neo4j_plugins:/plugins
+    restart: unless-stopped
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  neo4j_import:
+  neo4j_plugins:
