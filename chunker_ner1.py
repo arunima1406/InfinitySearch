@@ -23,6 +23,13 @@ EXTRACTION_MODEL = 'gemini-2.5-flash-lite'
 API_DELAY_SECONDS = 3
 BUCKET_NAME = "infinity-search-v1"
 S3_FOLDER = "kg-json"
+# Directory to save intermediate chunk files for debugging
+INTERMEDIATE_CHUNKS_DIR = "intermediate_chunks"
+# Set to True to save the chunks for each file as a separate JSON
+SAVE_INTERMEDIATE_CHUNKS = True
+# Parameters for text chunking
+CHUNK_SIZE = 250  # Increased for better context
+OVERLAP_SIZE = 50
 
 # --- Setup ---
 load_dotenv()
@@ -72,7 +79,7 @@ def describe_image_with_gemini(image_path):
     print(f"      > Describing image: {os.path.basename(image_path)}...")
     try:
         img = Image.open(image_path)
-        prompt = "Directly describe the content of this image in one factual, declarative sentence. Start the sentence with the main subject. Do not use phrases like 'This image shows' or 'The diagram depicts'."
+        prompt = "Analyze this image in detail. Provide a comprehensive, descriptive paragraph explaining its content. Describe the main subject, the setting, any actions taking place, colors, textures, and the overall mood or context. Be as thorough as possible, as if describing it to someone who cannot see it. Discard the use of wasteful words, and keep it precise but descriptive. always state the subject, dont use pronouns, and keep in mind this for triples extraction."
         response = quick_model.generate_content([prompt, img])
         time.sleep(API_DELAY_SECONDS)
         return response.text.strip()
@@ -84,6 +91,7 @@ def summarize_text_with_gemini(text):
     print("    > Summarizing document text...")
     if len(text) > MAX_TEXT_LENGTH_FOR_SUMMARY:
         text = text[:MAX_TEXT_LENGTH_FOR_SUMMARY]
+        print("      ! Text was truncated for summarization due to extreme length.")
     try:
         prompt = "Analyze the following. Synthesize its core subject and key points into a single, concise, and factual paragraph. Describe the content directly as if explaining it, starting with the main subject. Do not use third-person language like 'This text is about' or 'The author discusses'."
         response = quick_model.generate_content([prompt, text])
@@ -92,6 +100,16 @@ def summarize_text_with_gemini(text):
     except Exception as e:
         print(f"      ! Error during text summarization: {e}")
         return "Error during summarization."
+
+def create_overlapping_chunks(text, chunk_size, overlap_size):
+    words = text.split()
+    if len(words) <= chunk_size:
+        return [" ".join(words)]
+    chunks = []
+    step = chunk_size - overlap_size
+    for i in range(0, len(words), step):
+        chunks.append(" ".join(words[i:i + chunk_size]))
+    return chunks
 
 # --- File Processors ---
 def process_pdf(file_path):
@@ -135,21 +153,64 @@ def process_txt(file_path):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         return f.read(), []
 
+def process_pptx(file_path):
+    print("    > Extracting text and images from PPTX...")
+    prs = Presentation(file_path)
+    full_text = ""
+    images_data = []
+    for slide_number, slide in enumerate(prs.slides, start=1):
+        for shape in slide.shapes:
+            if hasattr(shape, "text"):
+                full_text += shape.text + "\n"
+            if shape.shape_type == 13:  # Picture
+                img = shape.image
+                img_bytes = img.blob
+                img_ext = img.ext
+                img_filename = f"{os.path.basename(file_path)}_s{slide_number}_i{len(images_data)+1}.{img_ext}"
+                img_path = os.path.join(IMAGE_OUTPUT_DIR, img_filename)
+                with open(img_path, "wb") as f:
+                    f.write(img_bytes)
+                description = describe_image_with_gemini(img_path)
+                images_data.append({"image_path": img_path, "description": description})
+    return full_text, images_data
+
+def process_csv(file_path):
+    print("    > Extracting text from CSV...")
+    full_text = ""
+    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            full_text += " ".join(row) + "\n"
+    return full_text, []
+
+def process_image(file_path):
+    print("    > Processing image file...")
+    description = describe_image_with_gemini(file_path)
+    return "", [{"image_path": file_path, "description": description}]
+
 # --- Knowledge Extraction ---
-def extract_knowledge_triples(full_text):
-    print("    > Extracting knowledge triples from full text...")
-    if not full_text.strip():
-        return []
-    prompt_parts = [TRIPLE_EXTRACTION_PROMPT, "Text to analyze:", full_text]
-    try:
-        response = extraction_model.generate_content(prompt_parts)
-        list_of_dicts = json.loads(response.text)
-        print(f"      + Extracted {len(list_of_dicts)} triples.")
-        time.sleep(API_DELAY_SECONDS)
-        return list_of_dicts
-    except Exception as e:
-        print(f"      ! Error processing the full text for triples: {e}")
-        return []
+def extract_knowledge_triples(texts_to_process):
+    print("    > Extracting knowledge triples...")
+    all_triples = []
+    for i, text_chunk in enumerate(texts_to_process, start=1):
+        print(f"      > Processing text chunk {i}/{len(texts_to_process)}...")
+        prompt_parts = [TRIPLE_EXTRACTION_PROMPT, "Text to analyze:", text_chunk]
+        try:
+            response = extraction_model.generate_content(prompt_parts)
+            # Clean the response
+            clean_response = response.text.strip()
+            if clean_response.startswith('```json'):
+                clean_response = clean_response[7:]
+            if clean_response.endswith('```'):
+                clean_response = clean_response[:-3]
+            clean_response = clean_response.strip()
+            list_of_dicts = json.loads(clean_response)
+            print(f"        + Extracted {len(list_of_dicts)} triples.")
+            all_triples.extend(list_of_dicts)
+            time.sleep(API_DELAY_SECONDS)
+        except Exception as e:
+            print(f"        ! Error processing a text part: {e}")
+    return all_triples
 
 # --- Single File Processing ---
 def process_single_file(file_path, user_id):
@@ -160,12 +221,25 @@ def process_single_file(file_path, user_id):
         if ext == ".pdf": full_text, images_data = process_pdf(file_path)
         elif ext == ".docx": full_text, images_data = process_docx(file_path)
         elif ext == ".txt": full_text, images_data = process_txt(file_path)
+        elif ext == ".pptx": full_text, images_data = process_pptx(file_path)
+        elif ext == ".csv": full_text, images_data = process_csv(file_path)
+        elif ext in [".png", ".jpg", ".jpeg"]: full_text, images_data = process_image(file_path)
 
         cleaned_text = re.sub(r'\s+', ' ', full_text).strip()
         summary = summarize_text_with_gemini(cleaned_text) if cleaned_text else "No text to summarize."
 
         all_content_text = cleaned_text + " " + " ".join([img["description"] for img in images_data])
-        extracted_triples = extract_knowledge_triples(all_content_text)
+        text_chunks = create_overlapping_chunks(all_content_text, CHUNK_SIZE, OVERLAP_SIZE)
+
+        if SAVE_INTERMEDIATE_CHUNKS:
+            os.makedirs(INTERMEDIATE_CHUNKS_DIR, exist_ok=True)
+            chunk_filename = f"chunks_{os.path.basename(file_path)}.json"
+            chunk_output_path = os.path.join(INTERMEDIATE_CHUNKS_DIR, chunk_filename)
+            with open(chunk_output_path, "w", encoding="utf-8") as f:
+                json.dump(text_chunks, f, indent=4)
+            print(f"    > Intermediate chunks saved to: {chunk_output_path}")
+
+        extracted_triples = extract_knowledge_triples(text_chunks)
 
         unique_triples_list, seen_triples = [], set()
         for triple in extracted_triples:
@@ -198,7 +272,9 @@ def process_single_file(file_path, user_id):
 def main():
     test_user_id = "123456789-local-test-user"
     os.makedirs(IMAGE_OUTPUT_DIR, exist_ok=True)
-    file_types = ["*.pdf", "*.docx", "*.txt"]
+    if SAVE_INTERMEDIATE_CHUNKS:
+        os.makedirs(INTERMEDIATE_CHUNKS_DIR, exist_ok=True)
+    file_types = ["*.pdf", "*.docx", "*.txt", "*.pptx", "*.csv", "*.png", "*.jpg", "*.jpeg"]
     all_files = [file for ftype in file_types for file in glob.glob(ftype)]
 
     if not all_files:
