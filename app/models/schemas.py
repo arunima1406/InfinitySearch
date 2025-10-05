@@ -30,6 +30,7 @@ class SearchResult(BaseModel):
     metadata: Dict[str, Any]
 
 class RAGResponse(BaseModel):
+    user_id: str
     answer: str
     source_documents: List[SearchResult]
     confidence: float

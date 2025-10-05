@@ -1,34 +1,17 @@
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from app.api.endpoints import router as api_router
-from app.config import settings
+# app/main.py
+from fastapi import FastAPI, Request
+import logging
 
-app = FastAPI(
-    title="Cloud-Based Semantic Search API",
-    description="API for semantic search using cloud storage and vector database",
-    version="1.0.0"
-)
+app = FastAPI(title="RAG Response Receiver")
 
-# CORS middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("uvicorn")
 
-# Include API routes
-app.include_router(api_router, prefix="/api/v1")
-
-@app.get("/")
-async def root():
-    return {"message": "Cloud-Based Semantic Search API is running"}
-
-@app.get("/health")
-async def health_check():
-    return {
-        "status": "healthy", 
-        "cloud_provider": settings.cloud_provider,
-        "vector_store": settings.vector_store
-    }
+@app.post("/receive")
+async def receive_rag_response(request: Request):
+    raw_body = await request.body()
+    print("Raw Body Received:", raw_body.decode())
+    data = await request.json()
+    print("Parsed JSON:", data)
+    return {"status": "success", "received": data}
