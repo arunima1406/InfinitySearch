@@ -4,7 +4,7 @@ Made for Samsung Prism GenAI Hackathon
 
 ## Project Overview
 
-InfinitySearch is an AI-powered **semantic search** application designed to process documents, extract meaningful knowledge, and enable intelligent querying through a mobile interface. The project leverages Generative AI (Gemini) to build **knowledge graphs using NEO4j** from various document types, allowing users to perform semantic searches beyond simple keyword matching.
+InfinitySearch is an AI-powered **semantic search** application designed to process documents, extract meaningful knowledge, and enable intelligent querying through a mobile interface. The project leverages Generative AI (Gemini) to build **knowledge graphs using Neo4j** from various document types, allowing users to perform semantic searches beyond simple keyword matching.
 
 The application consists of multiple components:
 - **Document Processing Pipeline**: Extracts text and images from PDFs, DOCX, TXT, and other formats, summarizes content, and extracts knowledge triples using AI.
