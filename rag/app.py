@@ -3,16 +3,15 @@ import logging
 import concurrent.futures
 from typing import Any, Dict, List, Optional
 
+import requests
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
 import google.generativeai as genai
 
-# ------------------ Setup ------------------
-load_dotenv()  # Load .env file
+load_dotenv()  
 
-# Env variables
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 NEO4J_URI = os.environ.get("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USERNAME = os.environ.get("NEO4J_USERNAME", "neo4j")
@@ -20,13 +19,16 @@ NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD", "password")
 NEO4J_DATABASE = os.environ.get("NEO4J_DATABASE", "neo4j")
 EMBED_MODEL = os.environ.get("EMBED_MODEL", "text-embedding-004")
 
+# URL to post results
+POST_URL = "https://d5ec38e44c60.ngrok-free.app/receive"  
+
 if not GEMINI_API_KEY:
     raise RuntimeError("GEMINI_API_KEY is missing in .env")
 
 genai.configure(api_key=GEMINI_API_KEY)
 logging.basicConfig(level=logging.INFO)
 
-# ------------------ Timeout Helper ------------------
+# Timeout if the request takes too long to run
 def run_with_timeout(func, *args, timeout: int = 15, **kwargs):
     """Run a function with timeout (cross-platform)."""
     with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -36,7 +38,7 @@ def run_with_timeout(func, *args, timeout: int = 15, **kwargs):
         except concurrent.futures.TimeoutError:
             raise TimeoutError(f"Operation timed out after {timeout}s")
 
-# ------------------ RAG Pipeline ------------------
+# RAG Pipeline
 class RAGPipeline:
     def __init__(self, uri: str, user: str, password: str, database: str = "neo4j"):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
@@ -86,8 +88,6 @@ class RAGPipeline:
             score = r.get("score", 0.0)
             if score >= min_score:
                 source_file = r.get("source_file") or "unknown"
-
-                # 🟢 Automatically infer file_type from the filename
                 file_type = "unknown"
                 if "." in source_file:
                     file_type = os.path.splitext(source_file)[-1].replace(".", "").lower()
@@ -102,7 +102,7 @@ class RAGPipeline:
                 })
         return episodes
 
-# ------------------ FastAPI Backend ------------------
+# FASTAPI Backend
 app = FastAPI(title="PrismBreak — Semantic RAG with User Context + File Type Detection")
 
 rag = RAGPipeline(
@@ -111,8 +111,7 @@ rag = RAGPipeline(
     password=NEO4J_PASSWORD,
     database=NEO4J_DATABASE,
 )
-
-# ------------------ Models ------------------
+# Pydantic Models 
 class EpisodeResponse(BaseModel):
     source_file: str
     episode_id: str
@@ -134,7 +133,18 @@ class IncomingUserQuery(BaseModel):
     user_id: str
     query: str
 
-# ------------------ Endpoints ------------------
+# POST results
+def post_results_to_url(results: dict):
+    """Send the result JSON to the configured URL, non-blocking, and print response"""
+    try:
+        response = requests.post(POST_URL, json=results, timeout=15)
+        logging.info(f"Posted results to {POST_URL}, status: {response.status_code}")
+        logging.info(f"Response from endpoint: {response.text}")
+        print(f"Response from endpoint: {response.text}")  # also print to terminal
+    except Exception as e:
+        logging.error(f"Failed to post results: {e}")
+
+# Creating endpoints
 @app.post("/chat", response_model=ChatResponse)
 def chat_endpoint(req: ChatRequest):
     """Main RAG endpoint"""
@@ -144,16 +154,23 @@ def chat_endpoint(req: ChatRequest):
         episodes = rag.extract_episodes(rows, min_score=req.min_score)
 
         if not episodes:
-            return ChatResponse(episodes=[EpisodeResponse(
+            episodes = [EpisodeResponse(
                 source_file="N/A",
                 episode_id="N/A",
                 summary="No matching episodes found. Try rephrasing your query.",
                 user_id=req.user_id,
                 file_type="N/A",
                 score=0.0
-            )])
+            )]
+        else:
+            episodes = [EpisodeResponse(**ep) for ep in episodes]
 
-        return ChatResponse(episodes=[EpisodeResponse(**ep) for ep in episodes])
+        result_json = {"episodes": [ep.dict() for ep in episodes]}
+
+        # Non-blocking POST
+        concurrent.futures.ThreadPoolExecutor().submit(post_results_to_url, result_json)
+
+        return ChatResponse(episodes=episodes)
 
     except TimeoutError as te:
         logging.error(f"Timeout: {te}")
