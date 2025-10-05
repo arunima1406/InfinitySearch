@@ -1,5 +1,5 @@
 # InfinitySearch
-![App icon](Group 4[1].png)
+![App icon](Group41.png)
 
 Made for Samsung Prism GenAI Hackathon
 
