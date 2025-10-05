@@ -1,0 +1,70 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# ---- Virtual environment ----
+.venv/
+venv/
+ENV/
+env/
+.venv.bak/
+Scripts/
+
+# ---- Environment / secrets ----
+.env
+.env.*
+*.key
+*.pem
+
+# ---- Logs / cache ----
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+*.coverage
+.coverage.*
+.cache/
+pytest_cache/
+ipynb_checkpoints/
+
+# ---- IDE / Editors ----
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ---- OS-specific ----
+Thumbs.db
+Desktop.ini
+
+# ---- FastAPI / Uvicorn ----
+*.db
+*.sqlite3
+__pycache__/
+*.pid
+
+# ---- Generated files ----
+output/
+data/
+uploads/
+storage/
+*.jsonl
+*.csv
+*.tsv
+
+# ---- Node or Frontend (if any) ----
+node_modules/
+*.lock
