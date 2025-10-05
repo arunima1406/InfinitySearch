@@ -34,9 +34,9 @@ function AppNavigator() {
         cardStyle: { backgroundColor: colors.background },
       }}
     >
-      <Stack.Screen name="Loading" component={LoadingScreen} options={{ title: 'Files' }} />
-      <Stack.Screen name="Search" component={SearchScreen} options={{ title: 'Semantic Search' }} />
-      <Stack.Screen name="FilePreview" component={FilePreviewScreen} options={{ title: 'File Preview' }} />
+      <Stack.Screen name="Loading" component={LoadingScreen} />
+      <Stack.Screen name="Search" component={SearchScreen} />
+      <Stack.Screen name="FilePreview" component={FilePreviewScreen}/>
     </Stack.Navigator>
   );
 }
