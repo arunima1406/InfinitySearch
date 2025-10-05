@@ -1,3 +1,5 @@
+
+
 import os
 import logging
 import concurrent.futures
@@ -9,10 +11,14 @@ from dotenv import load_dotenv
 from neo4j import GraphDatabase
 import google.generativeai as genai
 
+# ------------------ Setup ------------------
+#load_dotenv()  # Load .env file
+
 
 from dotenv import load_dotenv
-load_dotenv()  # This loads .env from the current working directory
+load_dotenv() 
 
+# Env variables
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 NEO4J_URI = os.environ.get("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USERNAME = os.environ.get("NEO4J_USERNAME", "neo4j")
@@ -24,11 +30,9 @@ if not GEMINI_API_KEY:
     raise RuntimeError("GEMINI_API_KEY is missing in .env")
 
 genai.configure(api_key=GEMINI_API_KEY)
-
 logging.basicConfig(level=logging.INFO)
 
-
-# Timeout if query takes too long to execute
+# ------------------ Timeout Helper ------------------
 def run_with_timeout(func, *args, timeout: int = 15, **kwargs):
     """Run a function with timeout (cross-platform)."""
     with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -38,8 +42,7 @@ def run_with_timeout(func, *args, timeout: int = 15, **kwargs):
         except concurrent.futures.TimeoutError:
             raise TimeoutError(f"Operation timed out after {timeout}s")
 
-
-# RAG pipeline
+# ------------------ RAG Pipeline ------------------
 class RAGPipeline:
     def __init__(self, uri: str, user: str, password: str, database: str = "neo4j"):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
@@ -65,6 +68,7 @@ class RAGPipeline:
         RETURN node.source_file AS source_file,
                node.episode_id AS episode_id,
                node.summary AS summary,
+               node.user_id AS user_id,
                score
         """
         logging.info("Running Neo4j vector search...")
@@ -92,13 +96,13 @@ class RAGPipeline:
                     "source_file": r.get("source_file") or "unknown",
                     "episode_id": r.get("episode_id") or "unknown",
                     "summary": r.get("summary") or "",
+                    "user_id": r.get("user_id") or "unknown",
                     "score": score
                 })
         return episodes
 
-
-# FASTAPI backend
-app = FastAPI(title="PrismBreak — Semantic RAG with Episode Summaries")
+# ------------------ FastAPI Backend ------------------
+app = FastAPI(title="PrismBreak — Semantic RAG with User Context")
 
 rag = RAGPipeline(
     uri=NEO4J_URI,
@@ -107,24 +111,23 @@ rag = RAGPipeline(
     database=NEO4J_DATABASE,
 )
 
-
+# ------------------ Models ------------------
 class EpisodeResponse(BaseModel):
     source_file: str
     episode_id: str
     summary: str
+    user_id: str
     score: float
-
 
 class ChatRequest(BaseModel):
     query: str
     top_k: Optional[int] = 5
     min_score: Optional[float] = 0.5
 
-
 class ChatResponse(BaseModel):
     episodes: List[EpisodeResponse]
 
-
+# ------------------ Endpoints ------------------
 @app.post("/chat", response_model=ChatResponse)
 def chat_endpoint(req: ChatRequest):
     try:
@@ -137,13 +140,18 @@ def chat_endpoint(req: ChatRequest):
                 source_file="N/A",
                 episode_id="N/A",
                 summary="No matching episodes found. Try rephrasing your query.",
+                user_id="N/A",
                 score=0.0
             )])
 
         return ChatResponse(episodes=[EpisodeResponse(**ep) for ep in episodes])
+
     except TimeoutError as te:
         logging.error(f"Timeout: {te}")
         raise HTTPException(status_code=504, detail=str(te))
     except Exception as e:
         logging.error(f"Error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+

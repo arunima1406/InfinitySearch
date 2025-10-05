@@ -3,7 +3,7 @@ import requests
 url = "http://127.0.0.1:8000/chat"
 
 payload = {
-    "query": "what is react native?",
+    "query": "what is waterfall model?",
     "top_k": 5,
     "min_score": 0.8
 }
