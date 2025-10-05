@@ -1,20 +1,16 @@
 import requests
 
-url = "http://127.0.0.1:8000/chat"
+resp = requests.post(
+    "http://127.0.0.1:8000/user-query",
+    json={
+        "user_id": "user_33cIGrBMt6QOqReLMXYVi7p6nFi",
+        "query": "Explain the waterfall model"
+    }
+)
 
-payload = {
-    "query": "what is waterfall model?",
-    "top_k": 5,
-    "min_score": 0.8
-}
+print("Status:", resp.status_code)
+print("Response:", resp.json())
 
-response = requests.post(url, json=payload)
-
-if response.status_code == 200:
-    print("Response JSON:")
-    print(response.json())
-else:
-    print(f"Error {response.status_code}: {response.text}")
 
 
 # uvicorn app:app --reload --port 8000

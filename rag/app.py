@@ -1,5 +1,3 @@
-
-
 import os
 import logging
 import concurrent.futures
@@ -12,11 +10,7 @@ from neo4j import GraphDatabase
 import google.generativeai as genai
 
 # ------------------ Setup ------------------
-#load_dotenv()  # Load .env file
-
-
-from dotenv import load_dotenv
-load_dotenv() 
+load_dotenv()  # Load .env file
 
 # Env variables
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -83,26 +77,33 @@ class RAGPipeline:
             rows = [dict(record) for record in results]
 
         logging.info(f"Neo4j returned {len(rows)} rows")
-        logging.info(f"Retrieved rows: {rows}")
         return rows
 
-    def extract_episodes(self, rows: List[Dict[str, Any]], min_score: float = 0.5) -> List[Dict[str, Any]]:
+    def extract_episodes(self, rows: List[Dict[str, Any]], min_score: float = 0.8) -> List[Dict[str, Any]]:
         """Return episodes with scores above min_score"""
         episodes = []
         for r in rows:
             score = r.get("score", 0.0)
             if score >= min_score:
+                source_file = r.get("source_file") or "unknown"
+
+                # 🟢 Automatically infer file_type from the filename
+                file_type = "unknown"
+                if "." in source_file:
+                    file_type = os.path.splitext(source_file)[-1].replace(".", "").lower()
+
                 episodes.append({
-                    "source_file": r.get("source_file") or "unknown",
+                    "source_file": source_file,
                     "episode_id": r.get("episode_id") or "unknown",
                     "summary": r.get("summary") or "",
                     "user_id": r.get("user_id") or "unknown",
+                    "file_type": file_type,
                     "score": score
                 })
         return episodes
 
 # ------------------ FastAPI Backend ------------------
-app = FastAPI(title="PrismBreak — Semantic RAG with User Context")
+app = FastAPI(title="PrismBreak — Semantic RAG with User Context + File Type Detection")
 
 rag = RAGPipeline(
     uri=NEO4J_URI,
@@ -117,21 +118,28 @@ class EpisodeResponse(BaseModel):
     episode_id: str
     summary: str
     user_id: str
+    file_type: str
     score: float
 
 class ChatRequest(BaseModel):
     query: str
+    user_id: str
     top_k: Optional[int] = 5
-    min_score: Optional[float] = 0.5
+    min_score: Optional[float] = 0.8
 
 class ChatResponse(BaseModel):
     episodes: List[EpisodeResponse]
 
+class IncomingUserQuery(BaseModel):
+    user_id: str
+    query: str
+
 # ------------------ Endpoints ------------------
 @app.post("/chat", response_model=ChatResponse)
 def chat_endpoint(req: ChatRequest):
+    """Main RAG endpoint"""
     try:
-        logging.info(f"Received query: {req.query}")
+        logging.info(f"Received query: {req.query} from user {req.user_id}")
         rows = rag.semantic_search(req.query, top_k=req.top_k)
         episodes = rag.extract_episodes(rows, min_score=req.min_score)
 
@@ -140,7 +148,8 @@ def chat_endpoint(req: ChatRequest):
                 source_file="N/A",
                 episode_id="N/A",
                 summary="No matching episodes found. Try rephrasing your query.",
-                user_id="N/A",
+                user_id=req.user_id,
+                file_type="N/A",
                 score=0.0
             )])
 
@@ -153,5 +162,21 @@ def chat_endpoint(req: ChatRequest):
         logging.error(f"Error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/user-query", response_model=ChatResponse)
+def handle_user_query(req: IncomingUserQuery):
+    """
+    Receives a query and user_id, builds payload, and directly runs RAG search
+    """
+    try:
+        payload = ChatRequest(
+            query=req.query,
+            user_id=req.user_id,
+            top_k=5,
+            min_score=0.8
+        )
+        logging.info(f"Received /user-query: {payload}")
+        return chat_endpoint(payload)
 
-
+    except Exception as e:
+        logging.error(f"Error handling /user-query: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
